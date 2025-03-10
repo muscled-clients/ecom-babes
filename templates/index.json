@@ -817,6 +817,10 @@
             "open_tab": false,
             "icon": ""
           }
+        },
+        "bundle_eq8B79": {
+          "type": "bundle",
+          "settings": {}
         }
       },
       "block_order": [
@@ -826,10 +830,11 @@
         "divider_dDYirq",
         "variant_picker_cQUQB3",
         "buy_buttons_ah7GJL",
-        "description_jHQEcA"
+        "description_jHQEcA",
+        "bundle_eq8B79"
       ],
       "settings": {
-        "product": "",
+        "product": "3-piece-fuzzy-fleece-loungewear-set",
         "inventory_transfers_enable": true,
         "gallery_size": "medium",
         "gallery_layout": "carousel-under",
