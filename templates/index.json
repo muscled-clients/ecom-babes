@@ -351,7 +351,7 @@
         "hotspot_74jw6H"
       ],
       "settings": {
-        "section_title": "Choose Your Perfect Size",
+        "section_title": "Find the Perfect Fit  for Your Journey",
         "title_font_size": 48,
         "title_font_size_m": 32,
         "title_color": "#ffffff",
@@ -363,6 +363,7 @@
         "btn_label_one": "Shop 12oz",
         "btn_url_two": "shopify://collections/16oz",
         "btn_label_two": "Shop 16oz",
+        "hotspots_image": "shopify://shop_images/Rectangle_7.png",
         "padding_top": 30,
         "padding_bottom": 0,
         "margin_top": 0,
