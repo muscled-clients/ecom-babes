@@ -562,9 +562,10 @@
         "block_xXwPMU": {
           "type": "block",
           "settings": {
+            "icon": "shopify://shop_images/Group_1000006062.svg",
             "icon-width": 42,
-            "block-title": "Planet Friendly",
-            "block-text": "Sustainable ceramic mugs designed for reusability—better for you and the planet."
+            "block-title": "Eco-Friendly",
+            "block-text": "Sustainably made to reduce waste and protect the planet for future generations."
           }
         },
         "spliter_XmThr6": {
