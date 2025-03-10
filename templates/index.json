@@ -314,8 +314,8 @@
         "hotspot_jJFRCe": {
           "type": "hotspot",
           "settings": {
-            "title": "Generous 16oz Mug",
-            "description": "Ideal for large drinks, this 16oz mug offers ample space for your favorite beverages.",
+            "title": "Show Features Here",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum diam.",
             "position_x": 39,
             "position_y": 35,
             "position_x_m": 30,
@@ -331,8 +331,8 @@
         "hotspot_74jw6H": {
           "type": "hotspot",
           "settings": {
-            "title": "Compact 12oz Mug",
-            "description": "Lightweight and stylish, this 12oz mug is perfect for enjoying your daily coffee.",
+            "title": "Show Features Here",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum diam.",
             "position_x": 68,
             "position_y": 62,
             "position_x_m": 89,
