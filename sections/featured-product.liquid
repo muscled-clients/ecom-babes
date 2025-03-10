@@ -1,17 +1,14 @@
 {%- liquid
   assign product = all_products[section.settings.product]
   assign zoom_size = 'master'
-
   assign current_variant = product.selected_or_first_available_variant
   assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
-
   for block in section.blocks
     if block.type == 'variant_picker' and block.settings.select_first_variant == false
       assign current_variant = product.selected_variant | default: false
       assign featured_media = product.featured_media
     endif
   endfor
-
   assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
   assign min_aspect_ratio = 0.6
   assign show_preorder_label = false
@@ -20,7 +17,6 @@
   endif
   assign description_shown = false
 -%}
-
 <div
   class="container section-{{ section.id }} featured-product product-detail {% if current_variant.compare_at_price > current_variant.price %}variant-status--on-sale{% endif %} strongly-spaced-row valign-middle"
   data-section-type="featured-product"
