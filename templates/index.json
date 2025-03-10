@@ -121,13 +121,69 @@
             "unmute": "",
             "product": "silver-color-pearl-ear-cuff-vintage-crystal-zircon-ear-clip-no-piercing-required-fashion-jewelry-for-women"
           }
+        },
+        "text_jTwkrN": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/image_976_1d68534b-8f1e-478f-abe2-c87773f5d8a0.png",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "mute": "",
+            "unmute": "",
+            "product": "summer-v-neck-ribbed-knit-crop-top-sleeveless-turndown-collar-in-10-colors"
+          }
+        },
+        "text_jUCG6a": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/image_976_1d68534b-8f1e-478f-abe2-c87773f5d8a0.png",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "mute": "",
+            "unmute": "",
+            "product": "womens-seamless-long-sleeve-yoga-jumpsuit"
+          }
+        },
+        "text_BLUBfr": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/image_976_1d68534b-8f1e-478f-abe2-c87773f5d8a0.png",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "mute": "",
+            "unmute": "",
+            "product": "two-piece-tracksuit-set"
+          }
+        },
+        "text_yH69gt": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/image_976_1d68534b-8f1e-478f-abe2-c87773f5d8a0.png",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "mute": "",
+            "unmute": "",
+            "product": "silver-color-pearl-ear-cuff-vintage-crystal-zircon-ear-clip-no-piercing-required-fashion-jewelry-for-women"
+          }
         }
       },
       "block_order": [
         "text_94CTfV",
         "text_6GdVeq",
         "text_cHqpNk",
-        "text_BzB6kB"
+        "text_BzB6kB",
+        "text_jTwkrN",
+        "text_jUCG6a",
+        "text_BLUBfr",
+        "text_yH69gt"
       ],
       "settings": {
         "featured_collection_order": "2",
