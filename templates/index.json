@@ -1140,12 +1140,12 @@
         "image_position": "center center",
         "mobile_image_position": "center bottom",
         "height": "fixed",
-        "height_desktop": 700,
+        "height_desktop": 600,
         "height_mobile": 220,
-        "image_link": "shopify://collections/products",
+        "image_link": "",
         "subheading": "",
-        "title": "Partner with Us  and Grow Together",
-        "title_size": 84,
+        "title": "Partner with Us  <br>and Grow Together",
+        "title_size": 60,
         "title_size_mobile": 46,
         "use_h1": false,
         "text": "",
