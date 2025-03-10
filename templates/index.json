@@ -77,6 +77,7 @@
             "video_controls": true,
             "video_muted": true,
             "video_loop": true,
+            "image": "shopify://shop_images/image_976.png",
             "mute": "",
             "unmute": "",
             "product": ""
@@ -128,7 +129,7 @@
       "settings": {
         "featured_collection_order": "2",
         "featured_products_order": "1",
-        "sec_bg_color": "#fff8f4",
+        "sec_bg_color": "#ffffff",
         "title": "Real Customers, Real Stories",
         "title_color": "#000",
         "title_font": 44,
