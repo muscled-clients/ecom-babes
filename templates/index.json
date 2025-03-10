@@ -587,9 +587,10 @@
         "block_y9Pn94": {
           "type": "block",
           "settings": {
+            "icon": "shopify://shop_images/Vector_2.svg",
             "icon-width": 60,
-            "block-title": "Compliments Guaranteed",
-            "block-text": "Unique handcrafted designs that turn heads and spark conversations over coffee."
+            "block-title": "Chemical-Free",
+            "block-text": "Made without harmful chemicals, ensuring safety for you and the planet."
           }
         }
       },
