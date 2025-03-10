@@ -898,7 +898,25 @@
         "row_aQLzxt": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Premium Look & Feel",
+            "value-to-compare": "Recyclable Packaging",
+            "tick-or-cross": "tick",
+            "tick-or-cross-2": "cross",
+            "tick-or-cross-3": "cross"
+          }
+        },
+        "row_tUJigB": {
+          "type": "row",
+          "settings": {
+            "value-to-compare": "Supports Charitable Causes",
+            "tick-or-cross": "tick",
+            "tick-or-cross-2": "cross",
+            "tick-or-cross-3": "cross"
+          }
+        },
+        "row_Bet6tK": {
+          "type": "row",
+          "settings": {
+            "value-to-compare": "Cost-Effective",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -912,7 +930,9 @@
         "row_FrVYbj",
         "row_4C3B3A",
         "row_eTAQmy",
-        "row_aQLzxt"
+        "row_aQLzxt",
+        "row_tUJigB",
+        "row_Bet6tK"
       ],
       "settings": {
         "section_heading": "Our Product Vs. Competitors",
