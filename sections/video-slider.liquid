@@ -519,8 +519,9 @@
               <div class="video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }}">
                 {% render 'ss-media-v1',
                   video: block.settings.video,
+                  img: block.settings.image,
                   object_fit: 'cover',
-                  poster_image: block.settings.image,
+                  poster_image: block.settings['p-image'],
                   loop: block.settings.video_loop,
                   autoplay: block.settings.video_autoplay,
                   muted: block.settings.video_muted
