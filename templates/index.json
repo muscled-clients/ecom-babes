@@ -50,8 +50,8 @@
             "slide-title-color": "#ffffff",
             "slide-content": "Timeless Elegance",
             "slide-content-color": "#ffffff",
-            "sec-btn": "Shop Now",
-            "sec-url": "shopify://collections/products"
+            "sec-btn": "View Collection",
+            "sec-url": "shopify://collections"
           }
         }
       },
