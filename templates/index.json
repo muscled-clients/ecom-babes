@@ -16,8 +16,6 @@
         "h1 {color: white;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/NOVA_MUGS_EDITED_99_of_307_1_50.jpg",
-        "mobile_image": "shopify://shop_images/custom_resized_b63f51b1-d61f-4cb6-85c7-1b193cd49ec2.jpg",
         "image_position": "center center",
         "mobile_image_position": "center top",
         "height": "fixed",
@@ -47,8 +45,7 @@
         "name_KyNQd3": {
           "type": "name",
           "settings": {
-            "slide-image": "shopify://shop_images/Rectangle_3_2.png",
-            "slide-image-m": "shopify://shop_images/Rectangle_3_1.png",
+            "slide-image": "shopify://shop_images/Rectangle_3.png",
             "slide-title": "Artisan Ceramic<br class=\"d4-large-hide\"> Travel Mugs  <br class=\"d4-small-hide\">for Coffee On-the-Go",
             "slide-title-color": "#ffffff",
             "slide-content": "Handcrafted for Coffee Lovers",
@@ -126,33 +123,22 @@
         "block_heading": "Elevate Your Coffee Ritual",
         "block_heading-2": "",
         "block_discription": "Start every morning with a cup that’s as unique and mindful as your routine. Crafted for durability, style, and sustainability, our Glaze cup redefines how you enjoy your coffee. Experience the perfect blend of artistry and practicality while making a positive impact on the planet.",
-        "image_id": "shopify://shop_images/1_1.gif",
-        "image_id_mobile": "shopify://shop_images/1_1.gif",
-        "left-icon-1": "shopify://shop_images/Group_1000006104.svg",
         "left_1_heading": "Sipper lid",
         "left_1_discp": "The silicone lid ensures a snug fit, preventing spills and enhancing your drinking experience anywhere.",
-        "left-icon-2": "shopify://shop_images/Vector_3.svg",
         "left_2_heading": "Fired to 1400°C",
         "left_2_discp": "High-temperature firing creates durable stoneware, making it perfect for daily use or adventurous commutes.",
-        "left-icon-3": "shopify://shop_images/Vector_4.svg",
         "left_3_heading": "Perfect size",
         "left_3_discp": "Available in two sizes, these cups are designed to suit every favorite beverage you enjoy.",
-        "left-icon-4": "shopify://shop_images/Group_1000006107_b001f5fb-5b75-4b1e-a25e-8d0748cef804.png",
         "left_4_heading": "Lightweight Design",
         "left_4_discp": "Designed to be lightweight and portable, making it ideal for busy lifestyles and convenient for on-the-go use.",
-        "right-icon-1": "shopify://shop_images/Group_1000006105.svg",
         "right_1_heading": "Dishwasher & Microwave safe",
         "right_1_discp": "Convenient cleaning and reheating are effortless as this cup is both dishwasher and microwave friendly.",
-        "right-icon-2": "shopify://shop_images/Group_1.svg",
         "right_2_heading": "One of a kind glazes",
         "right_2_discp": "Every cup boasts a unique glaze finish, combining artistry and individuality for a truly special experience.",
-        "right-icon-3": "shopify://shop_images/Group_2.svg",
         "right_3_heading": "Non-toxic",
         "right_3_discp": "Made with toxin-free, food-safe glazes, ensuring safety and quality compared to plastic-coated alternatives.",
-        "right-icon-4": "shopify://shop_images/Group_1000006108_20958086-898c-43cf-b6b4-1d61acab01fd.svg",
         "right_4_heading": "Heat Retention",
         "right_4_discp": "Keeps your beverages warm for extended periods, ensuring every sip is as enjoyable as the first one.",
-        "ship-icon": "shopify://shop_images/Frame_1410110648.svg",
         "ship-text": "Free U.S. Shipping Options",
         "button_content": "Try  Nova Ceramics Today",
         "button_url": "shopify://collections/products",
@@ -219,8 +205,6 @@
         "btn_label_one": "Shop 12oz",
         "btn_url_two": "shopify://collections/16oz",
         "btn_label_two": "Shop 16oz",
-        "hotspots_image": "shopify://shop_images/Rectangle_7.png",
-        "hotspots_image_mobile": "shopify://shop_images/Rectangle_7_1.png",
         "padding_top": 30,
         "padding_bottom": 0,
         "margin_top": 0,
@@ -250,7 +234,6 @@
         "@media only screen and (max-width: 768px) {h2 {font-size: 28px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/custom_resized_d40fc3e5-7464-42da-98b8-d2eb01c61136.jpg",
         "image_width": 700,
         "subheading": "Why Nova Ceramics?",
         "title": "Uniqueness in Every Sip",
@@ -279,39 +262,27 @@
       "blocks": {
         "text_eXWVAg": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Rectangle_11.png"
-          }
+          "settings": {}
         },
         "text_g4jjfg": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/IMG_7696.jpg"
-          }
+          "settings": {}
         },
         "text_9LTHcG": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/844185b4cde5ce35de8f0d4dbd832dc2.jpg"
-          }
+          "settings": {}
         },
         "text_crzwEJ": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/EBD0B199-4C75-4DB0-9AF2-6DE0246FEF1F_2.jpg"
-          }
+          "settings": {}
         },
         "text_WyDCyW": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/image_976.png"
-          }
+          "settings": {}
         },
         "text_NjJbFK": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/B910C5BC-A5A5-420E-93F4-552208FD1D43.jpg"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -349,39 +320,27 @@
       "blocks": {
         "text_BzeEtp": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/IMG_8746.jpg"
-          }
+          "settings": {}
         },
         "text_Rrqhie": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Rectangle_7_1.png"
-          }
+          "settings": {}
         },
         "text_pP9aHD": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/IMG_7610.jpg"
-          }
+          "settings": {}
         },
         "text_yib9Me": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Rectangle_9.png"
-          }
+          "settings": {}
         },
         "text_3wpRPN": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/457745755_1614500626145352_2845465738793141314_n.jpg"
-          }
+          "settings": {}
         },
         "text_BVJxxL": {
           "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Frame_1000004992.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -420,7 +379,6 @@
         "block_xXwPMU": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/Group_1000006062.svg",
             "icon-width": 42,
             "block-title": "Planet Friendly",
             "block-text": "Sustainable ceramic mugs designed for reusability—better for you and the planet."
@@ -433,7 +391,6 @@
         "block_PezqNc": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/Group_1000006118.svg",
             "icon-width": 42,
             "block-title": "Coffee Enhancing",
             "block-text": "Crafted from high-quality ceramic to preserve pure flavor in every sip."
@@ -446,7 +403,6 @@
         "block_y9Pn94": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/Group_6.svg",
             "icon-width": 60,
             "block-title": "Compliments Guaranteed",
             "block-text": "Unique handcrafted designs that turn heads and spark conversations over coffee."
@@ -465,8 +421,7 @@
         "heading": "Artisan Quality,<br>Naturally Inspired",
         "content": "<p>Our ceramics are crafted in small batches, allowing each piece to be made with careful attention to detail. Every mug is individually glazed, ensuring a finish as unique as nature itself. Fired at high temperatures for maximum durability, our mugs are designed to last, offering an artisanal alternative to mass-produced drinkware. Each sip from a Nova Ceramics mug is a reminder of the beauty of true craftsmanship.</p>",
         "btn": "",
-        "url": "",
-        "sec-image": "shopify://shop_images/Group_1000006060.png"
+        "url": ""
       }
     },
     "scrolling_text_NCxPGj": {
@@ -523,8 +478,6 @@
     "1663684322da33c5af": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify://shop_images/844185b4cde5ce35de8f0d4dbd832dc2.jpg",
-        "mobile_image": "shopify://shop_images/Rectangle_22.png",
         "image_position": "center center",
         "mobile_image_position": "center bottom",
         "height": "fixed",
@@ -601,7 +554,6 @@
           "type": "blocks",
           "settings": {
             "img_url": "shopify://collections/products",
-            "bg_image": "shopify://shop_images/Frame_1000004992_1.png",
             "heading": "Ceramic Cups"
           }
         },
@@ -609,7 +561,6 @@
           "type": "blocks",
           "settings": {
             "img_url": "shopify://collections/frontpage",
-            "bg_image": "shopify://shop_images/Frame_1000004992.png",
             "heading": "Lids & Sleeves"
           }
         }
@@ -631,15 +582,13 @@
         "collection_TWKfeM": {
           "type": "collection",
           "settings": {
-            "collection": "12oz",
-            "image": "shopify://shop_images/image.png"
+            "collection": "12oz"
           }
         },
         "collection_LHyAPT": {
           "type": "collection",
           "settings": {
-            "collection": "16oz",
-            "image": "shopify://shop_images/Large_Monsoon_Mug_Wood_2_1.jpg"
+            "collection": "16oz"
           }
         }
       },
@@ -735,13 +684,8 @@
       "settings": {
         "section_heading": "Nova Ceramics vs. The Rest",
         "section_subheading": "Why Handcrafted, Sustainable Mugs Make the Difference",
-        "company-logo": "shopify://shop_images/X_1_b37818df-72a2-4385-a584-9e657cc7fd8b.png",
-        "company-product": "shopify://shop_images/X_1_1.png",
         "company-2-name": "Plastic Cups",
-        "company-2-product": "shopify://shop_images/Layer_3_5f23a790-7c41-4927-8d32-8682fcfc102b.svg",
         "company-3-name": "Paper Cups",
-        "company-3-product": "shopify://shop_images/Layer_3.png",
-        "ship-icon": "shopify://shop_images/Frame_1410110648.svg",
         "ship-text": "Free U.S. Shipping Options",
         "button_text": "Try  Nova Ceramics Today",
         "btn-bg": "#49717b",
@@ -847,8 +791,6 @@
         "@media only screen and (max-width: 768px) {h2 {font-size: 28px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/custom_resized_ea107937-0f7d-4364-832c-c2eadf4d2da3.jpg",
-        "image_2": "shopify://shop_images/custom_resized_b27964da-0a9b-4915-ac24-c50b917aee6e.jpg",
         "image_width": 500,
         "subheading": "",
         "title": "About us",
@@ -932,7 +874,6 @@
     "custom_d4_image_with_text_XgmqAC": {
       "type": "custom-d4-image-with-text",
       "settings": {
-        "section-background": "shopify://shop_images/background_image.png",
         "section-heading": "Better coffee starts with better ceramics",
         "btn-label": "Shop Now",
         "btn-url": "shopify://collections/products"
