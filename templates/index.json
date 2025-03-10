@@ -812,6 +812,7 @@
         },
         "description_jHQEcA": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "show_in_tab": false,
             "open_tab": false,
