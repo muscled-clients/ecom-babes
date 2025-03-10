@@ -257,6 +257,7 @@
     },
     "featured_collection_d5_4w84ix": {
       "type": "featured-collection-d5",
+      "disabled": true,
       "settings": {
         "title": "<h2><strong>Travel Mugs</strong></h2>",
         "info": "<p>Our ceramic travel mugs combine artistry and convenience, letting you enjoy beautifully crafted coffee moments wherever life takes you.</p>",
