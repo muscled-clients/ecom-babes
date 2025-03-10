@@ -575,6 +575,7 @@
         "block_PezqNc": {
           "type": "block",
           "settings": {
+            "icon": "shopify://shop_images/Group_1000006063.svg",
             "icon-width": 42,
             "block-title": "Green Materials",
             "block-text": "Crafted from responsibly sourced materials for a cleaner, more sustainable environment."
