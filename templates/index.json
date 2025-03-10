@@ -421,43 +421,55 @@
       "blocks": {
         "text_eXWVAg": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         },
-        "text_g4jjfg": {
+        "text_ndJLDx": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         },
-        "text_9LTHcG": {
+        "text_VmzaNP": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         },
-        "text_crzwEJ": {
+        "text_xNMyzM": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         },
-        "text_WyDCyW": {
+        "text_4F7g8J": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         },
-        "text_NjJbFK": {
+        "text_NfgJAd": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_11.png"
+          }
         }
       },
       "block_order": [
         "text_eXWVAg",
-        "text_g4jjfg",
-        "text_9LTHcG",
-        "text_crzwEJ",
-        "text_WyDCyW",
-        "text_NjJbFK"
+        "text_ndJLDx",
+        "text_VmzaNP",
+        "text_xNMyzM",
+        "text_4F7g8J",
+        "text_NfgJAd"
       ],
       "settings": {
-        "sec-heading": "Real Customers, Real Love",
+        "sec-heading": "Loved by Our Customers",
         "heading-color": "#ffffff",
         "heading-size": 48,
         "heading-size-mobile": 30,
-        "sec-sub-heading": "Coffee lovers can’t get enough of our unique, handcrafted ceramic mugs.",
+        "sec-sub-heading": "Real Smiles, Real Stories – See Our Happy Customers!",
         "animate": "marquee-horizontal-right",
         "animate-time": 25,
         "stop-animation": false,
