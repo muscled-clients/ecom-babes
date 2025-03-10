@@ -165,7 +165,6 @@
         {% case block.type %}
           {% when '@app' %}
             {% render block %}
-
           {% when 'bundle' %}
             {% assign bundle = product.metafields.custom.bundles.value %}
             {% render 'd5-bundle', bundles: bundle %}
