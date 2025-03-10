@@ -845,24 +845,24 @@
           "type": "row",
           "settings": {
             "value-to-compare": "Free of plastic packaging",
-            "tick-or-cross": "tick",
-            "tick-or-cross-2": "cross",
-            "tick-or-cross-3": "cross"
+            "tick-or-cross": "cross",
+            "tick-or-cross-2": "tick",
+            "tick-or-cross-3": "tick"
           }
         },
         "row_LW8VBR": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Sustainable & Reusable",
+            "value-to-compare": "Leaves no nasty residue",
             "tick-or-cross": "tick",
-            "tick-or-cross-2": "cross",
-            "tick-or-cross-3": "cross"
+            "tick-or-cross-2": "tick",
+            "tick-or-cross-3": "tick"
           }
         },
         "row_qXGBbG": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Handcrafted Design",
+            "value-to-compare": "Vegan & Cruelty-Free",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -871,10 +871,10 @@
         "row_FrVYbj": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Microwave & Dishwasher Safe",
+            "value-to-compare": "All-Natural, Safe Ingredients",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
-            "tick-or-cross-3": "cross"
+            "tick-or-cross-3": "tick"
           }
         },
         "row_4C3B3A": {
