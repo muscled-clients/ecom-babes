@@ -708,32 +708,6 @@
         "use_alt_bg": false
       }
     },
-    "1663684322da33c5af": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image_position": "center center",
-        "mobile_image_position": "center bottom",
-        "height": "fixed",
-        "height_desktop": 700,
-        "height_mobile": 220,
-        "image_link": "shopify://collections/products",
-        "subheading": "",
-        "title": "",
-        "title_size": 84,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
     "custom_image_blocks_iYUj7c": {
       "type": "custom-image-blocks",
       "blocks": {
@@ -756,6 +730,7 @@
         "blocks_A8hygN",
         "blocks_nENtTx"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 125,
         "padding_bottom": 96,
@@ -965,6 +940,7 @@
     },
     "1666347260a6b453a1": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "full_width": false
       }
@@ -1052,18 +1028,39 @@
         "use_alt_bg": false
       }
     },
-    "1666347290701dc344": {
-      "type": "apps",
-      "settings": {
-        "full_width": false
-      }
-    },
     "custom_d4_image_with_text_XgmqAC": {
       "type": "custom-d4-image-with-text",
+      "disabled": true,
       "settings": {
         "section-heading": "Better coffee starts with better ceramics",
         "btn-label": "Shop Now",
         "btn-url": "shopify://collections/products"
+      }
+    },
+    "1663684322da33c5af": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image_position": "center center",
+        "mobile_image_position": "center bottom",
+        "height": "fixed",
+        "height_desktop": 700,
+        "height_mobile": 220,
+        "image_link": "shopify://collections/products",
+        "subheading": "",
+        "title": "",
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
       }
     }
   },
@@ -1082,7 +1079,6 @@
     "image_text_sec_Gtgq6m",
     "scrolling_text_NCxPGj",
     "custom_richtext_KNbKjW",
-    "1663684322da33c5af",
     "custom_image_blocks_iYUj7c",
     "collection_list_XhKHy7",
     "compare_table_d5_Cq9Lti",
@@ -1091,7 +1087,7 @@
     "16636847712d14e086",
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9",
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",
-    "1666347290701dc344",
-    "custom_d4_image_with_text_XgmqAC"
+    "custom_d4_image_with_text_XgmqAC",
+    "1663684322da33c5af"
   ]
 }
