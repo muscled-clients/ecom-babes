@@ -767,6 +767,77 @@
         "full_width": false
       }
     },
+    "featured_product_83emBx": {
+      "type": "featured-product",
+      "blocks": {
+        "title_fR4eA7": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_jfYFAP": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "vendor_zGB8hq": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "divider_dDYirq": {
+          "type": "divider",
+          "settings": {}
+        },
+        "variant_picker_cQUQB3": {
+          "type": "variant_picker",
+          "settings": {
+            "show_single": false,
+            "select_first_variant": true,
+            "variant_style": "listed",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_ah7GJL": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_backorder_text": true
+          }
+        },
+        "description_jHQEcA": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": false,
+            "open_tab": false,
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_fR4eA7",
+        "price_jfYFAP",
+        "vendor_zGB8hq",
+        "divider_dDYirq",
+        "variant_picker_cQUQB3",
+        "buy_buttons_ah7GJL",
+        "description_jHQEcA"
+      ],
+      "settings": {
+        "product": "",
+        "inventory_transfers_enable": true,
+        "gallery_size": "medium",
+        "gallery_layout": "carousel-under",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
     "compare_table_d5_Cq9Lti": {
       "type": "compare-table-d5",
       "blocks": {
@@ -1081,6 +1152,7 @@
     "custom_richtext_KNbKjW",
     "custom_image_blocks_iYUj7c",
     "collection_list_XhKHy7",
+    "featured_product_83emBx",
     "compare_table_d5_Cq9Lti",
     "1663686268ced6ee0c",
     "1666347260a6b453a1",
