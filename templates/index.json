@@ -661,32 +661,6 @@
         "font_choice": "Montserrat"
       }
     },
-    "1663684322da33c5af": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image_position": "center center",
-        "mobile_image_position": "center bottom",
-        "height": "fixed",
-        "height_desktop": 700,
-        "height_mobile": 220,
-        "image_link": "shopify://collections/products",
-        "subheading": "",
-        "title": "",
-        "title_size": 84,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
     "custom_richtext_KNbKjW": {
       "type": "custom-richtext",
       "blocks": {
@@ -731,6 +705,32 @@
         "text_alignment": "center",
         "full_width": false,
         "use_alt_bg": false
+      }
+    },
+    "1663684322da33c5af": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image_position": "center center",
+        "mobile_image_position": "center bottom",
+        "height": "fixed",
+        "height_desktop": 700,
+        "height_mobile": 220,
+        "image_link": "shopify://collections/products",
+        "subheading": "",
+        "title": "",
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
       }
     },
     "custom_image_blocks_iYUj7c": {
@@ -1080,8 +1080,8 @@
     "scrolling_images_d5_Cbhtpc",
     "image_text_sec_Gtgq6m",
     "scrolling_text_NCxPGj",
-    "1663684322da33c5af",
     "custom_richtext_KNbKjW",
+    "1663684322da33c5af",
     "custom_image_blocks_iYUj7c",
     "collection_list_XhKHy7",
     "compare_table_d5_Cq9Lti",
