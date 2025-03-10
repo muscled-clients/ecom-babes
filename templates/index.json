@@ -844,7 +844,7 @@
         "row_CwrNit": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Pure Taste",
+            "value-to-compare": "Free of plastic packaging",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -915,10 +915,14 @@
         "row_aQLzxt"
       ],
       "settings": {
-        "section_heading": "Nova Ceramics vs. The Rest",
-        "section_subheading": "Why Handcrafted, Sustainable Mugs Make the Difference",
+        "section_heading": "Our Product Vs. Competitors",
+        "section_subheading": "Quality, Innovation, and Sustainability That Stand Out",
+        "company-logo": "shopify://shop_images/X_1.png",
+        "company-product": "shopify://shop_images/X_1.png",
         "company-2-name": "Plastic Cups",
+        "company-2-product": "shopify://shop_images/X_1.png",
         "company-3-name": "Paper Cups",
+        "company-3-product": "shopify://shop_images/X_1.png",
         "ship-text": "Free U.S. Shipping Options",
         "button_text": "Try  Nova Ceramics Today",
         "btn-bg": "#49717b",
