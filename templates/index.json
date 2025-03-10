@@ -878,11 +878,44 @@
         "btn-label": "Shop Now",
         "btn-url": "shopify://collections/products"
       }
+    },
+    "video_slider_CCczNT": {
+      "type": "video-slider",
+      "settings": {
+        "featured_collection_order": "2",
+        "featured_products_order": "1",
+        "sec_bg_color": "#fff8f4",
+        "title": "Recommended by the best of the best",
+        "title_color": "#000",
+        "title_font": 44,
+        "title_font-m": 32,
+        "sub_heading": "Approved by a team of health, wellness, and sports nutrition professionals.",
+        "subheading_color": "#000",
+        "subheading_font": 20,
+        "subheading_font-m": 18,
+        "collection": "",
+        "product_limit": 10,
+        "collection_url": "/",
+        "collection_label": "SHOP COLLECTION",
+        "btn_color": "#2A1F19",
+        "btn_bgcolor": "#fff",
+        "btn_font": 12,
+        "btn_font-m": 12,
+        "pro_color": "#000",
+        "pro_font": 13,
+        "pro_font-m": 13,
+        "price_color": "#2a1f19",
+        "price_font": 13,
+        "price_font-m": 13,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "1663590573310273b6",
     "slide_show_d5_9giFXb",
+    "video_slider_CCczNT",
     "d5_icon_with_text_bar_a4CGUH",
     "featured_collection_d5_4w84ix",
     "benefits_d5_t8eVwA",
