@@ -1,0 +1,219 @@
+<style>
+
+           .d6-button-snippet {
+             margin: 40px auto 0;
+             display: flex;
+             overflow: hidden;
+       max-width: 490px;
+       width: 100%;
+       flex-direction: column;
+       align-items: center;
+           }
+    .d6-comparison-section-container .d6-button-snippet{
+       margin: 30px auto 0;
+     }
+         .d6-button-snippet-wrapper {
+             display: flex;
+             align-items: center;
+             margin-bottom: 0px;
+             width: max-content;
+         }
+
+           .d6-button-snippet-wrapper>* {
+             margin: auto 3px;
+           }
+           .d6-button-snippet-span::after {
+             content: '';
+             position: absolute;
+             right: -8px;
+             top: 5px;
+             height: 14px;
+             width: 1px;
+           }
+
+           .d6-button-snippet-wrapper span {
+             color: #040404;
+             font-family: Montserrat;
+             font-size: 14px;
+             font-style: normal;
+             font-weight: 500;
+             line-height: 27px;
+             margin-right: 12px;
+             position: relative;
+           }
+
+           .d6-button-snippet button {
+             border-radius: 5px;
+             background: #D3A221;
+             border: none;
+             color: #FFF;
+             font-size: 18px;
+             font-weight: 700;
+             width: 100%;
+             height: 64px;
+             font-family: "DIN Next";
+             font-style: normal;
+             line-height: 27px;
+             padding: 0;
+             cursor: pointer;
+             align-items: center;
+           }
+
+           .d6-button-snippet button a {
+             text-decoration: none;
+             display: block;
+             width: 100%;
+             height: 100%;
+             padding: 16px 0;
+             color: #FFF;
+             position: relative;
+             z-index: 2;
+             transition: 0.3s;
+           }
+           .button:after{
+             box-shadow:unset;
+           }
+            .button:hover:after{
+             box-shadow:unset !important;
+           }
+
+
+           .d6-comparison-section-main .button:hover:after {
+             box-shadow: unset;
+           }
+
+           .d6-comparison-section-main .button:after {
+             box-shadow: unset;
+           }
+    .shipping-icon-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto;
+        padding: 0 0 8px 0;
+    }
+
+    .shipping-icon-text p {
+        color: #000;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+        margin: 0;
+    }
+      .shine {
+          background-size: 200% !important;
+          background-position: -100% !important; /* Start from the left */
+              transition: all 0.5s ease-out;
+        }
+        .shine:hover {
+          background-position: 100% !important; /* Animate to the right on hover */
+          background-image: linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            transparent 100%
+          ) !important;
+        }
+
+        .shine {
+          background-size: 200% !important;
+          background-position: -100% !important; /* Start from the left */
+              transition: all 0.5s ease-out;
+        }
+        .custom-color.shine:hover {
+          background-position: 100% !important; /* Animate to the right on hover */
+         background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  ) !important;
+        }
+  button.d5-button-width a:hover{
+         color: #49717b !important;
+        background: #fff;
+       border: 1px solid #49717b;
+       border-radius: 5px;
+  }
+
+           @media screen and (max-width: 768px) {
+             .d6-button-snippet {
+               margin: 20px auto 0;
+     }
+             .d6-button-snippet button{
+               max-width: 504px;
+             margin: auto;
+               display: flex;
+               justify-content: center;
+               height: 54px;
+             }
+         .d6-button-snippet-wrapper span {
+             color: #040404;
+             font-family: Montserrat;
+             font-size: 10px;
+             font-style: normal;
+             font-weight: 500;
+             line-height: 27px;
+             margin-right: 0px;
+             position: relative;
+             letter-spacing: 0;
+         }
+
+             .d6-button-snippet-svg-1 {
+               width: 18px;
+               height: 12px;
+             }
+
+             .d6-button-snippet-svg-2 {
+               width: 18px;
+               height: 18px;
+             }
+             .d6-button-snippet button a{
+               z-index: 2;
+             }
+           }
+
+
+       #shopify-section-{{ section.id }} .custom-snippet-class {
+         width: 100%;
+       }
+</style>
+
+<div class="{{ class }} d6-button-snippet">
+  {% if hide_inline %}
+    <button
+      class="{% if customShine %}custom-color{% endif %} d5-button-width"
+      style="background-color: {% if background_color != blank %}{{ background_color }}{% endif %}; color: {% if color != blank %}{{ color }}{% endif %};"
+    >
+      {% if button_url != blank %}
+        <a href="{{ button_url }}" style="color: {% if color != blank %}{{ color }}{% endif %};">
+          {{ button_text }}
+        </a>
+      {% else %}
+        {{ button_text }}
+      {% endif %}
+    </button>
+  {% else %}
+    <div class="shipping-icon-text">
+      {% if ship-icon != blank %}
+        <img src="{{ ship-icon | image_url: width: 20, height: 14 }}" width="20" height="14">
+      {% endif %}
+      <p>{{ ship-text }}</p>
+    </div>
+    <button
+      class="{% if customShine %}custom-color{% endif %} d5-button-width"
+      style="background-color: {% if background_color != blank %}{{ background_color }}{% endif %}; color: {% if color != blank %}{{ color }}{% endif %};"
+    >
+      {% if button_url != blank %}
+        <a href="{{ button_url }}" style="color: {% if color != blank %}{{ color }}{% endif %};">
+          {{ button_text }}
+        </a>
+      {% else %}
+        {{ button_text }}
+      {% endif %}
+    </button>
+  {% endif %}
+</div>

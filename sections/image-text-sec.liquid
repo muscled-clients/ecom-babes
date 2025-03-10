@@ -1,0 +1,462 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+          .image-with-text-d6 {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 48px 48px 144px;
+            position: relative;
+        }
+        .image-text-flex-d6 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .text-side-d6 {
+            width: 535px;
+        }
+
+        .image-side-d6 {
+            width: 695px;
+        }
+
+        .image-side-d6 img {
+            width: 100%;
+            height: 100%;
+        }
+        .text-side-d6 h5 {
+            color: #254249;
+            font-family: "Libre Franklin";
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .text-side-d6 h2 {
+            color: #000;
+            font-family: "DIN Next W1G";
+            font-size: 48px;
+            font-weight: 700;
+            line-height: normal;
+           text-transform: capitalize;
+            padding: 32px 0;
+            margin: 0;
+        }
+
+        .text-side-d6 p {
+            color: #000;
+            font-family: "Libre Franklin";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .content-btn-d6 {
+            color: #FFF;
+            text-decoration: none;
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 0.36px;
+            text-transform: uppercase;
+            display: inline-flex;
+            height: 42px;
+            padding: 0 21px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            background: #161616;
+            transition: all 0.3s;
+            border: 1px solid #161616;
+            margin-top: 35px;
+        }
+
+        .content-btn-d6:hover {
+            color: #161616;
+            background: #FFF;
+        }
+
+        .btm-icons-texts {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            border-radius: 12px;
+            background: #49717B;
+            width: 100%;
+            max-width: 1110px;
+            margin: 0 auto;
+            padding: 32px;
+            position: absolute;
+            bottom: -90px;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 36px;
+        }
+
+        .icon-text-block {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .block-content h3 {
+      color: #FFF;
+      font-family: "DIN Next W1G";
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: capitalize;
+  }
+
+        .block-content p {
+            color: #FFF;
+            font-family: "Libre Franklin";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .icon-d6 {
+            height: 60px;
+            width: 100%;
+        }
+
+        .spliter-d6 {
+            width: 4px;
+            height: 100%;
+        }
+
+        .icon-d6 img,
+        .spliter-d6 img {
+            width: 100%;
+            height: 100%;
+        }
+       .mobile-slider{
+         display: none;
+       }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .image-text-flex-d6 {
+                flex-direction: column-reverse;
+                gap: 40px;
+            }
+
+            .text-side-d6 h5 {
+                margin: 0;
+                font-size: 14px;
+            }
+             .text-side-d6 p{
+               font-size: 14px;
+             }
+            .text-side-d6 h2 {
+                font-size: 32px;
+                padding: 16px 0;
+            }
+
+            .image-with-text-d6 {
+                padding: 40px 15px 60px;
+            }
+
+            .text-side-d6 {
+                width: 100%;
+            }
+
+            .image-side-d6 {
+                width: 100%;
+            }
+
+            .btm-icons-texts {
+                display: none;
+            }
+          .slider-wrapper {
+        /* position: relative; */
+        max-width: 800px;
+        margin: 15px auto 24px auto;
+        overflow: hidden;
+        display: block;
+             background: #49717B;
+            border-radius: 12px;
+      }
+
+      .icon-text-slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .icon-text-block {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 24px;
+      }
+
+      .prev-d6, .next-d6 {
+            position: absolute;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            bottom: 8px;
+        }
+
+      .prev-d6 { left: 32%; }
+      .next-d6 { right: 32%; }
+
+      .prev-d6:active,
+      .next-d6:active {
+        background: transparent;
+      }
+
+      .dots-container-d6 {
+       text-align: center;
+            margin-top: 24px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0px);
+      }
+
+      .dot-d6 {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: transparent;
+        border: 1px solid #254249;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .dot-d6.active {
+        background-color: #254249;
+      }
+          #image-text-sec-d6{
+            margin: 0 0 !important;
+          }
+        }
+</style>
+
+<section id="image-text-sec-d6" style="background: #FEF7EF; margin: 0 0 90px 0">
+  <div class="image-with-text-d6">
+    <div class="image-text-flex-d6">
+      <div class="text-side-d6">
+        <h5>
+          {{- section.settings['sub-heading'] }}
+        </h5>
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.content }}</p>
+        {% if section.settings.btn != blank %}
+          <a class="content-btn-d6" href="{{ section.settings.url }}">{{ section.settings.btn }}</a>
+        {% endif %}
+      </div>
+      <div class="image-side-d6">
+        <img src="{{ section.settings.sec-image | img_url: 'master' }}" width="600" height="423">
+      </div>
+    </div>
+    <div class="btm-icons-texts">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'block' %}
+            <style>
+              .icon-block-{{ block.id }} .icon-d6 {
+                max-width:{{ block.settings.icon-width }}px;
+              }
+            </style>
+            <div class="icon-text-block icon-block-{{ block.id }}">
+              <div class="icon-d6">
+                <img src="{{ block.settings.icon | image_url: width: 70, height: 70 }}" width="45" height="60">
+              </div>
+              <div class="block-content">
+                <h3>{{ block.settings['block-title'] }}</h3>
+                <p>{{ block.settings['block-text'] }}</p>
+              </div>
+            </div>
+          {% when 'spliter' %}
+            <div class="spliter-d6">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0605/8816/3242/files/Line_43_2.png?v=1738788583"
+                width="2"
+                height="auto"
+              >
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <div class="slider-wrapper mobile-slider">
+      <div class="icon-text-slider">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'block' %}
+              <div class="icon-text-block slide-mobl icon-block-{{ block.id }}">
+                <div class="icon-d6">
+                  <img src="{{ block.settings.icon | image_url: width: 70, height: 70 }}" width="45" height="60">
+                </div>
+                <div class="block-content">
+                  <h3>{{ block.settings['block-title'] }}</h3>
+                  <p>{{ block.settings['block-text'] }}</p>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <!-- Navigation Arrows -->
+      <button class="prev-d6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+          <path d="M9.4375 17.2847L1.4375 9.28467L9.4375 1.28467" stroke="#254249" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="next-d6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+          <path d="M1.4375 1.28467L9.4375 9.28467L1.4375 17.2847" stroke="#254249" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <!-- Dots Container -->
+      <div class="dots-container-d6"></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".icon-text-slider");
+  const slides = document.querySelectorAll(".slide-mobl");
+  const prevBtn = document.querySelector(".prev-d6");
+  const nextBtn = document.querySelector(".next-d6");
+  const dotsContainer = document.querySelector(".dots-container-d6");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // Create dots dynamically
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot-d6");
+    if (index === 0) dot.classList.add("active");
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".dot-d6");
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", function () {
+      currentIndex = parseInt(this.dataset.index);
+      updateSlider();
+    });
+  });
+
+});
+</script>
+{% schema %}
+{
+  "name": "Image with Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sub-heading",
+      "label": "Sub Heading",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "liquid",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Add Content</p>"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "default": "GET IN TOUCH",
+      "label": "Button"
+    },
+    {
+      "type": "url",
+      "id": "url",
+       "label": "Button URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "sec-image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "range",
+          "id": "icon-width",
+          "label": "Icon Width",
+          "min": 40,
+          "max": 80,
+          "default": 42,
+          "unit": "px"
+        },
+        {
+          "type": "text",
+          "id": "block-title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "block-text",
+          "label": "Text",
+          "default": "Text"
+        }
+      ]
+    },
+    {
+      "type": "spliter",
+      "name": "Divider",
+      "settings": []
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Text"
+    }
+  ]
+}
+{% endschema %}

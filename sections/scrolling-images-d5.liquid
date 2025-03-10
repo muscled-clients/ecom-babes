@@ -1,0 +1,282 @@
+{% comment %}
+  Linked files
+  scrolling-images.css
+{% endcomment %}
+{{ 'scrolling-images-d5.css' | asset_url | stylesheet_tag }}
+{% assign block_count = 0 %}
+<!-- Initialize a counter outside the loop -->
+{% for block in section.blocks %}
+  {% assign block_count = block_count | plus: 1 %}
+  <!-- Increment the counter for each block -->
+{% endfor %}
+<div id="shopify-section-scroll-imgs-d6" class="shopify-section">
+  <style data-shopify="">
+              #shopify-section-{{ section.id }} .scrolling-image-heading-scroll-imgs-d6 h2 {
+                   font-size: {{ section.settings.heading-size-mobile }}px;
+                   color: {{ section.settings.heading-color }};
+               }
+          #shopify-section-{{ section.id }} .scrolling-image-heading-scroll-imgs-d6 p{
+          color: #E6E6E6;
+    text-align: center;
+    font-family: "Libre Franklin";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+                   margin: 8px 0 0;
+              }
+              #shopify-section-{{ section.id }} .scrolling-image-slide-scroll-imgs-d6{
+                 border: 1px solid {{ section.settings.box-border-color }};
+                 border-width: {{ section.settings.box-border-width }}px;
+                 border-radius: {{ section.settings.box-border-radius }}px;
+                background: {{ section.settings.box-bg }};
+               }
+               #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 p,
+              #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 a,
+              #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 li {
+                   font-size: {{ section.settings.text-size-mobile }}px;
+                   color: {{ section.settings.text-color }};
+               }
+               #shopify-section-{{ section.id }} .track-horizontal-scroll-imgs-d6 {
+                 animation: {{ section.settings.animate }} {{ section.settings.animate-time }}s linear infinite;
+               }
+             .track-horizontal-scroll-imgs-d6 {
+              width: calc((174px * {{ block_count }}) + (12px * {{ block_count }}));
+             }
+         .scrolling-image-heading-scroll-imgs-d6 p br{
+                   display: block;
+                 }
+
+               @media (min-width: 1024px) {
+                  #shopify-section-{{ section.id }} .scrolling-image-heading-scroll-imgs-d6 h2 {
+                       font-size: {{ section.settings.heading-size }}px;
+                   }
+                 #shopify-section-{{ section.id }} .scrolling-image-heading-scroll-imgs-d6 p{
+                 font-size: 16px;
+              }
+                 .scrolling-image-heading-scroll-imgs-d6 p br{
+                   display: none;
+                 }
+
+                  #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 p,
+                  #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 a,
+                  #shopify-section-{{ section.id }} .scrolling-image-content-scroll-imgs-d6 li {
+                       font-size: {{ section.settings.text-font }}px;
+                   }
+                  .track-horizontal-scroll-imgs-d6 {
+                       width: calc((194px * {{ block_count }}) + (12px * {{ block_count }}));
+                       gap: 12px;
+                   }
+                   {% if section.settings.stop-animation %}
+                  #shopify-section-{{ section.id }} .marquee-horizontal-scroll-imgs-d6:hover .track-horizontal-scroll-imgs-d6 {
+                       animation-play-state: paused;
+                   }
+                   {% endif %}
+               }
+  </style>
+
+  <div
+    id="{{ section.settings.sec-id }}"
+    class="section-scroll-imgs-d6 scrolling-image-scroll-imgs-d6"
+    style="background-color:{{ section.settings.scrolling-sec-bg }}; background-image: ;"
+  >
+    <div class="scrolling-image-heading-scroll-imgs-d6">
+      <h2>{{ section.settings['sec-heading'] }}</h2>
+      {% if section.settings['sec-sub-heading'] != blank %}
+        <p>{{ section.settings['sec-sub-heading'] }}</p>
+      {% endif %}
+    </div>
+    <div class="section-scroll-imgs-d6-settings scrolling-image-body-scroll-imgs-d6 sss">
+      <div class="scrolling-image-slider-scroll-imgs-d6">
+        <div class="marquee-horizontal-scroll-imgs-d6">
+          {% for i in (1..5) %}
+            <div class="track-horizontal-scroll-imgs-d6">
+              {% for block in section.blocks %}
+                {% if block.settings['block-img'] != blank %}
+                  <div class="scrolling-image-slide-scroll-imgs-d6">
+                    <img
+                      src="{{ block.settings.block-img | image_url: width: 800, height:800  }}"
+                      width="195"
+                      height="270"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% if section.settings['show-text'] %}
+        {% if section.settings.text != blank %}
+          <div class="scrolling-image-content-scroll-imgs-d6">
+            <p>{{ section.settings.text }}</p>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Scrolling Images",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sec-heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "heading-color",
+      "label": "Heading color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "heading-size",
+      "label": "Heading Font-size",
+      "min": 30,
+      "default": 40,
+      "max": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading-size-mobile",
+      "label": "Font-size for MObile",
+      "min": 26,
+      "default": 34,
+      "max": 40,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "sec-sub-heading",
+      "label": "Sub-Heading"
+    },
+    {
+      "type": "select",
+      "id": "animate",
+      "label": "Animation Flow",
+      "default": "marquee-horizontal-left",
+      "options": [
+        {
+          "value": "marquee-horizontal-right",
+          "label": "Left to Right"
+        },
+        {
+          "value": "marquee-horizontal-left",
+          "label": "Right to Left"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "animate-time",
+      "label": "Animation Duration",
+      "default": 4,
+      "info": "Value will works in Second"
+    },
+    {
+      "type": "checkbox",
+      "id": "stop-animation",
+      "label": "Stop Animation on Hover",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Bottom Text"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "text-font",
+      "label": "Text Font",
+      "min": 18,
+      "default": 22,
+      "max": 26,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "text-size-mobile",
+      "label": "Font-size for Mobile",
+      "min": 14,
+      "default": 18,
+      "max": 20,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "show-text",
+      "label": "Show Text",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "box-border-color",
+      "label": "Box Border-color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "box-border-width",
+      "label": "Border Width",
+      "min": 0,
+      "max": 5,
+      "default": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "box-border-radius",
+      "label": "Box Border Radius",
+      "min": 0,
+      "max": 30,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "box-bg",
+      "label": "Box Background",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "sec-id",
+      "label": "Section Custom Id"
+    },
+    {
+      "type": "color",
+      "id": "scrolling-sec-bg",
+      "label": "Section Background",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-img",
+          "label": "Add Image"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling Images"
+    }
+  ]
+}
+{% endschema %}

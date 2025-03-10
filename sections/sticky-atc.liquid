@@ -1,0 +1,242 @@
+{% if section.settings.enable_section and request.page_type == 'product' and product.available %}
+  {% liquid
+    assign current_variant = product.selected_or_first_available_variant
+    assign image = current_variant.image | default: product.featured_image
+    assign img_size = section.settings.img_width | append: 'x' | append: section.settings.img_height
+  %}
+
+  <style>
+    #md-sticky-atc {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding-top: {{ section.settings.pt }}rem;
+      padding-bottom: {{ section.settings.pb }}rem;
+      visibility: hidden;
+      background-color: {{ section.settings.bg-color }};
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all .15s ease-out;
+      border-top: 0.1rem solid rgba(var(--color-foreground), .08);
+    }
+    #md-sticky-atc.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #md-sticky-atc .page-width-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #md-sticky-atc .product-content {
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+    }
+    #md-sticky-atc .product_color_sl,
+    #md-sticky-atc  .product__title {
+      margin: 0;
+      color: white;
+      font-size: 17px;
+      line-height: 23.8px;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-family: Madera, sans-serif;
+    }
+    #md-sticky-atc .product-content img {
+        margin-right: .75rem;
+    }
+    #md-sticky-atc .product-form__submit {
+      background-color: white !important;
+      color: #49717b !important;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 13px 25px 15px;
+      min-height: 47px;
+      width: 490px;
+      max-width: 100%;
+      border: 0;
+      border-radius: 3px;
+    }
+    #md-sticky-atc .product-form__submit:hover {
+      background-color: #49717b  !important;
+      border: 1px solid white !important;
+      color: white !important;
+    }
+    @media (max-width: 790px) {
+      #md-sticky-atc .product-content {
+        display: none;
+      }
+      #md-sticky-atc .product-form__submit {
+        width: 340px;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const stickyATC = document.querySelector('#md-sticky-atc');
+        const img = stickyATC.querySelector('.product-content img');
+        const btn = stickyATC.querySelector('[name="add"]');
+        const selectField = stickyATC.querySelector('select[name="id"]');
+        const threshold = btn.getBoundingClientRect().top + Number(stickyATC.dataset.offset);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > threshold) {
+                stickyATC.classList.add('show');
+                document.documentElement.style.paddingBottom = `${stickyATC.clientHeight}px`;
+            } else {
+                stickyATC.classList.remove('show');
+                document.documentElement.style.paddingBottom = '0';
+            }
+        });
+
+        if (selectField) {
+            selectField.addEventListener('change', () => {
+                img.setAttribute('src', selectField.options[selectField.selectedIndex].dataset.img);
+            });
+        }
+
+        btn?.addEventListener('click', () => {
+            const largeButton = document.querySelector('.custom-cart-btn');
+            largeButton?.click();
+        });
+    });
+  </script>
+
+  <div
+    id="md-sticky-atc"
+    class="color-{{ section.settings.bg-color }}"
+    aria-hidden="true"
+    data-offset="{{ section.settings.offset }}"
+  >
+    <div class="page-width">
+      <div class="page-width-inner">
+        <div class="product-content">
+          {% if section.settings.show_img %}
+            <img
+              src="{{ image | img_url: img_size, crop: 'center' }}"
+              width="{{ section.settings.img_width }}"
+              height="{{ section.settings.img_height }}"
+              loading="lazy"
+            >
+          {% endif %}
+          <div>
+            {% if product.variants.size == 1 %}
+              <h3 class="product__title">{{ product.title }}</h3>
+            {% else %}
+              <h3 class="product_color_sl">{{ product.title }}</h3>
+            {% endif %}
+          </div>
+        </div>
+        <product-form class="product-form">
+          {% if product.selected_or_first_available_variant.inventory_quantity != 0 %}
+            <button
+              type="submit"
+              name="add"
+              class="product-form__submit button"
+              data-id="{{ product.selected_or_first_available_variant.id }}"
+            >
+              <span>{{ 'products.product.add_to_cart' | t }}</span>
+            </button>
+          {% else %}
+            <button
+              type="submit"
+              name="add"
+              class="product-form__submit button"
+              data-id="{{ product.selected_or_first_available_variant.id }}"
+              disabled
+            >
+              <span>
+                {%- if product.template_suffix contains 'preorder' -%}
+                  {{ 'products.product.preorder' | t -}}
+                {%- else -%}
+                  SOLD OUT
+                {%- endif -%}
+              </span>
+            </button>
+          {% endif %}
+        </product-form>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Sticky Add To Cart",
+  "settings": [
+      {
+          "type": "header",
+          "content": "General"
+      },
+      {
+          "type": "checkbox",
+          "id": "enable_section",
+          "label": "Enable \"Sticky ATC\"",
+          "default": true
+      },
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+      },
+      {
+          "type": "checkbox",
+          "id": "show_img",
+          "default": true,
+          "label": "Show image"
+      },
+      {
+          "type": "text",
+          "id": "img_width",
+          "default": "80",
+          "label": "Image width (px)"
+      },
+      {
+          "type": "text",
+          "id": "img_height",
+          "default": "80",
+          "label": "Image height (px)"
+      },
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "range",
+          "id": "offset",
+          "label": "Offset",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "default": 0
+      },
+      {
+          "type": "header",
+          "content": "Spacing"
+      },
+      {
+          "type": "range",
+          "id": "pt",
+          "label": "Padding top",
+          "min": 0,
+          "max": 5,
+          "step": 0.5,
+          "default": 0.5
+      },
+      {
+          "type": "range",
+          "id": "pb",
+          "label": "Padding bottom",
+          "min": 0,
+          "max": 5,
+          "step": 0.5,
+          "default": 0.5
+      }
+  ]
+}
+{% endschema %}

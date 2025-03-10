@@ -1,0 +1,113 @@
+<script src="{{ 'd5-atc.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'd5-upsell-options.js' | asset_url }}" defer="defer"></script>
+<div class="nc-upsell-container-d5">
+  <h2 class="upsell-title-d5">{{ title }}</h2>
+  {% for product_d in products_m %}
+    {% assign variant_d5 = product_d.variants %}
+    <div class="nc-up-main-d5">
+      <div class="nc-up-inner-d5">
+        <div class="up-image-d5">
+          <img src="{{ product_d.featured_image | image_url: width: 400, height: 350 }}" width="100" height="80">
+          {% if product_d.variants.first.compare_at_price > product_d.variants.first.price %}
+            <span class="sale-label-d5">
+              {% assign original_price = product_d.variants.first.compare_at_price %}
+              {% assign current_price = product_d.variants.first.price %}
+              {% assign discount = original_price | minus: current_price %}
+
+              Save {{ discount | money }}
+            </span>
+          {% endif %}
+        </div>
+        <div class="up-content-d5">
+          <a href="{{ product_d.url }}"><h3>{{ product_d.title }}</h3></a>
+          <p>{{ product_d.variants.first.price | money }}</p>
+          <div class="up-product-operations-d5">
+            <div class="up-quantity-d5">
+              <span class="up-qty-minus-d5 up-qty-btn">-</span>
+              <input type="text" readonly value="1" name="quantity" class="up-qty-input-d5">
+              <span class="up-qty-plus-d5 up-qty-btn">+</span>
+            </div>
+            <button
+              data-variant-d5="{{ variant_d5.first.id }}"
+              data-quantity-d5="3"
+              class="add-to-cart-d5 d5-upsell-atc {% unless variant_d5.first.available %}d5-upsell-sold{% endunless %}"
+              onclick="addToCart(this)"
+            >
+              <span class="btn-text-d5">Add to Cart</span>
+              <span class="sold-text-d5">Soldout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {% if variant_d5.size > 1 %}
+        <div class="up-variants-main-d5">
+          <div class="up-variants-d5" data-variants-json="{{ product_d.variants | json | escape }}">
+            <div class="up-product-type-d5">
+              <p>{{ product_d.title }}</p>
+            </div>
+            {% for option_d in product_d.options_with_values %}
+              <div class="up-option-container-d5">
+                <div class="up-option-name">
+                  {{ option_d.name }}: <span class="selected-option-value-d5">{{ option_d.selected_value }}</span>
+                </div>
+                {% assign swatch_options = settings.swatch_option_name | split: ',' %}
+                {% if swatch_options contains option_d.name %}
+                  {% assign swatch_value_list = settings.swatch_value_list | newline_to_br | split: '<br />' %}
+                  <div class="up-option-values-d5 color-swatch-d5">
+                    {% for value in option_d.values %}
+                      {% assign color_code = '' %}
+                      <!-- Reset color_code for each value -->
+
+                      {% for swatch_value in swatch_value_list %}
+                        {% assign swatch_pair = swatch_value | split: ':' %}
+                        {% assign swatch_name = swatch_pair[0] | strip %}
+                        {% assign swatch_color = swatch_pair[1] | strip %}
+                        {% assign value_d = value | downcase %}
+                        {% assign swatch_name_d = swatch_name | downcase %}
+                        <!-- Pre-process swatch_name -->
+
+                        {% if swatch_name_d == value_d %}
+                          {% assign color_code = swatch_color %}
+                        {% endif %}
+                      {% endfor %}
+
+                      {% if color_code contains '.png' or color_code contains '.jpg' or color_code contains '.jpeg' %}
+                        <div
+                          class="up-option-value-d5 {% if forloop.index == 1 %}selected-value-d5{% endif %}"
+                          value="{{ value }}"
+                          style="background: url({{ color_code | file_url }}) no-repeat center center / cover;"
+                        >
+                          <span hidden> {{ value }}</span>
+                        </div>
+                      {% else %}
+                        <div
+                          class="up-option-value-d5 {% if forloop.index == 1 %}selected-value-d5{% endif %}"
+                          value="{{ value }}"
+                          style="background: {% if color_code != blank %}{{ color_code }}{% else %}{{ value }}{% endif %};"
+                        >
+                          <span hidden> {{ value }}</span>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <div class="up-option-values-d5 normal-options-d5">
+                    {% for value in option_d.values %}
+                      <div
+                        class="up-option-value-d5 {% if forloop.index == 1 %}selected-value-d5{% endif %}"
+                        value="{{ value }}"
+                      >
+                        {{ value }}
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

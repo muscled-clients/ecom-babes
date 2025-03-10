@@ -1,0 +1,1113 @@
+{{ 'ss-media-v1.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ss-media-v1.js' | asset_url }}" defer="defer"></script>
+<div
+  id="shopify-section-{{ section.id }}__video_from_social_2_{{ section.id }}"
+  class="shopify-section shopify-section-padding-{{ section.id }} d6"
+>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style data-shopify="">
+                                .section-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  border-top: solid #000000 0px;
+                                  border-bottom: solid #000000 0px;
+                                  margin-top: 0px;
+                                  margin-bottom: 0px;
+                                  overflow: hidden;
+                                  background-color: {{ section.settings.sec_bg_color }};
+                                }
+                                .section-{{ section.id }}__video_from_social_2_{{ section.id }}-settings {
+                                  margin: 0 auto;
+                                  padding-top: 10px;
+                                  padding-bottom: 10px;
+                                  padding-left: 0rem;
+                                  padding-right: 0rem;
+                                }
+
+                                .video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  text-align: center;
+                                  padding: 0 16px;
+                                }
+
+                                .video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+                                  margin: 0;
+                                  font-size: 32px;
+                            text-align: center;
+                            font-family: "DIN Next W1G";
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                                  color: {{ section.settings.title_color }};
+                                  font-size: {{ section.settings.title_font }}px;
+                                }
+                                .video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  margin-top: 8px;
+                                  text-align: center;
+                                  padding: 0 16px;
+                                }
+                                .video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+                                  margin: 0;
+                        text-align: center;
+                        font-family: "Libre Franklin";
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                                  color: {{ section.settings.subheading_color }};
+                                  font-size: {{ section.settings.subheading_font }}px;
+                                }
+
+                                .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  margin-top: 30px;
+                                  overflow: visible !important;
+                                }
+
+                                .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: flex;
+                                  flex-direction: column;
+                                  padding: 0px 0px;
+                                  box-sizing: border-box !important;
+                                  height: auto !important;
+                                  text-decoration: none;
+                                  overflow: hidden;
+                                  transform: scale(0.95) !important;
+                                  transition: all 0.25s ease 0s;
+                                }
+
+                                .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  border-radius: 8px;
+                border: 5px solid #49717B;
+                background: url(<path-to-image>) lightgray 50% / cover no-repeat, url(<path-to-image>) lightgray 50% / cover no-repeat;
+                                  overflow: hidden;
+                                  position: relative;
+                                }
+
+                                .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} video,
+                                .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} iframe {
+                                  display: block;
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: cover;
+                                  box-shadow: none;
+                                  border: 0px;
+                                  position: relative;
+                                  z-index: 1;
+                                }
+
+                                .video-social-content-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  border-radius: 4px;
+                                  border: 1px solid rgba(73, 113, 123, 0.25);
+                                  background: #FEF7EF;
+                                  padding: 16px;
+                                  margin: 15px 0 0 0;
+                                  display: flex;
+                                  gap: 12px;
+                                }
+
+                                .video-social-info-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: block;
+                                  width: 100%;
+                                  margin: 0;
+                                  font-size: 14px;
+            color: #000;
+            font-family: "Libre Franklin";
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+                                  text-transform: unset;
+                                  text-decoration: none;
+                                  margin: 0 0 8px 0;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  position: absolute;
+                                  width: 42px;
+                                  height: 42px;
+                                  border: 0px solid #000000;
+                                  border-radius: 50%;
+                                  display: flex !important;
+                                  align-items: center;
+                                  justify-content: center;
+                                  transition: all 0.3s ease 0s;
+                                  cursor: pointer;
+                                  -webkit-appearance: none;
+                                  transition: all 0.25s ease 0s;
+                                  z-index: 2;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}:hover {
+                                  transition: all 0.25s ease 0s;
+                                  border: 0px solid #000000;
+                                  background: #fff8f4;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} svg {
+                                  height: 42px;
+                                  width: 42px;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} svg {
+                                  fill: #121212;
+                                  transition: all 0.25s ease 0s;
+                                }
+
+                                video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}:hover svg {
+                                  fill: #121212;
+                                  transition: all 0.25s ease 0s;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} .video-social-unmute-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: none;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}.active .video-social-unmute-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: block;
+                                }
+
+                                .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}.active .video-social-mute-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: none;
+                                }
+
+                                .video-social-navigation-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  margin-top: 32px;
+                                  width: 100%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  gap: 16px;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }},
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  position: static !important;
+                                  flex: 0 0 50px;
+                                  height: 50px;
+                                  border: 0px solid #000000;
+                                  border-radius: 50%;
+                                  background: transparent;
+                                  align-items: center;
+                                  justify-content: center;
+                                  transition: all 0.3s ease 0s;
+                                  padding: 0;
+                                  cursor: pointer;
+                                  -webkit-appearance: none;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  left: 0px !important
+                                }
+
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  right: 0px !important
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }} svg,
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} svg {
+                                  height: 56px;
+                                  width: 56px;
+                                  fill: none !important;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }} svg path,
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} svg path {
+                                  fill: #000000;
+                                  transition: all 0.3s ease 0s;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }}:hover,
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }}:hover {
+                                  transition: all 0.3s ease 0s;
+                                  border: 0px solid #000000;
+                                  background: #c2d6ff;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }}:hover svg path,
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }}:hover svg path {
+                                  fill: #000000;
+                                  transition: all 0.3s ease 0s;
+                                }
+
+                                .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }}.swiper-button-disabled,
+                                .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }}.swiper-button-disabled {
+                                  opacity: 0.3;
+                                }
+
+                                .video-social-pagination-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  align-items: center;
+                                  gap: 8px;
+                                }
+
+                                .video-social-line-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  display: block;
+                                  margin: 0px;
+                                  width: 46px;
+                                  height: 2px;
+                                  background-color: #000000;
+                                  vertical-align: baseline;
+                                }
+
+                                .video-social-current-{{ section.id }}__video_from_social_2_{{ section.id }},
+                                .video-social-all-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                  margin: 0;
+                                  font-size: 16px;
+                                  color: #000000;
+                                  line-height: 100%;
+                                  text-transform: unset;
+                                  text-decoration: none;
+                                }
+            p.product-price-d6 {
+            color: #000;
+            font-family: "Libre Franklin";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin: 0;
+        }
+        .product-img-d6 {
+        width: 46px;
+        height: 46px;
+    }
+    .product-img-d6 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }}.swiper-slide-active {
+        transform: scale(1.03) !important;
+        transition: all 0.25s ease 0s;
+      }
+                                @media(min-width: 1024px) {
+
+                                  .shopify-section-padding-{{ section.id }} {
+                                    padding-top: {{ section.settings.padding_top }}px;
+                                    padding-bottom: {{ section.settings.padding_bottom }}px;
+                                  }
+
+                                  .section-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    margin-top: 0px;
+                                    margin-bottom: 0px;
+                                  }
+
+                                  .section-{{ section.id }}__video_from_social_2_{{ section.id }}-settings {
+                                    padding: 0 5rem;
+                                    padding-top: 0px;
+                                    padding-bottom: 10px;
+                                    padding-left: 0rem;
+                                    padding-right: 0rem;
+                                  }
+
+                                  .video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    text-align: center;
+                                  }
+
+                                  .video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+                                    font-size: 44px;
+                                  }
+
+                                  .video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    margin-top: 8px;
+                                    text-align: center;
+                                  }
+
+                                  .video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+                                    font-size: 20px;
+                                  }
+
+                                  .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    margin-top: 40px;
+                                  }
+
+                                  .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    padding: 0px 0px;
+                                    transform: scale(0.95);
+                                  }
+
+                                  .video-social-content-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    padding: 10px 10px;
+                                  }
+
+                                  .video-social-info-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    font-size: 14px;
+                                  }
+
+                                  .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    width: 42px;
+                                    height: 42px;
+                                  }
+
+                                  .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} svg {
+                                    width: 42px;
+                                    height: 42px;
+                                  }
+
+                                  .video-social-navigation-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    margin-top: 40px;
+                                    gap: 16px;
+                                  }
+
+                                  .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }},
+                                  .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    height: 50px;
+                                    flex: 0 0 50px;
+                                  }
+
+                                  .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }} svg,
+                                  .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} svg {
+                                    height: 56px;
+                                    fill: none !important;
+                                    width: 56px;
+                                  }
+
+                                  .video-social-current-{{ section.id }}__video_from_social_2_{{ section.id }},
+                                  .video-social-all-{{ section.id }}__video_from_social_2_{{ section.id }} {
+                                    font-size: 16px;
+                                  }
+
+                                }
+  </style>
+
+  <style>
+    .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      border: 0px solid #000000;
+    }
+  </style>
+
+  <style>
+    .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} {
+     aspect-ratio: 9.6/14;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+     .video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }} {
+       aspect-ratio: 9.6/14;
+      }
+    }
+  </style>
+
+  <style>
+    .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }},
+    .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      display: flex;
+    }
+
+    .video-social-right-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      padding: 0px 60px;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }},
+      .video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        display: flex;
+      }
+    }
+  </style>
+
+  <style>
+    .video-social-pagination-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      display: flex;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .video-social-pagination-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        display: flex;
+      }
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .video-social-navigation-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        display: flex;
+      }
+    }
+  </style>
+
+  <style>
+    .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px){
+       .video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        top: unset;
+        left: unset;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+  </style>
+
+  <style>
+    .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}.preview .swiper-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      gap: 16px;
+    }
+
+    .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}.preview .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} {
+      width: 100%;
+    }
+
+    @media(min-width: 1024px) {
+     .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}.preview .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        width: calc(20% - 16px);
+      }
+
+      .video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}.preview .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }}:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} {
+        transform: scale(0.95) !important;
+      }
+      .video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }}.swiper-slide-active {
+        transform: scale(1.03) !important;
+        transition: all 0.25s ease 0s;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+        font-size: {{ section.settings.title_font-m }}px;
+      }
+      .video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }} * {
+        font-size: {{ section.settings.subheading_font-m }}px;
+      }
+    }
+  </style>
+
+  <div
+    class="section-{{ section.id }}__video_from_social_2_{{ section.id }} video-social-{{ section.id }}__video_from_social_2_{{ section.id }}"
+    style="background-color:; background-image: ;"
+  >
+    <div class="section-{{ section.id }}__video_from_social_2_{{ section.id }}-settings">
+      <div class="video-social-heading-{{ section.id }}__video_from_social_2_{{ section.id }}">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+
+      <div class="video-social-subheading-{{ section.id }}__video_from_social_2_{{ section.id }}">
+        <p>{{ section.settings.sub_heading }}</p>
+      </div>
+
+      <div class="video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }} swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+        <div
+          class="swiper-wrapper"
+          id="swiper-wrapper-7af38864e3aa65d9"
+          aria-live="polite"
+          style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);"
+        >
+          {% for block in section.blocks %}
+            <div
+              class="video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }} swiper-slide"
+              data-swiper-slide-index="0"
+              role="group"
+              style="width: 179px; margin-right: 16px;"
+            >
+              <div class="video-social-video-{{ section.id }}__video_from_social_2_{{ section.id }}">
+                {% render 'ss-media-v1',
+                  video: block.settings.video,
+                  object_fit: 'cover',
+                  poster_image: block.settings.image,
+                  loop: block.settings.video_loop,
+                  autoplay: block.settings.video_autoplay,
+                  muted: block.settings.video_muted
+                %}
+                <div class="video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}">
+                  <div class="video-social-mute-{{ section.id }}__video_from_social_2_{{ section.id }}">
+                    {{ block.settings.mute }}
+                  </div>
+                  <div class="video-social-unmute-{{ section.id }}__video_from_social_2_{{ section.id }}">
+                    {{ block.settings.unmute }}
+                  </div>
+                  <svg
+                    class="video-social-mute-{{ section.id }}__video_from_social_2_{{ section.id }}"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_b_287_1190)">
+                      <circle cx="21" cy="21" r="21" fill="black" fill-opacity="0.5"/>
+                    </g>
+                    <path d="M21.1883 14.1546C20.7196 13.9162 20.1712 13.9557 19.742 14.2582L15.6407 17.1828C15.6407 17.1828 15.5692 17.2223 15.5215 17.2223H13.3912C12.6282 17.2223 12 17.8505 12 18.6135V23.3824C12 24.1454 12.6282 24.7736 13.3912 24.7736H15.5215C15.561 24.7736 15.6013 24.7892 15.6407 24.8131L19.742 27.7377C19.9804 27.9128 20.2666 28 20.5527 28C20.7673 28 20.9901 27.9523 21.1883 27.8413C21.657 27.6028 21.9431 27.126 21.9431 26.6014L21.9438 15.3863C21.9438 14.8617 21.6577 14.3931 21.189 14.1464L21.1883 14.1546Z" fill="#FEF7EF"/>
+                    <path d="M23.7325 23.9765C23.5812 23.9765 23.4307 23.9206 23.3115 23.8014C23.0812 23.5712 23.0812 23.1896 23.3115 22.9586L28.0803 18.1898C28.3106 17.9595 28.6921 17.9595 28.9231 18.1898C29.1533 18.42 29.1533 18.8015 28.9231 19.0325L24.1542 23.8014C24.035 23.9206 23.8837 23.9765 23.7332 23.9765H23.7325Z" fill="#FEF7EF"/>
+                    <path d="M28.5013 23.9765C28.3501 23.9765 28.1996 23.9206 28.0803 23.8014L23.3115 19.0325C23.0812 18.8023 23.0812 18.4208 23.3115 18.1898C23.5417 17.9595 23.9232 17.9595 24.1542 18.1898L28.9231 22.9586C29.1533 23.1889 29.1533 23.5704 28.9231 23.8014C28.8039 23.9206 28.6526 23.9765 28.5021 23.9765H28.5013Z" fill="#FEF7EF"/>
+                    <defs>
+                      <filter id="filter0_b_287_1190" x="-4" y="-4" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_287_1190"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_287_1190" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <svg
+                    class="video-social-unmute-{{ section.id }}__video_from_social_2_{{ section.id }}"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_b_287_1218)">
+                      <circle cx="21" cy="21" r="21" fill="black" fill-opacity="0.5"/>
+                    </g>
+                    <path d="M21.1883 14.1546C20.7196 13.9162 20.1712 13.9557 19.742 14.2582L15.6407 17.1828C15.6407 17.1828 15.5692 17.2223 15.5215 17.2223H13.3912C12.6282 17.2223 12 17.8505 12 18.6135V23.3824C12 24.1454 12.6282 24.7736 13.3912 24.7736H15.5215C15.561 24.7736 15.6013 24.7892 15.6407 24.8131L19.742 27.7377C19.9804 27.9128 20.2666 28 20.5527 28C20.7673 28 20.9901 27.9523 21.1883 27.8413C21.657 27.6028 21.9431 27.126 21.9431 26.6014L21.9438 15.3863C21.9438 14.8617 21.6577 14.3931 21.189 14.1464L21.1883 14.1546Z" fill="#49717B"/>
+                    <path d="M23.7325 23.9765C23.5813 23.9765 23.4308 23.9206 23.3115 23.8014C23.0813 23.5712 23.0813 23.1896 23.3115 22.9586L28.0804 18.1898C28.3106 17.9595 28.6922 17.9595 28.9232 18.1898C29.1534 18.42 29.1534 18.8015 28.9232 19.0325L24.1543 23.8014C24.0351 23.9206 23.8838 23.9765 23.7333 23.9765H23.7325Z" fill="#49717B"/>
+                    <path d="M28.5014 23.9765C28.3501 23.9765 28.1996 23.9206 28.0804 23.8014L23.3115 19.0325C23.0813 18.8023 23.0813 18.4208 23.3115 18.1898C23.5418 17.9595 23.9233 17.9595 24.1543 18.1898L28.9232 22.9586C29.1534 23.1889 29.1534 23.5704 28.9232 23.8014C28.8039 23.9206 28.6527 23.9765 28.5022 23.9765H28.5014Z" fill="#49717B"/>
+                    <defs>
+                      <filter id="filter0_b_287_1218" x="-4" y="-4" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_287_1218"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_287_1218" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              {% assign product = all_products[block.settings.product] %}
+              <div class="video-social-content-{{ section.id }}__video_from_social_2_{{ section.id }}">
+                {% if product.featured_image != blank %}
+                  <div class="product-img-d6">
+                    <img src="{{ product.featured_image | image_url: width: 46, height: 46 }}" width="46" height="46">
+                  </div>
+                {% endif %}
+                <div class="product-detail-d6">
+                  <p
+                    class="video-social-info-{{ section.id }}__video_from_social_2_{{ section.id }}"
+                  >
+                    {{ product.title }}
+                  </p>
+                  <p class="product-price-d6">{{ product.price | money }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+
+      <div class="video-social-navigation-{{ section.id }}__video_from_social_2_{{ section.id }}">
+        <button
+          class="video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }}"
+          tabindex="0"
+          aria-label="Previous slide"
+          aria-controls="swiper-wrapper-7af38864e3aa65d9"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1113 28.8888L31.2225 36L33 34.2225L26.7775 28L33 21.7775L31.2225 20L24.1113 27.1113C23.8756 27.347 23.7432 27.6667 23.7432 28C23.7432 28.3333 23.8756 28.653 24.1113 28.8888Z" fill="#254249"/>
+            <circle cx="28" cy="28" r="27" transform="matrix(-1 0 0 1 56 0)" stroke="#254249" stroke-width="2"/>
+          </svg>
+        </button>
+        <!--
+          <div class="video-social-pagination-{{ section.id }}__video_from_social_2_{{ section.id }}">
+            <span class="video-social-current-{{ section.id }}__video_from_social_2_{{ section.id }}">1</span>
+            <span class="video-social-line-{{ section.id }}__video_from_social_2_{{ section.id }}"></span>
+            <span class="video-social-all-{{ section.id }}__video_from_social_2_{{ section.id }}">7</span>
+          </div>
+        -->
+        <button
+          class="video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }}"
+          tabindex="0"
+          aria-label="Next slide"
+          aria-controls="swiper-wrapper-7af38864e3aa65d9"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.8887 28.8888L24.7775 36L23 34.2225L29.2225 28L23 21.7775L24.7775 20L31.8887 27.1113C32.1244 27.347 32.2568 27.6667 32.2568 28C32.2568 28.3333 32.1244 28.653 31.8887 28.8888Z" fill="#254249"/>
+            <circle cx="28" cy="28" r="27" stroke="#254249" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script>
+    function initVideoFromSocial2() {
+      document.querySelector('.video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}').classList.remove('preview');
+      const slider = new Swiper('.video-social-slider-{{ section.id }}__video_from_social_2_{{ section.id }}', {
+        speed: 300,
+        loop: true,
+        navigation: {
+          nextEl: '.video-social-btn-next-{{ section.id }}__video_from_social_2_{{ section.id }}',
+          prevEl: '.video-social-btn-prev-{{ section.id }}__video_from_social_2_{{ section.id }}'
+        },
+        breakpoints: {
+          320: {
+            centeredSlides: true,
+            spaceBetween: 16,
+            slidesPerView: 1.4
+          },
+          768: {
+            centeredSlides: false,
+            spaceBetween: 16,
+            slidesPerView: 3
+          },
+          1024: {
+            centeredSlides: true,
+            spaceBetween: 16,
+            slidesPerView: 5
+          }
+        },
+        on: {
+          slideChange: function () {
+            const slides = this.slides;
+            let slidesIndex = this.realIndex;
+            slidesIndex++;
+
+            if (document.querySelector('.video-social-current-{{ section.id }}__video_from_social_2_{{ section.id }}')) {
+              document.querySelector('.video-social-current-{{ section.id }}__video_from_social_2_{{ section.id }}').innerText = slidesIndex;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+              let video = slides[i].querySelector('video');
+              let frame = slides[i].querySelector('iframe');
+              let btn = slides[i].querySelector('.video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}');
+              let src3;
+              let src2;
+              let src1;
+              if(frame) {
+                src3 = frame.getAttribute('data-src3');
+                src2 = frame.getAttribute('data-src2');
+                src1 = frame.getAttribute('data-src');
+              }
+
+              if (i === this.activeIndex) {
+                if (video) {
+                  video.play();
+                }
+
+                if(btn) {
+                  if(btn.classList.contains('active')) {
+                    if(frame) {
+                      frame.src = src1;
+                    }
+                  } else {
+                    if(frame) {
+                      frame.src = src3;
+                    }
+                  }
+                } else {
+                  if(frame) {
+                    frame.src = src3;
+                  }
+                }
+              } else {
+                if (video) {
+                  video.pause();
+                }
+
+                if(frame) {
+                  frame.src = src2;
+                }
+              }
+            }
+          },
+        },
+      });
+
+      document.querySelectorAll('.video-social-card-{{ section.id }}__video_from_social_2_{{ section.id }}').forEach(el => {
+        let btn = el.querySelector('.video-social-action-{{ section.id }}__video_from_social_2_{{ section.id }}');
+        let frame = el.querySelector('iframe');
+        let src;
+        if(frame) {
+          src = frame.getAttribute("data-src");
+        }
+        let video = el.querySelector('video');
+        if(btn) {
+           btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            if(btn.classList.contains('active')) {
+              if(frame) {
+                frame.src = src;
+              }
+              if(video) {
+                video.muted = false;
+                video.setAttribute("mute", "false");
+              }
+            } else {
+              if(frame) {
+                frame.src += "&mute=1";
+              }
+              if(video) {
+                video.muted = true;
+                video.setAttribute("mute", "true");
+              }
+            }
+          })
+        }
+      })
+
+      var ssVideoElements = document.querySelectorAll('.section-{{ section.id }}__video_from_social_2_{{ section.id }} video');
+      ssVideoElements .forEach(function(ssVideo) {
+        ssVideo.setAttribute('controlsList', 'nodownload');
+      });
+
+      const observer = lozad();
+      observer.observe();
+    }
+
+    document.addEventListener('DOMContentLoaded', initVideoFromSocial2);
+
+    if (Shopify.designMode) {
+       document.addEventListener('shopify:section:load', initVideoFromSocial2);
+    }
+  </script>
+</div>
+{% schema %}
+{
+  "name": "Video Slider",
+  "settings": [
+    {
+      "type": "select",
+      "id": "featured_collection_order",
+      "label": "Featured Collection Order",
+      "options": [
+        {
+          "value": "1",
+          "label": "Order 1"
+        },
+        {
+          "value": "2",
+          "label": "Order 2"
+        },
+        {
+          "value": "3",
+          "label": "Order 3"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "featured_products_order",
+      "label": "Featured Products Order",
+      "options": [
+        {
+          "value": "1",
+          "label": "Order 1"
+        },
+        {
+          "value": "2",
+          "label": "Order 2"
+        },
+        {
+          "value": "3",
+          "label": "Order 3"
+        },
+      ],
+      "default": "1"
+    },
+    {
+      "type": "color",
+      "id": "sec_bg_color",
+      "label": "Section BG Color",
+      "default": "#fff8f4"
+    },
+    {
+  "type": "header",
+  "content": "Title",
+  "info": "Title Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Recommended by the best of the best"
+    },
+    {
+     "type": "color",
+    "id": "title_color",
+    "label": "Color",
+    "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "title_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 2,
+      "min": 12,
+      "max": 80,
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "title_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 12,
+      "max": 80,
+      "default": 32
+    },
+    {
+  "type": "header",
+  "content": "Subheading",
+  "info": "Subheading Settings"
+    },
+     {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Subheading",
+      "default": "Approved by a team of health, wellness, and sports nutrition professionals."
+    },
+    {
+     "type": "color",
+    "id": "subheading_color",
+    "label": "Color",
+    "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 2,
+      "min": 12,
+      "max": 80,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "subheading_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 12,
+      "max": 30,
+      "default": 18
+    },
+    {
+  "type": "header",
+  "content": "Collection",
+  "info": "Collection Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_banner",
+      "label": "Collection Banner"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Number of Products to Display",
+      "min": 3,
+      "max": 20,
+      "default": 10
+    },
+  {
+    "type": "header",
+    "content": "Collection Button",
+    "info": "Button Settings"
+   },
+    {
+      "type": "url",
+      "id": "collection_url",
+      "label": "Collection link",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "collection_label",
+      "label": "Collection Label",
+      "default": "SHOP COLLECTION"
+    },
+     {
+     "type": "color",
+    "id": "btn_color",
+    "label": "Color",
+    "default": "#2A1F19"
+    },
+    {
+     "type": "color",
+    "id": "btn_bgcolor",
+    "label": "Background Color",
+    "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "btn_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 2,
+      "min": 12,
+      "max": 50,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "btn_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 12,
+      "max": 30,
+      "default": 12
+    },
+    {
+    "type": "header",
+    "content": "Product Info",
+    "info": "Info Settings"
+   },
+    {
+     "type": "color",
+    "id": "pro_color",
+    "label": "Product Title Color",
+    "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "pro_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 1,
+      "min": 10,
+      "max": 30,
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "pro_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 10,
+      "max": 30,
+      "default": 13
+    },
+    {
+     "type": "color",
+    "id": "price_color",
+    "label": "Product Price Color",
+    "default": "#2a1f19"
+    },
+    {
+      "type": "range",
+      "id": "price_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 1,
+      "min": 10,
+      "max": 30,
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "price_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 10,
+      "max": 30,
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "unit": "px",
+      "step": 1,
+      "min": 0,
+      "max": 50,
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "unit": "px",
+      "step": 1,
+      "min": 0,
+      "max": 50,
+      "default": 36
+    },
+  ],
+     "blocks" : [
+    {
+      "name":"Video",
+        "type":"text",
+        "settings":[
+          {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+      },
+      {
+        "type": "checkbox",
+        "id": "video_autoplay",
+        "label": "Autoplay video",
+        "default": true,
+        "info": "Autoplay will only work if the video is muted"
+      },
+      {
+        "type": "checkbox",
+        "id": "video_controls",
+        "label": "Show video controls",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "video_muted",
+        "label": "Mute video",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "video_loop",
+        "label": "Play in loop",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Video poster image",
+        "info": "Fallback video poster image will be visible until some frames of video get downloaded"
+      },
+          {
+          "type": "textarea",
+          "id": "mute",
+          "label": "Mute Button SVG"
+          },
+          {
+          "type": "textarea",
+          "id": "unmute",
+          "label": "Unmute Button SVG"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      }
+   ],
+  "presets": [
+    {
+      "name": "Video Slider"
+    }
+  ]
+}
+{% endschema %}

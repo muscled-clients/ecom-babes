@@ -1,0 +1,969 @@
+{% assign collection = section.settings.collection %}
+<script src="{{ 'd5-js.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'd5-atc.js' | asset_url }}" defer="defer"></script>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #shopify-section-{{ section.id }} p {
+    margin: 0;
+  }
+  .nc-fp-slider-d5[data-slider="collection-slider"] {
+    --slides-to-show: 4;
+    --slide-gap: 24px;
+  }
+  .nc-fp-main-d5 {
+    margin: 96px 0;
+    padding: 0 48px;
+    overflow: hidden;
+  }
+  .nc-fp-slider-container-d5 {
+    width: 100%;
+    position: relative;
+    padding: 40px 0 0;
+  }
+  .nc-fp-inner-d5 {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .nc-fp-slider-d5 {
+    display: flex;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+    gap: 24px;
+  }
+  .nc-fp-slider-d5 {
+    max-width: 1344px;
+    margin: 0 auto;
+  }
+  .nc-fp-slider-d5.grabbing {
+    cursor: grabbing;
+    transition: none;
+  }
+
+  .nc-fp-slide-d5 {
+    flex: 0 0 25%; /* Show 3 slides at a time */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nc-fp-slide-d5 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .nc-fp-progress-bar-d5 {
+    width: 100%;
+    height: 2px;
+    background-color: #aec0c4;
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .nc-fp-progress-d5 {
+    height: 100%;
+    background: #254249;
+    width: 50%; /* Dynamically adjusted */
+    transition: width 0.3s ease;
+  }
+  /* .nc-fp-slider-d5.grabbing a{
+        pointer-events: none;
+      } */
+  .slider-navigation-d5 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 10px;
+    max-width: 1344px;
+    margin: 0 auto;
+  }
+  .slider-arrows-d5 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .nc-fp-arrow-d5 {
+    all: unset;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+  }
+  .nc-fp-arrow-d5 svg {
+    width: 100%;
+    height: 100%;
+    fill: none !important;
+  }
+  .nc-fp-arrow-d5 svg path {
+    fill: #254249;
+  }
+  .nc-fp-title-d5 {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .nc-fp-title-d5 .title-d5 * {
+    color: #000;
+    font-family: "DIN Next W1G";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.576px;
+  }
+  .nc-fp-title-d5 .info-d5 * {
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .nc-fp-view-all-btn a {
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .nc-fp-view-all-btn a svg {
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+  }
+  .product-content-d5 {
+    margin-top: 16px;
+  }
+  .content-header-d5,
+  .pdp-rating-d5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .pdp-rating-d5 svg {
+    width: 15px;
+    height: 15px;
+  }
+  .content-header-d5 {
+    justify-content: space-between;
+  }
+  .pdp-vendor-d5,
+  .pdp-rating-d5,
+  .product-content-d5 p,
+  .variant-price-d5 {
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: normal;
+  }
+  .pdp-rating-d5 {
+    font-size: 14px;
+  }
+  .product-content-d5 h3,
+  .variant-title-d5 h4,
+  .product-options-d5 h4,
+  .option-d5 {
+    color: #000;
+    font-family: "DIN Next W1G";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.192px;
+    text-align: left;
+  }
+  .product-content-d5 h3{
+    margin: 8px 0;
+  }
+  .product-options-d5 h4 span,
+  .option-d5 {
+    font-weight: 400;
+  }
+  .nc-fp-title-content {
+    max-width: 47%;
+  }
+  .product-image-d5 {
+    position: relative;
+    overflow: hidden;
+  }
+  .quick-view-btn-d5 {
+    border-radius: 4px;
+    background: #49717b;
+    padding: 14px 30px;
+    border: 1px solid #49717b;
+    color: #fff;
+    font-family: "DIN Next W1G";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    bottom: -500px;
+    right: 16px;
+    z-index: 444;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+  .quick-view-btn-d5:hover {
+    color: #49717b;
+    background: #fff;
+  }
+  .nc-fp-slide-d5:hover .quick-view-btn-d5 {
+    bottom: 16px;
+    opacity: 1;
+  }
+  /* .nc-fp-slider-d5.grabbing a,
+      .nc-fp-slider-d5.grabbing button {
+          pointer-events: none;
+      } */
+
+  .nc-fp-slider-d5 a,
+  .nc-fp-slider-d5 button {
+    pointer-events: auto;
+  }
+  .nc-fp-slide-d5 .d5-quick-popup {
+    display: none;
+  }
+  .nc-fp-slide-d5 * {
+    user-select: none;
+  }
+  .quick-buy-popup-d5 {
+    display: none;
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    /* display: block; */
+    padding: 24px;
+    z-index: 10;
+    box-shadow: 0 0 5px 1px #00000073;
+    border-radius: 10px;
+  }
+  .variant-info-d5 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .popup--active .quick-buy-popup-d5 {
+    display: block;
+  }
+  .overlay-d5 {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    display: none;
+    /* display: block !Important; */
+    position: fixed;
+  }
+  .popup--active .overlay-d5 {
+    display: block !important;
+  }
+  .popup--active quickpopup.quick-buy-popup-d5 {
+    display: block;
+  }
+  .product-values-d5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .product-values-d5 .option-d5 {
+    padding: 5px 10px;
+    border: 1px solid #49717b;
+    color: #49717b;
+    transition: all 0.3s;
+    cursor: pointer;
+    min-width: 45px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .product-values-d5 .option-d5.active-value {
+    background: #49717b;
+    color: #fff;
+  }
+  .product-options-d5 {
+    margin: 20px 0;
+  }
+  .quick-buy-popup-d5 .quick-view-btn-d5 {
+    position: static !important;
+    opacity: 1 !important;
+    width: 100%;
+  }
+  .variant-info-d5 img {
+    width: 100px;
+    height: auto;
+  }
+  .close-icon-d5 {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .d5-quick-popup {
+    height: 400px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .d5-quick-popup::-webkit-scrollbar {
+    display: none;
+  }
+  .nc-fp-slide-d5 .add-to-cart-d5.not-available-d5,
+  .sold-text-d5,
+  .add-to-cart-d5.not-available-d5 .btn-text-d5 {
+    display: none;
+  }
+  .add-to-cart-d5.not-available-d5 .sold-text-d5 {
+    display: block;
+  }
+  .add-to-cart-d5.not-available-d5 {
+    opacity: 0.5 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .mobile-d5 {
+    display: none;
+  }
+  .product-options-d5 {
+    display: flex;
+    align-items: center;
+    justify-conent: center;
+    flex-direction: column;
+  }
+  .product-options-d5 h4{
+    margin: 10px 0 0;
+    text-transform: none;
+  }
+  @media (max-width: 1024px) {
+    .nc-fp-slider-d5[data-slider="collection-slider"] {
+      --slides-to-show: 4;
+      --slide-gap: 24px;
+    }
+    .nc-fp-main-d5 {
+      margin: 96px 0;
+      padding: 0 48px;
+      overflow: hidden;
+    }
+    .nc-fp-slider-container-d5 {
+      width: 100%;
+      position: relative;
+      padding: 40px 0 0 0;
+    }
+    .nc-fp-inner-d5 {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .nc-fp-slider-d5 {
+      display: flex;
+      transition: transform 0.3s ease-out;
+      cursor: grab;
+      gap: 24px;
+    }
+    .nc-fp-slider-d5 {
+      max-width: 1344px;
+      margin: 0 auto;
+    }
+    .nc-fp-slider-d5.grabbing {
+      cursor: grabbing;
+      transition: none;
+    }
+
+    .nc-fp-slide-d5 {
+      flex: 0 0 25%; /* Show 3 slides at a time */
+      box-sizing: border-box;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .nc-fp-slide-d5 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .nc-fp-progress-bar-d5 {
+      width: 100%;
+      height: 2px;
+      background-color: #aec0c4;
+      margin-top: 0px;
+      position: relative;
+    }
+
+    .nc-fp-progress-d5 {
+      height: 100%;
+      background: #254249;
+      width: 50%; /* Dynamically adjusted */
+      transition: width 0.3s ease;
+    }
+    /* .nc-fp-slider-d5.grabbing a{
+          pointer-events: none;
+        } */
+    .slider-navigation-d5 {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-top: 40px;
+      padding: 0 10px;
+      max-width: 1344px;
+      margin: 0 auto;
+    }
+    .slider-arrows-d5 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nc-fp-arrow-d5 {
+      all: unset;
+      width: 56px;
+      height: 56px;
+      cursor: pointer;
+    }
+    .nc-fp-arrow-d5 svg {
+      width: 100%;
+      height: 100%;
+      fill: none !important;
+    }
+    .nc-fp-arrow-d5 svg path {
+      fill: #254249;
+    }
+    .nc-fp-title-d5 {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+    }
+    .nc-fp-title-d5 .title-d5 * {
+      color: #000;
+      font-family: "DIN Next W1G";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.576px;
+    }
+    .nc-fp-title-d5 .info-d5 * {
+      color: #000;
+      font-family: "Libre Franklin";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+    .nc-fp-view-all-btn a {
+      color: #000;
+      font-family: "Libre Franklin";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .nc-fp-view-all-btn a svg {
+      margin-left: 12px;
+      width: 24px;
+      height: 24px;
+    }
+    .product-content-d5 {
+      margin-top: 16px;
+    }
+    .content-header-d5,
+    .pdp-rating-d5 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .pdp-rating-d5 svg {
+      width: 15px;
+      height: 15px;
+    }
+    .content-header-d5 {
+      justify-content: space-between;
+    }
+    .pdp-vendor-d5,
+    .pdp-rating-d5,
+    .product-content-d5 p,
+    .variant-price-d5 {
+      color: #000;
+      font-family: "Libre Franklin";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: left;
+      line-height: normal;
+    }
+    .pdp-rating-d5 {
+      font-size: 14px;
+    }
+    .product-content-d5 h3,
+    .variant-title-d5 h4,
+    .product-options-d5 h4,
+    .option-d5 {
+      color: #000;
+      font-family: "DIN Next W1G";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.192px;
+      text-align: left;
+    }
+    .product-content-d5 h3{
+      margin: 8px 0;
+    }
+    .product-options-d5 h4 span,
+    .option-d5 {
+      font-weight: 400;
+    }
+    .nc-fp-title-content {
+      max-width: 47%;
+    }
+    .product-image-d5 {
+      position: relative;
+      overflow: hidden;
+    }
+    .quick-view-btn-d5 {
+      border-radius: 4px;
+      background: #49717b;
+      padding: 14px 30px;
+      border: 1px solid #49717b;
+      color: #fff;
+      font-family: "DIN Next W1G";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      bottom: -500px;
+      right: 16px;
+      z-index: 444;
+      cursor: pointer;
+      transition: all 0.3s;
+      opacity: 0;
+    }
+    .quick-view-btn-d5:hover {
+      color: #49717b;
+      background: #fff;
+    }
+    .nc-fp-slide-d5:hover .quick-view-btn-d5 {
+      bottom: 16px;
+      opacity: 1;
+    }
+    /* .nc-fp-slider-d5.grabbing a,
+        .nc-fp-slider-d5.grabbing button {
+            pointer-events: none;
+        } */
+
+    .nc-fp-slider-d5 a,
+    .nc-fp-slider-d5 button {
+      pointer-events: auto;
+    }
+    .nc-fp-slide-d5 .d5-quick-popup {
+      display: none;
+    }
+    .nc-fp-slide-d5 * {
+      user-select: none;
+    }
+    .quick-buy-popup-d5 {
+      display: none;
+      max-width: 600px;
+      width: 100%;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: #fff;
+      /* display: block; */
+      padding: 24px;
+      z-index: 10;
+      box-shadow: 0 0 5px 1px #00000073;
+      border-radius: 10px;
+    }
+    .variant-info-d5 {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .popup--active .quick-buy-popup-d5 {
+      display: block;
+    }
+    .overlay-d5 {
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.3);
+      top: 0;
+      left: 0;
+      display: none;
+      /* display: block !Important; */
+      position: fixed;
+    }
+    .popup--active .overlay-d5 {
+      display: block !important;
+    }
+    .popup--active quickpopup.quick-buy-popup-d5 {
+      display: block;
+    }
+    .product-values-d5 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+    .product-values-d5 .option-d5 {
+      padding: 5px 10px;
+      border: 1px solid #49717b;
+      color: #49717b;
+      transition: all 0.3s;
+      cursor: pointer;
+      min-width: 45px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .product-values-d5 .option-d5.active-value {
+      background: #49717b;
+      color: #fff;
+    }
+    .product-options-d5 {
+      margin: 20px 0;
+    }
+    .quick-buy-popup-d5 .quick-view-btn-d5 {
+      position: static !important;
+      opacity: 1 !important;
+      width: 100%;
+    }
+    .variant-info-d5 img {
+      width: 100px;
+      height: auto;
+    }
+    .close-icon-d5 {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .d5-quick-popup {
+      height: 400px;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .d5-quick-popup::-webkit-scrollbar {
+      display: none;
+    }
+    .nc-fp-slide-d5 .add-to-cart-d5.not-available-d5,
+    .sold-text-d5,
+    .add-to-cart-d5.not-available-d5 .btn-text-d5 {
+      display: none;
+    }
+    .add-to-cart-d5.not-available-d5 .sold-text-d5 {
+      display: block;
+    }
+    .add-to-cart-d5.not-available-d5 {
+      opacity: 0.5 !important;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .mobile-d5 {
+      display: none;
+    }
+    .product-options-d5 {
+      display: flex;
+      align-items: center;
+      justify-conent: center;
+      flex-direction: column;
+    }
+    @media (max-width: 1024px) {
+      .nc-fp-slider-d5[data-slider="collection-slider"] {
+        --slides-to-show: 3;
+        --slide-gap: 24px;
+      }
+    }
+    @media (max-width: 768px) {
+      .desktop-d5 {
+        display: none;
+      }
+      .d5-slide-button.quick-view-btn-d5 {
+        padding: 3px 8px;
+        bottom: 10px !important;
+        right: 6px;
+        opacity: 1;
+      }
+      .d5-slide-button.quick-view-btn-d5 svg{
+        width: 20px;
+        height: 20px;
+      }
+      .mobile-d5 {
+        display: block;
+      }
+      .nc-fp-slider-d5 {
+        gap: 18px;
+      }
+      .quick-buy-popup-d5 {
+        width: calc(100% - 20px);
+      }
+      .nc-fp-slider-d5[data-slider="collection-slider"] {
+        --slides-to-show: 2;
+        --slide-gap: 18px;
+      }
+      .nc-fp-main-d5 {
+        margin: 64px 0;
+        padding: 0 16px 2px;
+      }
+      .nc-fp-slider-container-d5 {
+        padding: 24px 0 0;
+      }
+      .nc-fp-title-d5 .title-d5 * {
+        font-size: 32px;
+      }
+      .nc-fp-title-d5 .info-d5 *,
+      .nc-fp-view-all-btn a {
+        font-size: 14px;
+      }
+      .product-content-d5 h3,
+      .variant-title-d5 h4,
+      .product-options-d5 h4,
+      .option-d5 {
+        font-size: 14px;
+      }
+      .product-content-d5 h3{
+        margin: 4px 0;
+      }
+      .pdp-vendor-d5 {
+        font-size: 10px;
+      }
+      .pdp-rating-d5 {
+        font-size: 12px;
+      }
+      .nc-fp-arrow-d5 {
+        width: 32px;
+        height: 32px;
+      }
+      .product-content-d5 {
+        margin-top: 8px;
+      }
+      .nc-fp-title-content {
+        max-width: 65%;
+      }
+    }
+</style>
+<div class="nc-fp-main-d5">
+  <div class="nc-fp-inner-d5">
+    <div class="nc-fp-title-d5">
+      <div class="nc-fp-title-content">
+        <div class="title-d5">{{ section.settings.title }}</div>
+        <div class="info-d5">{{ section.settings.info }}</div>
+      </div>
+      <div class="nc-fp-view-all-btn">
+        <a href="{{ section.settings.btn-u }}">
+          {{- section.settings['btn-l'] }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#FEF7EF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6666 12.3809L10.6189 15.4286L9.85712 14.6668L12.5239 12L9.85712 9.3332L10.6189 8.57141L13.6666 11.6191C13.7676 11.7201 13.8243 11.8571 13.8243 12C13.8243 12.1428 13.7676 12.2798 13.6666 12.3809Z" fill="black"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="nc-fp-slider-container-d5">
+      <div class="nc-fp-slider-d5" data-slider="collection-slider">
+        {% for product in collection.products %}
+          {% if forloop.index == 1 %}
+            {% assign d5_product = product %}
+          {% endif %}
+          <div class="nc-fp-slide-d5">
+            <div class="product-image-d5">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | image_url: width: 800, height:1200  }}" width="320" height="410">
+              </a>
+              <button
+                {% unless product.variants.size > 1 %}
+                  data-variant-d5="{{ product.variants.first.id }}"
+                {% endunless %}
+                class="d5-slide-button quick-view-btn-d5 {% if product.variants.size > 1 %}open-box-d5{% else %}add-to-cart-d5 {% unless product.variants.first.available %}not-available-d5{% endunless %}{% endif %}"
+                {% unless product.variants.size > 1 %}
+                  onclick="addToCart(this)"
+                {% endunless %}
+              >
+                <span class="desktop-d5"> + Quick buy </span>
+                <span class="mobile-d5">{% render 'svg-basket' %}</span>
+              </button>
+            </div>
+            <a href="{{ product.url }}">
+              <div class="product-content-d5">
+                <div class="content-header-d5">
+                  <span class="pdp-vendor-d5">{{ product.vendor }}</span>
+                  <span class="pdp-rating-d5">
+                    {{ product.metafields.loox.avg_rating }}
+                    <!-- {{- rating_d5 | default: '4.8' }} -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                      <path d="M7.5 0.900024L9.18386 6.0824H14.6329L10.2245 9.28528L11.9084 14.4677L7.5 11.2648L3.09161 14.4677L4.77547 9.28528L0.367076 6.0824H5.81614L7.5 0.900024Z" fill="#F4D3A8"/>
+                    </svg>
+                  </span>
+                </div>
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.price | money }}</p>
+              </div>
+            </a>
+            {% if product.variants.size > 1 %}
+              <div class="d5-quick-popup" d5-variants-json="{{ product.variants | json | escape }}">
+                <div>
+                  <div class="variant-info-d5">
+                    <img
+                      src="{% if product.first_available_variant.image != blank %}{{ product.first_available_variant.image | image_url: width: 300, height: 300 }}{% else %}{{ product.featured_image | image_url: width: 300, height: 300 }}{% endif %}"
+                      width="80"
+                      height="80"
+                    >
+                    <div class="variant-title-d5">
+                      <h4>{{ d5_product.title }}</h4>
+                      <p class="variant-price-d5">{{ product.price | money }}</p>
+                    </div>
+                  </div>
+                  <div class="product-options-d5">
+                    {% for option in product.options_with_values %}
+                      <h4>
+                        {{ option.name }}: <span class="selected-option-d5">{{ option.selected_value }}</span>
+                      </h4>
+                      <div class="product-values-d5">
+                        {% for value in option.values %}
+                          <div
+                            class="option-d5 {% if forloop.index == 1 %} active-value {% endif %}"
+                            value="{{ value }}"
+                          >
+                            {{ value }}
+                          </div>
+                        {% endfor %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <button
+                  data-variant-d5="{{ product.variants.first.id }}"
+                  class="quick-view-btn-d5 add-to-cart-d5"
+                  onclick="addToCart(this)"
+                >
+                  <span class="btn-text-d5">+ Quick buy</span>
+                  <span class="sold-text-d5">Soldout</span>
+                </button>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="overlay-d5 close-quick-model-d5"></div>
+      <quickpopup class="quick-buy-popup-d5">
+        <div class="close-icon-d5 close-quick-model-d5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="2" x2="22" y2="22" stroke="black" stroke-width="2"/>
+            <line x1="22" y1="2" x2="2" y2="22" stroke="black" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="dynamic-quick-model-data"></div>
+      </quickpopup>
+      <div class="slider-navigation-d5">
+        <div class="nc-fp-progress-bar-d5">
+          <div class="nc-fp-progress-d5"></div>
+        </div>
+        <div class="slider-arrows-d5">
+          <div class="nc-fp-arrow-d5 left" onclick="moveSlide(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1113 28.8888L31.2225 36L33 34.2225L26.7775 28L33 21.7775L31.2225 20L24.1113 27.1113C23.8756 27.347 23.7432 27.6667 23.7432 28C23.7432 28.3333 23.8756 28.653 24.1113 28.8888Z" fill="#254249"/>
+              <circle cx="28" cy="28" r="27" transform="matrix(-1 0 0 1 56 0)" stroke="#254249" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="nc-fp-arrow-d5 right" onclick="moveSlide(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M31.8887 28.8888L24.7775 36L23 34.2225L29.2225 28L23 21.7775L24.7775 20L31.8887 27.1113C32.1244 27.347 32.2568 27.6667 32.2568 28C32.2568 28.3333 32.1244 28.653 31.8887 28.8888Z" fill="#254249"/>
+              <circle cx="28" cy="28" r="27" stroke="#254249" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+  <script>
+      (function() {
+      document.addEventListener("DOMContentLoaded", function () {
+        const openBoxes = document.querySelectorAll('.nc-fp-slide-d5');
+
+        openBoxes.forEach(box => {
+          const openBtn = box.querySelector('.open-box-d5');
+
+          // Check if the button exists before adding an event listener
+          if (!openBtn) return;
+
+          openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            // Remove active class from all elements
+            document.querySelectorAll('.nc-fp-slide-d5').forEach(b => b.classList.remove('popup--active'));
+
+            // Add active class to the clicked element
+            if (!box.classList.contains('popup--active')) {
+              box.classList.add('popup--active');
+            }
+          });
+        });
+      });
+    })();
+  </script>
+{% endcomment %}
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Subtext"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "btn-l",
+      "label": "Button Link"
+    },
+    {
+      "type": "url",
+      "id": "btn-u",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection D5"
+    }
+  ]
+}
+{% endschema %}

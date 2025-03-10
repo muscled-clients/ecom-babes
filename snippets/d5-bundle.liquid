@@ -1,0 +1,163 @@
+<style>
+  .nc-b-main-d5 h4{
+    margin: 0;
+  }
+  .nc-b-main-d5{
+    margin: 20px 0;
+  }
+  .b-row-d5, .b-card-prices-d5, .b-title-content-d5{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .b-card-d5{
+    padding: 16px;
+    border: 1px solid #D9D9D9;
+    cursor: pointer;
+  }
+  .b-card-inner-d5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .b-card-content-d5{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .radio-icon-d5.checked, .b-card-d5.selected-bundle .radio-icon-d5.unchecked{
+    display: none;
+  }
+  .b-title-content-d5 h4{
+    color: #272727;
+    font-family: "DIN Next W1G";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .b-title-content-d5 .additional-text-d5{
+    border: 1px solid #254249;
+    display: flex;
+    height: 20px;
+    padding: 0px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #254249;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: fit-content;
+  } 
+  .b-title-content-d5 .sale-badge-d5{
+    background: #254249;
+    display: flex;
+    width: 65px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .radio-icon-d5 svg{
+    width: 25px;
+    height: 25px;
+  }
+  .nc-b-main-d5 h3{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: "Libre Franklin";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin-bottom: 8px;
+  }
+  .selling-price-d5, .compare-price-d5{
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .compare-price-d5{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: line-through;
+  }
+  .compare-price-d5.bigger{
+    display: none;
+  }
+  .b-card-d5.selected-bundle{
+    border: 2px solid #AEC0C4;
+    background: #FEF7EF;
+  }
+  .b-card-d5.selected-bundle .radio-icon-d5.checked{
+    display: flex;
+  }
+</style>
+<script src="{{ 'd5-bundle.js' | asset_url }}" defer="defer"></script>
+<div class="nc-b-main-d5">
+  <h3>{{ title | default: 'Options' }}</h3>
+  <div class="b-inner-d5">
+    <div class="b-row-d5">
+      {% for bundle in bundles %}
+        {% assign variant = product.selected_or_first_available_variant %}
+        <div class="b-card-d5 {% if forloop.first %}selected-bundle{% endif %}" data-quantity-d5="{{ bundle.quantity }}" data-off-d5="{{ bundle.off_ }}">
+          <div class="b-card-inner-d5">
+            <div class="b-card-content-d5">
+              <div class="b-radio-icons-d5">
+                <span class="radio-icon-d5 unchecked">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                    <rect x="0.5" y="1" width="24" height="24" rx="12" stroke="#254249"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.13 8.76664L10.1463 18.7504L4.5 13.1041L5.26664 12.3375L10.1463 17.2171L19.3634 8L20.13 8.76664Z" fill="white"/>
+                  </svg>
+                </span>
+                <span class="radio-icon-d5 checked">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                    <rect y="0.5" width="25" height="25" rx="12.5" fill="#254249"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.13 8.76664L10.1463 18.7504L4.5 13.1041L5.26664 12.3375L10.1463 17.2171L19.3634 8L20.13 8.76664Z" fill="white"/>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="b-img-d5">
+                <img src="{{ bundle.img | image_url: width: 300, height: 300 }}" width="80" height="80">
+              </div>
+              <div class="b-title-content-d5">
+                <h4>{{ bundle.bundle_tile }}</h4>
+                {% if bundle.additional_text != blank %}
+                <span class="additional-text-d5">{{ bundle.additional_text }}</span>
+                {% endif %}
+                {% if bundle.quantity > 1 %}
+                  <span class="sale-badge-d5">Save {{ bundle.off_ }}%</span>
+                {% endif %}
+              </div>
+            </div>
+            <div class="b-card-prices-d5">
+              {% if bundle.quantity > 1 %}
+                {% assign discount = bundle.off_ | times: 0.01 %}
+                {% assign discount_amount = variant.price | times: discount %}
+                {% assign discounted_price = variant.price | minus: discount_amount %}
+
+                <span class="selling-price-d5">US {{ discounted_price | money }}</span>
+
+              {% else %}
+                <span class="selling-price-d5">US {{ variant.price | money }}</span>
+              {% endif %}
+              <span class="compare-price-d5 {% unless variant.compare_at_price > variant.price %}bigger{% endunless %}">US {{ variant.price | money }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

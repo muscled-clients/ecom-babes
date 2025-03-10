@@ -1,0 +1,249 @@
+{% comment %}
+  linked files names
+  ss-button.css
+  ss-media-v1.css,
+  slideshow-2.css
+{% endcomment %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+>
+
+{{ 'slide-show-d5.css' | asset_url | stylesheet_tag }}
+<div id="shopify-section-slideshow-2-d6" class="shopify-section">
+  <style>
+    #shopify-section-{{ section.id }} div.swiper-button-next-slideshow-2-d6,
+    #shopify-section-{{ section.id }} div.swiper-button-prev-slideshow-2-d6 {
+       border: 1px solid {{ section.settings.bullet-bdr-color }};
+     }
+    #shopify-section-{{ section.id }} .swiper-pagination-slideshow-2-d6 span {
+       --swiper-pagination-bullet-inactive-color: transparent;
+       border: 1px solid {{ section.settings.bullet-bdr-color }};
+     }
+    #shopify-section-{{ section.id }} span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+       background:{{ section.settings.bullet-bg-color }};
+     }
+    #shopify-section-{{ section.id }} button.ss-button.icon-position-before{
+      padding: 20px 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      #shopify-section-slideshow-2-d6 .swiper {
+        aspect-ratio: 1/1.2;
+      }
+    }
+  </style>
+
+  <div
+    class="section-slideshow-2-d6-padding"
+    style="
+      background-color:;
+      --pt: 0px;
+      --pt-desktop: 0px;
+      --pb: 0px;
+      --pb-desktop: 0px;
+      --swiper-pagination-color: #ffffff;
+      --swiper-pagination-bg-color: transparent;
+      --swiper-navigation-color: #ffffff;
+      --font-family: &quot;Open Sans&quot;;
+      --swiper-pagination-bullet-size: 20px;
+    "
+  >
+    <div
+      class="swiper swiper-slideshow-2-d6"
+      style="
+        --overlay-opacity: 0.15;
+        --text-color: #ffffff;
+      "
+    >
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <style>
+            .slideshow-slide-{{ block.id }} .text-content-slideshow-2-d6{
+                 color: {{ block.settings.slide-title-color }};
+                font-size: {{ block.settings.slide-title-size }}px;
+             }
+             .slideshow-slide-{{ block.id }} .p-slideshow-2-d6{
+               color: {{ block.settings.slide-content-color }};
+                font-size: {{ block.settings.slide-content-size }}px;
+             }
+          </style>
+          <div
+            class="swiper-slide slideshow-slide-{{ block.id }}"
+            style=""
+          >
+            <picture>
+              <source
+                srcset="{{ block.settings.slide-image-m | image_url: width: 1440, height:1600 }}"
+                media="(max-width: 767px)"
+              >
+              <source
+                srcset="{{ block.settings.slide-image | image_url: width: 1920, height:1600 }}"
+                media="(min-width: 768px)"
+              >
+              <img src="{{ block.settings.slide-image | image_url: width: 1920, height:1600 }}" alt="Responsive Image">
+            </picture>
+
+            <div
+              class="overlay-slideshow-2-d6"
+              style=""
+            ></div>
+
+            <div class="text-content-slideshow-2-d6">
+              <p
+                class="p-slideshow-2-d6"
+              >
+                {{ block.settings['slide-content'] }}
+              </p>
+              <div
+                class="slide-title-d5"
+                style="
+                  margin-bottom: 16px;
+                  line-height:1.1;
+                "
+              >
+                <h2>{{ block.settings['slide-title'] }}</h2>
+              </div>
+
+              <div class="button-wrapper-slideshow-2-d6">
+                <a class="d5-button-1" href="{{ block.settings['sec-url'] }}">{{ block.settings['sec-btn'] }}</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-slideshow-2-d6"
+      ></div>
+      <div
+        class="swiper-button-next swiper-button-next-slideshow-2-d6"
+      ></div>
+      <div
+        class="swiper-button-prev swiper-button-prev-slideshow-2-d6"
+      ></div>
+    </div>
+  </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    defer
+  ></script>
+
+  <script>
+    // load the swiper css and js only once:
+    (function () {
+      function loadSwiperOnBannerSlider2() {
+        if (typeof Swiper === 'undefined') {
+          setTimeout(loadSwiperOnBannerSlider2, 100);
+          return;
+        }
+        try {
+          new Swiper('#shopify-section-{{ section.id }} .swiper-slideshow-2-d6', {
+            slidesPerView: 1,
+            navigation: {
+              nextEl: '#shopify-section-{{ section.id }} .swiper-button-next-slideshow-2-d6',
+              prevEl: '#shopify-section-{{ section.id }} .swiper-button-prev-slideshow-2-d6',
+            },
+            pagination: {
+              el: '#shopify-section-{{ section.id }} .swiper-pagination-slideshow-2-d6',
+              clickable: true,
+            },
+            loop: true,
+
+              // autoplay: {
+              //   delay: 100000,
+              // },
+
+          });
+        } catch (e) {
+          console.log('Swiper not loaded');
+          console.log(e);
+        }
+      }
+      //document.addEventListener('swiper:loaded', loadSwiperOnBannerSlider2);
+      loadSwiperOnBannerSlider2();
+      if (window.Shopify && Shopify.designMode) {
+        document.addEventListener(
+          'shopify:section:load',
+          loadSwiperOnBannerSlider2
+        );
+      }
+    })();
+  </script>
+</div>
+{% schema %}
+{
+  "name": "Slideshow 2",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bullet-bdr-color",
+      "label": "Bullets and Arrows Border-color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bullet-bg-color",
+      "label": "Bullets Background color",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "name",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide-image",
+          "label": "Image Desktop"
+        },
+         {
+          "type": "image_picker",
+          "id": "slide-image-m",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "liquid",
+          "id": "slide-title",
+          "label": "Heading",
+          "default": "Smart bluetooth speaker"
+        },
+        {
+          "type": "color",
+          "id": "slide-title-color",
+          "label": "Heading Color",
+          "default": "#fff"
+        },
+        {
+          "type": "textarea",
+          "id": "slide-content",
+          "label": "Content",
+          "default": "Connect 6+ devices at the same time"
+        },
+        {
+          "type": "color",
+          "id": "slide-content-color",
+          "label": "Content Color",
+          "default": "#fff"
+        },
+        {
+      "type": "text",
+      "id": "sec-btn",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "sec-url",
+      "label": "Button Url"
+    },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow 2"
+    }
+  ]
+}
+{% endschema %}

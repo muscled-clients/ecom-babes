@@ -1,0 +1,142 @@
+<style>
+  .d4-main-div * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .d4-main-div {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            aspect-ratio: 16/7.1;
+            margin: 16px 0 0 0;
+        }
+
+        .d4-main-div img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .d4-content-box {
+            z-index: 1;
+            position: relative;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .d4-content-box h1 {
+            color: #FFF;
+            text-align: center;
+            font-family: "DIN Next W1G";
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 66px;
+            text-transform: none;
+        }
+
+        .d4-content-box a {
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid #fff;
+            display: flex;
+            width: 217px;
+            height: 60px;
+            padding: 17px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #000000;
+            font-family: DIN Next W1G;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            transition: all .3s;
+            margin-inline: auto;
+        }
+
+        .d4-content-box a:hover {
+            color: #fff;
+            background: transparent;
+        }
+
+        .d4-small-hide {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .d4-content-box h1 {
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            .d4-small-hide {
+                display: none;
+            }
+
+           .d4-main-div {
+             aspect-ratio: 1/1;
+             margin: 40px 0 0 0;
+           }
+           .d4-content-box a {
+             font-size: 16px;
+             display: flex;
+             padding: 16px 20px;
+             gap: 10px;
+             width: 180px;
+             height: unset;
+           }
+        }
+</style>
+
+<div class="d4-main-div">
+  <img src="{{ section.settings.section-background | image_url }}" alt="" width="100%" height="auto">
+  <div class="d4-content-box">
+    <h1>{{ section.settings['section-heading'] }}</h1>
+    <a href="{{ section.settings.btn-url }}">{{ section.settings['btn-label'] }}</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Text with image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "section-background",
+      "label": "Select Background image"
+    },
+    {
+      "type": "liquid",
+      "id": "section-heading",
+      "label": "Enter Main text"
+    },
+    {
+      "type": "text",
+      "id": "btn-label",
+      "label": "Enter button Label"
+    },
+    {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Select Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Text with image"
+    }
+  ]
+}
+{% endschema %}

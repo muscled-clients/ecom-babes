@@ -1,0 +1,166 @@
+<style>
+  .upsells_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 2px solid #49717b;
+    padding: 20px;
+  }
+  .upsells_box .upsells_thumb {
+    width: 100px;
+  }
+  .upsells_box .upsells_content {
+    width: 100%;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .form .pnda-delivery-info {
+    font-size: 16px;
+    color: #49717b;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .form .custom-cart-btn {
+    padding: 10px 20px 15px;
+    width: 155px;
+    background-color: #49717b !important;
+    color: white !important;
+    border: 1.5px solid #49717b !important;
+    font-weight: 600;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .form .custom-cart-btn:hover {
+    border: 1px solid #49717b !important;
+    background-color: white !important;
+    color: #49717b !important;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price .prd-title a h4 {
+    font-weight: 600;
+  }
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price .prd-title a h4,
+  .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price .udp_price-wrapper .price-item--regular {
+    color: #49717b;
+  }
+  @media only screen and (max-width: 890px) {
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price {
+      margin-left: -25px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner {
+      flex-direction: row;
+    }
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price {
+      margin-left: unset;
+    }
+  }
+    @media only screen and (max-width: 445px) {
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .upsells_content .prd_info-wrapper .prd_info-wrapper-inner .title-and-price {
+      margin-left: -25px;
+    }
+  }
+</style>
+<div class="upsells_box">
+  <div class="upsells_thumb">
+    <img src="{{ product.featured_image | img_url:'master' }}" class="img-fluid">
+  </div>
+  <div class="upsells_content">
+    <div class="prd_info-wrapper">
+      <div class="prd_info-wrapper-inner">
+        <div class="title-and-price">
+          <div class="prd-title">
+            <a href="{{ product.url }}" class="link_unstyle">
+              <h4>{{ product.title }}</h4>
+            </a>
+          </div>
+          <div class="udp_price-wrapper">
+            {% render 'price-for-upsell', product: product %}
+          </div>
+        </div>
+        <product-form data-section-id="{{ section.id }}">
+          {%- form 'product', product, id: product_form_id, class: 'form', data-type: 'add-to-cart-form' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}"
+              class="product-variant-id"
+              {% if product.selected_or_first_available_variant.available == false %}
+                disabled
+              {% endif %}
+            >
+            <button
+              class="button button--large custom-cart-btn upsell-cart-bttn"
+              type="button"
+              data-id="{{ product.selected_or_first_available_variant.id }}"
+            >
+              Add to Cart
+            </button>
+          {%- endform -%}
+        </product-form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.upsell-btn');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          console.log(button)
+          const variantId = parseInt(button.dataset.id);
+
+          const formData = {
+            'items': [{
+              'id': variantId,
+              'quantity': 1
+            }]
+          };
+
+          fetch(window.Shopify.routes.root + 'cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Success:', data);
+            const largeButton = document.querySelector('.custom-cart-btn');
+            if (largeButton) {
+              largeButton.click();
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        });
+      });
+    });
+  </script>
+
+          {% if product.variants.first.inventory_quantity != 0 %}
+            <button class="upsell-btn" data-id="{{ product.selected_or_first_available_variant.id }}">Add to cart</button>
+          {% else %}
+            <button class="upsell-btn" data-id="{{ product.selected_or_first_available_variant.id }}" disabled>
+              SOLD OUT
+            </button>
+          {% endif %}
+{% endcomment %}

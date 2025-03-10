@@ -1,0 +1,127 @@
+<style>
+  .product-qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
+  }
+
+  .product-qualities .quality-block {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .product-qualities .quality-block:first-child:before {
+    display: none;
+  }
+
+  .product-qualities .quality-block:before {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: black;
+    position: absolute;
+    left: -14px;
+  }
+
+  .product-qualities .quality-block .quality-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-qualities .quality-block .quality-text {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 10px 0 0;
+  }
+
+  @media (max-width: 768px) {
+  .product-qualities {
+    align-items: center;
+  }
+
+  .product-qualities .quality-block {
+    width: calc(50% - 10px);
+  }
+  .product-qualities .quality-block:before {
+    display: none;
+  }
+}
+</style>
+
+<section class="product-qualities">
+  {% for block in section.blocks %}
+    <div class="quality-block">
+      {% if block.settings['quality-image'] != blank %}
+        <img
+          src="{{ block.settings.quality-image | img_url: 'Master' }}"
+          alt="{{ block.settings.quality-text }}"
+          class="quality-image"
+        >
+        <p class="quality-text">{{ block.settings.quality-text }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Product Qualities",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quality",
+      "name": "Quality Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "quality-image",
+          "label": "Quality Image"
+        },
+        {
+          "type": "text",
+          "id": "quality-text",
+          "label": "Quality Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Qualities",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

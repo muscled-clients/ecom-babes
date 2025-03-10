@@ -1,0 +1,544 @@
+{% style %}
+                            .d5-comparison-section-main {
+                              padding: {{ section.settings.custom-padding-top-2-desktop }}px 0 {{ section.settings.custom-padding-bottom-2-desktop }}px 0;
+                            }
+                            .d5-comparison-table {
+                              border-spacing: 0;
+                              margin: 34px auto 10px auto;
+                              width: 100%;
+                              max-width: 1056px;
+                            }
+                             th, td {
+                            border: none;
+                        }
+                            .d5-comparison-table-head th div,
+                            .d5-comparison-section-container {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              flex-direction: column;
+                              gap: 10px;
+                            }
+
+                            .d5-comparison-table tr td:not(:first-child) {
+                              text-align: center;
+                              padding: 10px 60px;
+                            }
+
+                            .d5-comparison-table tr:nth-child(n+2):nth-last-child(n+2) {
+                              position: relative;
+                            }
+
+                            .d5-comparison-table tr:nth-child(n+2):nth-last-child(n+2) td {
+                              border-bottom: 1px solid #254249;
+                            }
+
+                            /* .d5-comparison-table tr td:nth-child(2), .d5-comparison-table tr th:nth-child(2) {
+                              border-left: 1px solid #254249;
+                              border-right: 1px solid #254249;
+                            } */
+
+                            .d5-comparison-table tr:first-child th:nth-child(2) {
+                              /* border-top: 1px solid #254249; */
+                              border-top-left-radius: 15px;
+                              border-top-right-radius: 15px;
+                            }
+
+                            .d5-comparison-table tr:last-child td:nth-child(2) {
+                              /* border-bottom: 1px solid #254249; */
+                              border-bottom-left-radius: 15px;
+                              border-bottom-right-radius: 15px;
+                            }
+                           td.our-product-d5 {
+                      border-bottom: 1px solid #fff !important;
+                  }
+                 th.our-product-d5 div {
+        width: 100%;
+        height: 68px;
+        max-width: 125px;
+        margin: 0 auto;
+    }
+                  .d5-comparison-table-head th:nth-child(2) div img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                            .d5-comparison-table-head th:nth-child(2) {
+                              padding: 20px;
+                            }
+
+                            .d5-comparison-table tr td:first-child {
+                              padding-right: 50px;
+                              color: #000;
+                          font-family: "Libre Franklin";
+                          font-size: 20px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: normal;
+                          text-transform: capitalize;
+                            }
+
+                            .d5-comparison-section-headings {
+                              text-align: center;
+                            }
+
+                            .d5-comparison-section-headings h1 {
+                              color: #000;
+                      text-align: center;
+                      font-family: "DIN Next W1G";
+                      font-size: 48px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: normal;
+                      text-transform: capitalize;
+                              margin-bottom: 2px;
+                            }
+
+                            .d5-comparison-section-headings p {
+                              margin-top: 14px;
+                              color: #000;
+                    font-family: "Libre Franklin";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; /* 150% */
+                            }
+
+                            .d5-comparison-section-headings h1 span {
+                              color: #254249;
+                            }
+                             .d5-comparison-table tr td:first-child {
+      padding: 27px 16px 27px 0;
+  }
+                               .d5-comparison-table tr:nth-child(2) td:first-child {
+                                padding: 12px 16px 27px 0 !important;
+                              }
+                            .d5-comparison-table-head th p{
+                              color: #000;
+              font-family: "Libre Franklin";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+                            }
+                            .our-product-d5{
+                              background: #49717B;
+                            }
+                            @media screen and (max-width: 430px) {
+                              .d5-comparison-section-container.page-width {
+                padding: 0 20px;
+            }
+                              .company-2-product{
+                                height:30px;
+                              }
+                               .d5-comparison-table-head th p{
+                                  font-size: 10px;
+                                  font-weight: 500;
+                                  line-height: 12.19px;
+                               }
+                              .d5-comparison-table tr td svg{
+                                width: 24px;
+                                height: 24px;
+                              }
+                               .d5-comparison-table tr td .cross-icon-d5{
+                                width: 16px;
+                                height: 16px;
+                              }
+                              .third-th-d5, .third-td-d5{
+                                display: none;
+                              }
+                              .d5-comparison-table-head th,.d5-comparison-section-main td {
+                                min-width: 80px;
+                              }
+                              th.our-product-d5 div{
+                                width: 87px;
+                                height: 48px;
+                              }
+                              .d5-comparison-section-main{
+                                padding-top: {{ section.settings.custom-padding-top-2-mobile }}px;
+                                padding-bottom: {{ section.settings.custom-padding-bottom-2-mobile }}px;
+                                padding-inline: 0;
+                              }
+
+                              .d5-comparison-table svg {
+                                width: 30px;
+                              }
+
+                              .d5-comparison-table tr td:not(:first-child) {
+                                padding: 27px 0;
+                              }
+
+                              .d5-comparison-table tr td:first-child {
+                                padding-right: 20px;
+                                color: #000;
+      font-family: "Libre Franklin";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+                              }
+
+                              .d5-comparison-table p {
+                              color: #040404;
+                              text-align: center;
+                              font-size: 10px;
+                              font-style: normal;
+                              line-height: normal;
+                              }
+                              .d5-comparison-table{
+                                margin: 0 0px;
+                              }
+                              .d5-slide-container-first-div{
+                                align-content: unset;
+                              }
+                              .d5-comparison-section-headings h1 {
+                                color: #000;
+          text-align: center;
+          font-family: "DIN Next W1G";
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: capitalize;
+                                max-width: 300px;
+                                margin: 0 auto;
+                              }
+
+                              .d5-comparison-section-headings p {
+                                color: #000;
+        text-align: center;
+        font-family: "Libre Franklin";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+                                margin-top: 16px;
+                              }
+
+                              .d5-comparison-table tr:nth-child(n+2):nth-last-child(n+2) td{
+                                border-bottom: 1px solid #254249;
+                              }
+                              .d5-comparison-table tr td:first-child {
+      padding: 27px 16px 27px 0;
+  }
+                               .d5-comparison-table tr:nth-child(2) td:first-child {
+                                padding: 12px 16px 12px 0 !important;
+                              }
+                              table.d5-comparison-table tr th:nth-child(2),
+                              table.d5-comparison-table tr th:nth-child(3) {
+                                width: 94px !important;
+                              }
+                            }
+
+                            @media screen and (min-width: 426px) and (max-width: 644px) {
+                              table.d5-comparison-table tr th:nth-child(2),
+                              table.d5-comparison-table tr th:nth-child(3) {
+                                width: 94px !important;
+                              }
+                              .d5-comparison-section-container.page-width {
+                padding: 0 20px;
+            }
+                              .company-2-product{
+                                height:30px;
+                              }
+                              .d5-comparison-table-head th:nth-child(2) div img {
+                                width: 40px;
+                              }
+
+                              .d5-comparison-table svg {
+                                width: 25px;
+                              }
+
+                              .d5-comparison-table tr td:not(:first-child) {
+                                padding: 5px 30px;
+                              }
+
+                              .d5-comparison-table tr td:first-child {
+                                padding-right: 20px;
+                                  color: #040404;
+                                  font-family: Montserrat;
+                                  font-size: 12px;
+                                  font-style: normal;
+                                  font-weight: 600;
+                                  line-height: normal;
+                                  text-transform: capitalize;
+                              }
+
+                              .d5-comparison-table p {
+                                font-size: 12px;
+                              }
+
+                              .d5-comparison-section-headings h1 {
+                                font-size: 36px;
+                              }
+
+                              .d5-comparison-section-headings p {
+                                font-size: 18px;
+                              }
+                               .d5-comparison-table tr td:first-child{
+                                padding: 12px 16px 12px 0;
+                              }
+                            }
+{% endstyle %}
+
+<div class="d5-comparison-section-main">
+  <div class="d5-comparison-section-container page-width">
+    <div class="d5-comparison-section-headings">
+      {% if section.settings.section_heading != blank %}
+        <h1>{{ section.settings.section_heading }}</h1>
+      {% endif %}
+      {% if section.settings.section_subheading != blank %}
+        <p>{{ section.settings.section_subheading }}</p>
+      {% endif %}
+    </div>
+    <table class="d5-comparison-table">
+      <tbody>
+        <tr class="d5-comparison-table-head">
+          <th style="width:auto"></th>
+          <th class="our-product-d5" style="vertical-align: bottom; width: 202px;">
+            <div>
+              <img src="{{ section.settings.company-product | img_url: 'master' }}">
+            </div>
+          </th>
+          <th style="width: 202px;">
+            <div>
+              <p>{{ section.settings['company-2-name'] }}</p>
+              <img class="company-2-product" src="{{ section.settings.company-2-product | img_url: 'master' }}">
+              {% comment %}
+                <img src="{{ section.settings.company-2-product | img_url }}" />
+              {% endcomment %}
+            </div>
+          </th>
+          <th style="width: 202px;" class="third-th-d5">
+            <div>
+              <p>{{ section.settings['company-3-name'] }}</p>
+              <img src="{{ section.settings.company-3-product | img_url: 'master' }}" width="100">
+            </div>
+          </th>
+        </tr>
+        {% for block in section.blocks %}
+          <tr>
+            <td>{{ block.settings['value-to-compare'] }}</td>
+            <td class="our-product-d5">
+              {% if block.settings['tick-or-cross'] == 'tick' %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <path d="M18 0.429688C8.33668 0.429688 0.5 8.26637 0.5 17.9297C0.5 27.593 8.33668 35.4297 18 35.4297C27.6633 35.4297 35.5 27.593 35.5 17.9297C35.5 8.26637 27.6633 0.429688 18 0.429688ZM29.1385 14.916C24.4134 19.3587 19.6826 23.7957 14.5772 28.5899C11.5808 25.3284 8.80919 22.5107 6.32565 19.4567C5.79552 18.8056 5.87619 16.7945 6.4409 16.322C7.2188 15.6766 8.91291 15.4577 9.86368 15.8668C11.0738 16.3912 11.9784 17.6819 12.9177 18.7306C14.2776 20.2461 15.5453 20.2634 17.0031 18.8517C19.7114 16.2298 22.5176 13.7117 25.2086 11.0726C26.6549 9.65507 28.1473 9.24019 29.6283 10.7384C31.0688 12.202 30.4638 13.6714 29.1385 14.916Z" fill="white"/>
+                </svg>
+              {% else %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <path d="M18 35.4297C27.665 35.4297 35.5 27.5947 35.5 17.9297C35.5 8.2647 27.665 0.429688 18 0.429688C8.33502 0.429688 0.5 8.2647 0.5 17.9297C0.5 27.5947 8.33502 35.4297 18 35.4297Z" fill="white"/>
+                  <path d="M25.9263 11.923C25.7742 12.7466 25.1237 13.2134 24.6044 13.7695C23.2037 15.2541 20.6753 16.7701 20.712 18.2179C20.7487 19.7235 23.2667 21.1713 24.6935 22.6401C24.9296 22.8867 25.1657 23.1385 25.4017 23.385C26.0837 24.0932 26.2935 24.9221 25.5906 25.6617C24.8037 26.4906 23.8962 26.3437 23.1093 25.5725C21.95 24.4342 20.67 23.3798 19.6943 22.0946C18.3671 20.3425 17.4019 20.7517 16.2058 22.1838C15.2196 23.3641 14.0655 24.4027 12.9692 25.4834C12.2243 26.2178 11.343 26.564 10.4827 25.7509C9.59612 24.9116 9.9948 24.0722 10.7082 23.2959C12.3082 21.549 15.3088 20.0645 15.2406 18.113C15.1829 16.3976 12.3449 14.7872 10.7397 13.1243C9.9948 12.3531 9.68005 11.5505 10.5928 10.6797C11.5318 9.78793 12.3187 10.2863 13.0426 10.9892C14.3278 12.2482 15.6603 13.4705 16.8353 14.8291C17.7533 15.8888 18.3461 15.7419 19.2117 14.7819C20.4654 13.3813 21.8503 12.0908 23.1985 10.7741C23.7231 10.26 24.3526 9.99776 25.0503 10.4646C25.5539 10.8004 25.9683 11.2305 25.9263 11.923Z" fill="#49717B"/>
+                </svg>
+              {% endif %}
+            </td>
+            <td>
+              {% if block.settings['tick-or-cross-2'] == 'tick' %}
+                {% render 'd5-tick' %}
+              {% else %}
+                {% render 'd5-cross' %}
+              {% endif %}
+            </td>
+            <td class="third-td-d5">
+              {% if block.settings['tick-or-cross-3'] == 'tick' %}
+                {% render 'd5-tick' %}
+              {% else %}
+                {% render 'd5-cross' %}
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% render 'd6-button-snippet',
+      button_url: section.settings.button_url,
+      button_text: section.settings.button_text,
+      background_color: section.settings['btn-bg'],
+      color: section.settings['btn-color'],
+      ship-icon: section.settings['ship-icon'],
+      ship-text: section.settings['ship-text']
+    %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Comparison Section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "section_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "section_subheading",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "company-logo",
+      "label": "Our Company Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "company-product",
+      "label": "Our Company Product"
+    },
+    {
+      "type": "text",
+      "id": "company-2-name",
+      "label": "Second Company Name"
+    },
+    {
+      "type": "image_picker",
+      "id": "company-2-product",
+      "label": "Second Company Product"
+    },
+    {
+      "type": "text",
+      "id": "company-3-name",
+      "label": "Third Company Name"
+    },
+    {
+      "type": "image_picker",
+      "id": "company-3-product",
+      "label": "Third Company Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "ship-icon",
+      "label": "Shipping Icon"
+    },
+    {
+      "type": "text",
+      "id": "ship-text",
+      "label": "Shipping Text",
+      "default": "Free U.S. & CDN Shipping Options"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button"
+    },
+    {
+      "type": "color",
+      "id": "btn-bg",
+      "label": "Button Background"
+    },
+    {
+      "type": "color",
+      "id": "btn-color",
+      "label": "Button Text Color"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+    "type": "range",
+    "id": "custom-padding-top-2-desktop",
+    "label": "Select Top Padding",
+    "default": 65,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+  {
+    "type": "range",
+    "id": "custom-padding-bottom-2-desktop",
+    "label": "Select Bottom Padding",
+    "default": 0,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+    {
+    "type": "range",
+    "id": "custom-padding-top-2-mobile",
+    "label": "Select Mobile Top Padding",
+    "default": 15,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+  {
+    "type": "range",
+    "id": "custom-padding-bottom-2-mobile",
+    "label": "Select Mobile Bottom Padding",
+    "default": 15,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value-to-compare",
+          "label": "Value To Compare"
+        },
+        {
+          "type": "select",
+          "id": "tick-or-cross",
+          "label": "Does our company have it?",
+          "options": [
+            {
+              "value": "tick",
+              "label": "Tick"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            }
+          ],
+          "default": "tick"
+        },
+        {
+          "type": "select",
+          "id": "tick-or-cross-2",
+          "label": "Does the second company have it?",
+          "options": [
+            {
+              "value": "tick",
+              "label": "Tick"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            }
+          ],
+          "default": "tick"
+        },
+        {
+          "type": "select",
+          "id": "tick-or-cross-3",
+          "label": "Does the third company have it?",
+          "options": [
+            {
+              "value": "tick",
+              "label": "Tick"
+            },
+            {
+              "value": "cross",
+              "label": "Cross"
+            }
+          ],
+          "default": "tick"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

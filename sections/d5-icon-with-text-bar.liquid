@@ -1,0 +1,122 @@
+<style>
+  #shopify-section-{{ section.id }} p{
+    margin: 0;
+  }
+  .ib-main-d5{
+    width: 100%;
+    padding: 24px 96px;
+    background: #FEF7EF;
+  }
+  .ib-row-d5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ib-col-d5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .ib-icon-d5{
+    height: 40px;
+  }
+  .ib-icon-d5 img, .ib-icon-d5 svg{
+    height: 100%;
+    width: auto;
+  }
+  .ib-content-d5 *{
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  @media(max-width: 1185px){
+    .ib-col-d5{
+     justify-content: start;
+    }
+  }
+  @media (max-width: 768px){
+    .ib-row-d5{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 16px;
+     max-width: fit-content;
+     margin: 0 auto;
+   } 
+    
+    .ib-main-d5{
+      padding: 20px;
+    }
+    .ib-content-d5 *{
+      font-size: 14px;
+    }
+    .ib-col-d5{
+     gap: 12px;
+   }
+   .ib-icon-d5{
+    height: 32px;
+  }
+  }
+</style>
+
+<div class="ib-main-d5">
+
+  <div class="ib-inner-d5">
+    <div class="ib-row-d5">
+      {% for block in section.blocks %}
+      <div class="ib-col-d5">
+        <div class="ib-icon-d5">
+          {% if block.settings.img != blank %}
+            {{ block.settings.img | image_url: width: 200, height:200 | image_tag }}
+            {% else %}
+          {{ block.settings.icon }}
+          {% endif %}
+        </div>
+        <div class="ib-content-d5">
+          {{ block.settings.cont }}
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Icon with Text bar",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "icon-with-text",
+        "name": "Icon with Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "cont",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Icon"
+          },
+          {
+            "type": "liquid",
+            "id": "icon",
+            "label": "SVG Code"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon with Text bar D5"
+      }
+    ]
+  }
+{% endschema %}

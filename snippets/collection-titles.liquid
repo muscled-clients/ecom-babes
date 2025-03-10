@@ -1,0 +1,78 @@
+{% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  .page-header .container .dropdown .dropdown-menu {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    z-index: 2;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    visibility: hidden;
+    min-width: 190px;
+  }
+  .page-header .container .dropdown .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+  }
+  .page-header .container .dropdown .dropdown-menu .c_title_list {
+    list-style: none;
+  }
+  .page-header .container .dropdown .btn.btn-primary {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    color: black;
+  }
+  .page-header .container .dropdown .dropdown-menu .c_title_list .c_title {
+    font-size: 20px;
+  }
+  .rotate {
+      transition: transform 0.5s ease;
+  }
+</style>
+
+<div class="container">
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+      {% for p_collection in collections %}
+        {% if p_collection.handle == collection.handle %}
+          {{ p_collection.title }}
+        {% endif %}
+      {% endfor %}
+      <span class="dropdown-icon">
+        {% render 'svg-chevron-down' %}
+      </span>
+    </button>
+    <ul class="dropdown-menu">
+      {% for p_collection in collections %}
+        {% unless p_collection.handle == 'frontpage' or p_collection.handle == 'products' %}
+          <li
+            class="c_title_list"
+            {% if p_collection.handle == collection.handle %}
+              selected
+            {% endif %}
+          >
+            <a class="c_title" href="{{ p_collection.url }}" data-ref="{{ p_collection.handle }}">
+              {{ p_collection.title }}
+            </a>
+          </li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

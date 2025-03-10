@@ -1,0 +1,1111 @@
+.d5-header #pageheader {
+  display: grid;
+}
+#shopify-section-header {
+  height: 94px;
+  overflow: hidden;
+}
+.d5-header,
+.d5-header #pageheader {
+  height: 100%;
+  border: none;
+}
+#shopify-section-header
+  .navigation--left
+  .navigation__tier-1-container
+  .navigation__tier-1
+  > .navigation__item
+  > .navigation__link {
+  padding-bottom: 11px;
+}
+.logo-area__right__inner .show-search-link {
+  order: -1;
+}
+.pageheader--transparent svg path {
+  fill: #fff;
+}
+.pageheader--transparent .cart-link__icon svg path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+.announcement__text p {
+  color: #fff;
+  font-family: "Libre Franklin";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.extra-links-d5 {
+  order: -2;
+}
+.extra-links-d5 ul {
+  display: flex;
+  align-items: center;
+}
+.extra-links-d5 ul li {
+  list-style: none;
+  margin-right: 24px;
+}
+.extra-links-d5 ul li a,
+#shopify-section-header
+  .navigation--left
+  .navigation__tier-1-container
+  .navigation__tier-1
+  > .navigation__item
+  > .navigation__link {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.extra-links-d5.desktop-only ul li a {
+  transition: all 0.3s;
+  position: relative;
+  padding: 10px 0;
+}
+.extra-links-d5.desktop-only ul li a:after {
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: all 0.3s;
+}
+.pageheader--transparent .extra-links-d5.desktop-only ul li a:after {
+  background: #fff;
+}
+.extra-links-d5.desktop-only ul li:hover a:after {
+  transform: translateX(-50%) scale(1);
+}
+.navigation.navigation--tight-underline
+  .navigation__tier-1
+  > .navigation__item
+  > .navigation__link:before,
+.navigation.navigation--tight-underline
+  .navigation__tier-1
+  > .navigation__item
+  > .navigation__link:after {
+  bottom: 5px;
+}
+.extra-links-d5.mobile-only {
+  padding: 0 22px;
+  gap: 10px;
+}
+.extra-links-d5.mobile-only ul li a {
+  color: #000;
+}
+.extra-links-d5.mobile-only ul li {
+  width: 100%;
+  margin: 0;
+}
+.pageheader--transparent .extra-links-d5 ul li a,
+#shopify-section-header
+  .pageheader--transparent
+  .navigation--left
+  .navigation__tier-1-container
+  .navigation__tier-1
+  > .navigation__item
+  > .navigation__link {
+  color: #fff;
+}
+
+/*  main product section   */
+
+.d5-main-product-section .container {
+  max-width: 1440px;
+  padding: 0 48px;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.d5-main-product-section .product-detail .gallery-size-medium {
+  max-width: 48.36%;
+  width: 100%;
+}
+.d5-main-product-section .product-detail .product-column-right {
+  margin: 0;
+  max-width: 46.88%;
+  width: 100%;
+}
+.d5-main-product-section .product-detail .gallery .main-image {
+  margin-bottom: 32px;
+}
+.d5-main-product-section .owl-item {
+  width: 88px !important;
+  margin-right: 10px !important;
+}
+.d5-main-product-section .product-detail .detail .title {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.d5-main-product-section span.current-price.theme-money {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+.d5-main-product-section .price-area .was-price {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.288px;
+  text-transform: uppercase;
+}
+.d5-main-product-section .price.h4-style.on-sale {
+  display: flex;
+  align-items: center;
+}
+.d5-main-product-section .lightly-spaced-row.not-in-quickbuy {
+  margin: 20px 0;
+}
+.d5-main-product-section #shopify-installments {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.216px;
+}
+.d5-main-product-section .vendor.lightly-spaced-row * {
+  font-family: "DIN Next";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.216px;
+  text-decoration: none;
+}
+.swatch-style-icon_square .option-selector--swatch .opt-label:before,
+.swatch-style-icon_circle .option-selector--swatch .opt-label:before {
+  background-image: none !important;
+}
+.d5-main-product-section .product-form .label,
+.d5-main-product-section .product-form .label__value {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Libre Franklin";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.d5-main-product-section .product-form .label__value {
+  color: #000;
+  margin-left: 8px;
+}
+.swatch-style-icon_square .option-selector--swatch .opt-label,
+.swatch-style-icon_circle .option-selector--swatch .opt-label {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.swatch-style-icon_square .option-selector--swatch .opt-label:after,
+.swatch-style-icon_circle .option-selector--swatch .opt-label:after,
+.swatch-style-icon_square .option-selector--swatch .opt-label:before,
+.swatch-style-icon_circle .option-selector--swatch .opt-label:before {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 4px #fff;
+  border: none;
+}
+.quantity-submit-row.input-row {
+  margin-top: 20px;
+}
+.gcb-deli {
+  margin-bottom: 30px;
+}
+.d5-main-product-section
+  .product-form
+  .quantity-submit-row
+  .quantity-submit-row__submit {
+  margin-top: 20px;
+}
+.d5-main-product-section .quantity-submit-row .label {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.216px;
+}
+.cc-select__btn,
+.product-form
+  .quantity-submit-row
+  .quantity-submit-row__submit
+  button[type="submit"] {
+  border-radius: 5px;
+}
+.product-info-block p,
+.cc-accordion-item__content * {
+  color: #000;
+  font-family: "Libre Franklin";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.192px;
+}
+.cc-accordion-item__content strong {
+  font-weight: 600;
+}
+.pdp-icons-container-d5 {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.pdp-icon-d5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.svg-icon-d5 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.svg-icon-d5 svg {
+  height: 40px;
+  width: auto;
+}
+.icon-title-d5 p {
+  color: #254249;
+  text-align: center;
+  font-family: "DIN Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.svg-splitter-d5 svg {
+  height: 64px;
+}
+.d5-main-product-section .cc-accordion-item__title:before,
+.d5-main-product-section .cc-accordion-item__title:after {
+  display: none;
+}
+.d5-main-product-section .cc-accordion-item__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+.d5-cutom-icon svg {
+  width: auto;
+  height: auto;
+}
+.d5-cutom-icon {
+  transition: all 0.3s;
+}
+.cc-accordion-item.is-open .d5-cutom-icon {
+  transform: rotate(180deg);
+}
+.d5-acc-title,
+.upsell-title-d5 {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+/* upsell css */
+.nc-upsell-container-d5 {
+  padding: 24px 0 0;
+}
+.up-variants-main-d5 {
+  padding-top: 15px;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 20px;
+}
+.nc-up-main-d5 {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+}
+.nc-up-inner-d5 {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  gap: 20px;
+}
+.up-product-operations-d5 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.up-quantity-d5 {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  border: 1px solid rgba(142, 142, 142, 0.4);
+}
+.up-quantity-d5 input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.up-content-d5 {
+  flex: 1;
+}
+.up-qty-btn {
+  padding-inline: 14px;
+  height: 100%;
+  color: #000;
+  line-height: 120%;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+.d5-upsell-atc {
+  border-radius: 5px;
+  background: #4a717c;
+  border: 1px solid #4a717c;
+  display: flex;
+  width: 140px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "DIN Next";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0;
+  line-height: normal;
+  transition: all 0.3s;
+}
+.d5-upsell-atc:hover {
+  color: #4a717c;
+  background: #fff;
+}
+.d5-upsell-atc .sold-text-d5 {
+  display: none;
+}
+.up-content-d5 h3,
+.up-content-d5 p {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 5px 0;
+}
+.up-content-d5 p {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+.up-image-d5 {
+  width: 100px;
+  height: 80px;
+  position: relative;
+}
+.up-image-d5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sale-label-d5 {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border-radius: 5px;
+  background: #4a717c;
+  display: flex;
+  width: 65px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: "DIN Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.up-variants-d5 {
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(74, 113, 124, 0.1);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.up-product-type-d5 p {
+  color: #085650;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.up-option-values-d5 {
+  display: flex;
+  align-items: start;
+  margin-top: 10px;
+  gap: 10px;
+}
+.selected-value-d5 {
+  border-color: #000;
+}
+.color-swatch-d5 .up-option-value-d5 {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.up-option-value-d5 {
+  cursor: pointer;
+}
+.color-swatch-d5 .selected-value-d5.up-option-value-d5 {
+  border-color: #000;
+}
+.normal-options-d5 .up-option-value-d5 {
+  border-radius: 3px;
+  border: 1px solid #254249;
+  background: #fff;
+  display: flex;
+  height: 35px;
+  padding: 5px 15px;
+  color: #254249;
+  font-family: "DIN Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.normal-options-d5 .selected-value-d5.up-option-value-d5 {
+  background: #254249;
+  color: #fff;
+}
+.up-option-name {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.d5-upsell-atc.soldout-d5 {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.d5-upsell-atc.soldout-d5 .sold-text-d5 {
+  display: block;
+}
+.d5-upsell-atc.soldout-d5 .btn-text-d5 {
+  display: none;
+}
+.up-option-name span {
+  font-weight: 700;
+}
+.pdp-splitter-d5-15 {
+  display: none;
+}
+
+/* image with text section pdp */
+.d5-image-with-text * {
+  text-align: left;
+}
+.d5-image-with-text .flexible-layout,
+.d5-image-with-text .fixed-layout {
+  margin: 0;
+}
+.d5-image-with-text .feature-text-paired {
+  margin: 0;
+  padding: 60px;
+}
+.d5-image-with-text .flexible-layout .column,
+.d5-image-with-text .fixed-layout .column {
+  padding: 0;
+}
+.d5-image-with-text .feature-text-paired h2 {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.d5-image-with-text .feature-text-paired p {
+  color: #000;
+  font-family: "Libre Franklin";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.d5-image-with-text.strongly-spaced-row,
+.d5-image-with-text.fully-spaced-row--medium {
+  margin: 16px 0;
+}
+.d5-recomendation .product-block__title {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+}
+.d5-recomendation .product-price__item.product-price__amount,
+.d5-recomendation .product-price__item.product-price__compare {
+  color: #4a717c;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.d5-recomendation .product-price__item.product-price__compare {
+  font-weight: 500;
+  color: #aec0c4;
+}
+.d5-recomendation .product-price__item.price-label.price-label--sale {
+  display: none;
+}
+.d5-recomendation .product-price {
+  justify-content: start;
+}
+.d5-recomendation .product-block .btn.quickbuy-toggle {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: "DIN Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.d5-recomendation .product-block .btn.quickbuy-toggle:hover {
+  color: #4a717c;
+}
+.d5-recomendation h4.align-center.hometitle {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  padding: 0 !important;
+  margin-bottom: 5px;
+}
+.d5-recomendation .subtext-d5 {
+  color: var(--Grey-500, #666);
+  font-family: "Libre Franklin";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+.d5-recomendation img.rimage__image.fade-in.cover.lazyautosizes.lazyloaded {
+  margin-bottom: 8px;
+  padding: 0;
+}
+.d5-recomendation .fully-spaced-row {
+  margin-bottom: 130px;
+}
+
+/* discounts block */
+.d-iiner-d5 {
+  width: 100%;
+  background: #ececec;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.d-main-d5 *{
+  text-align: center;
+  font-family: "DIN Next"
+}
+.d-subtitle-d5{
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: none;
+}
+.d-title-d5{
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0;
+  text-transform: none; 
+}
+.d-main-d5 p{
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+}
+ .shopify-section.section-main-product.page-section-spacing{
+    margin-bottom: 114px;
+  }
+@media (max-width: 1280px) {
+  .mobile-navigation-drawer {
+    max-width: 400px;
+  }
+  .reveal-mobile-nav .mobile-navigation-drawer {
+    transform: translate(0);
+  }
+  .logo-area .button.mobile-nav-toggle {
+    display: block !important;
+  }
+  .enable-mobile-nav-transition .mobile-navigation-drawer {
+    transition: transform 0.5s cubic-bezier(0.55, 0.03, 0.37, 0.96);
+  }
+  .mobile-navigation-drawer {
+    display: block;
+  }
+  .reveal-mobile-nav .page-shade,
+  .reveal-mobile-nav .header-shade {
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .page-shade,
+  .header-shade {
+    z-index: 7000;
+  }
+  .mobile-only.navigation__mobile-header {
+    display: flex !important;
+  }
+  .mobile-navigation-drawer ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1140px) {
+  .up-variants-d5,
+  .up-option-values-d5,
+  .nc-up-inner-d5 {
+    flex-wrap: wrap;
+  }
+  .up-product-type-d5 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .up-option-container-d5 {
+    width: 50%;
+  }
+  .pdp-icons-container-d5 {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 375px;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+  }
+  .pdp-icon-d5 {
+    max-width: 140px;
+    width: 100%;
+  }
+  .pdp-splitter-d5-13,
+  .pdp-splitter-d5-15 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .shopify-section.section-main-product.page-section-spacing{
+    margin-bottom: 64px;
+  }
+  .d5-main-product-section {
+    overflow: hidden;
+  }
+  .d5-main-product-section .spaced-row {
+    margin-bottom: 14px;
+  }
+  .d5-main-product-section .product-detail .gallery .main-image {
+    margin: 0;
+  }
+  .d5-main-product-section .container {
+    padding: 0 16px;
+  }
+  .d5-main-product-section .product-detail .gallery-size-medium {
+    max-width: 100%;
+    width: 100%;
+  }
+  .d5-main-product-section .product-detail .product-column-right {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .d5-main-product-section .owl-stage {
+    width: 100% !important;
+  }
+  .d5-main-product-section .owl-item {
+    width: 64px !important;
+  }
+  .d5-main-product-section .thumbnails.owl-carousel {
+    margin: 24px 0 30px;
+  }
+  .d5-main-product-section .thumbnails .thumbnail {
+    margin: 0;
+  }
+  .d5-main-product-section .product-detail .detail .title {
+    font-size: 32px;
+  }
+  .d5-main-product-section span.current-price.theme-money {
+    font-size: 30px;
+  }
+  .d5-main-product-section .price-area .was-price {
+    font-size: 20px;
+  }
+  .d5-main-product-section .lightly-spaced-row.not-in-quickbuy {
+    margin: 16px 0;
+  }
+  .product-info-block p,
+  .cc-accordion-item__content *,
+  .up-content-d5 h3 {
+    font-size: 14px;
+  }
+  .d5-main-product-section .vendor.lightly-spaced-row *,
+  .d5-main-product-section .deliver-text,
+  .d5-main-product-section .icon-text h4,
+  .d5-main-product-section .cc-select__btn {
+    font-size: 15px;
+  }
+  .product-form
+    .quantity-submit-row
+    .quantity-submit-row__submit
+    button[type="submit"] {
+    font-size: 14px;
+  }
+  .d5-acc-title {
+    font-size: 16px;
+  }
+  .up-content-d5 p {
+    font-size: 12px;
+  }
+  #shopify-installments-content .font-bold {
+    font-weight: 400;
+  }
+  .d5-main-product-section .cc-accordion-item__title {
+    padding: 20px 0;
+  }
+  .nc-up-main-d5 {
+    padding: 16px;
+  }
+  .d5-upsell-atc {
+    width: 81px;
+  }
+  .up-quantity-d5 {
+    width: 78px;
+  }
+  .up-qty-btn {
+    padding-inline: 10px;
+  }
+  .d5-main-product-section .nc-up-inner-d5 {
+    flex-wrap: nowrap;
+  }
+  .color-swatch-d5 .up-option-value-d5 {
+    width: 26px;
+    height: 26px;
+  }
+  .up-variants-d5 {
+    padding: 14px;
+  }
+  .d5-image-with-text .flexible-layout .column {
+    margin-bottom: 30px;
+  }
+  .d5-image-with-text .feature-text-paired {
+    padding: 0;
+  }
+  .d5-image-with-text .feature-text-paired h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .d5-image-with-text .feature-text-paired p {
+    font-size: 16px;
+  }
+  .d5-image-with-text.strongly-spaced-row,
+  .d5-image-with-text.fully-spaced-row--medium {
+    margin: 10px 0;
+  }
+  .d5-recomendation .collection-listing .product-list {
+    margin: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    gap: 18px;
+    scroll-behavior: smooth;
+  }
+  .d5-recomendation .collection-listing .product-list .product-block {
+    min-width: calc(50% - 9px);
+    padding: 0;
+    scroll-snap-align: start;
+  }
+  .shopify-section {
+    width: 100%;
+    overflow: hidden;
+  }
+  .d5-recomendation img.rimage__image.fade-in.cover.lazyautosizes.lazyloaded {
+    margin-bottom: 8px;
+  }
+  .d5-recomendation .product-block__title {
+  }
+  .d5-recomendation .product-block__title,
+  .d5-recomendation .product-price__item.product-price__amount,
+  .d5-recomendation .product-price__item.product-price__compare,
+  .d5-recomendation .product-block .btn.quickbuy-toggle,
+  .d5-recomendation .subtext-d5 {
+    font-size: 14px;
+  }
+  .d5-recomendation .product-block .btn.quickbuy-toggle {
+    padding: 10px !important;
+  }
+  .d5-recomendation h4.align-center.hometitle {
+    font-size: 32px;
+  }
+  .d5-recomendation .subtext-d5 {
+    margin-bottom: 20px;
+  }
+  .d5-recomendation .fully-spaced-row {
+    margin-top: 0;
+  }
+  .section-apps .fully-spaced-row--medium {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  .product-recommendations.d5-recomendation {
+    margin-top: -6px;
+  }
+  .d5-recomendation .collection-listing .product-block,
+  .d5-recomendation .product-block .block-inner {
+    margin-bottom: 0;
+  }
+  .d5-recomendation .fully-spaced-row {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 750px) {
+  #shopify-section-header {
+    height: 48px;
+  }
+  .announcement__text p {
+    font-size: 10px;
+  }
+}
+/* d6 button styling */
+.d6-button-snippet {
+  margin: 40px auto 0;
+  display: flex;
+  overflow: hidden;
+  max-width: 490px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.d6-comparison-section-container .d6-button-snippet {
+  margin: 30px auto 0;
+}
+.d6-button-snippet-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  width: max-content;
+}
+
+.d6-button-snippet-wrapper > * {
+  margin: auto 3px;
+}
+.d6-button-snippet-span::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 5px;
+  height: 14px;
+  width: 1px;
+}
+
+.d6-button-snippet-wrapper span {
+  color: #040404;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  margin-right: 12px;
+  position: relative;
+}
+
+.d6-button-snippet button {
+  border-radius: 5px;
+  background: #d3a221;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  height: 64px;
+  font-family: "DIN Next";
+  font-style: normal;
+  line-height: 27px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.d6-button-snippet button a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.button:after {
+  box-shadow: unset;
+}
+.button:hover:after {
+  box-shadow: unset !important;
+}
+
+.d6-comparison-section-main .button:hover:after {
+  box-shadow: unset;
+}
+
+.d6-comparison-section-main .button:after {
+  box-shadow: unset;
+}
+.shipping-icon-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  padding: 0 0 8px 0;
+}
+
+.shipping-icon-text p {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+}
+.shine {
+  background-size: 200% !important;
+  background-position: -100% !important; /* Start from the left */
+  transition: all 0.5s ease-out;
+}
+.shine:hover {
+  background-position: 100% !important; /* Animate to the right on hover */
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  ) !important;
+}
+
+.shine {
+  background-size: 200% !important;
+  background-position: -100% !important; /* Start from the left */
+  transition: all 0.5s ease-out;
+}
+.custom-color.shine:hover {
+  background-position: 100% !important; /* Animate to the right on hover */
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  ) !important;
+}
+button.d5-button-width a:hover {
+  color: #49717b !important;
+  background: #fff;
+  border: 2px solid #49717b;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .d6-button-snippet {
+    margin: 20px auto 0;
+  }
+  .d6-button-snippet button {
+    max-width: 504px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 54px;
+  }
+  .d6-button-snippet-wrapper span {
+    color: #040404;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    margin-right: 0px;
+    position: relative;
+    letter-spacing: 0;
+  }
+
+  .d6-button-snippet-svg-1 {
+    width: 18px;
+    height: 12px;
+  }
+
+  .d6-button-snippet-svg-2 {
+    width: 18px;
+    height: 18px;
+  }
+  .d6-button-snippet button a {
+    z-index: 2;
+  }
+}

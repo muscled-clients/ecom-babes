@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Nova Ceramics",
+        "url": "https://novaceramics.co/",
+        "logo": "https://novaceramics.co/cdn/shop/files/Nova_Ceramics_logo_in_black_3197f9fc-99fd-4992-83e0-ae7c3333eda3_280x.png?v=1663508984",
+        "sameAs": [
+          "https://www.facebook.com/NovaCeramics.cups/",
+          "https://www.instagram.com/nova_ceramics_/",
+          "https://www.pinterest.co.uk/pin/159455643050772439/"
+        ]
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+       @font-face {
+        font-family: 'DIN Next';
+        src: url('https://cdn.shopify.com/s/files/1/0605/8816/3242/files/dinnextw1g_medium.woff?v=1738790533') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'DIN Next W1G';
+        src: url('https://cdn.shopify.com/s/files/1/0605/8816/3242/files/dinnextw1g_medium.woff?v=1738790533') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+   @font-face {
+        font-family: 'Nexa Bold';
+        src: url('https://cdn.shopify.com/s/files/1/0605/8816/3242/files/NexaBold.woff?v=1739298648') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+      .d4-large-hide {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .d4-large-hide {
+          display: block;
+        }
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async type="text/lazyload" src="https://www.googletagmanager.com/gtag/js?id=G-H6WVWY22PC"></script>
+    <script type="text/lazyload">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H6WVWY22PC');
+    </script>
+
+    <!-- Symmetry 5.3.0 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style">
+    {% render 'head-tag' %}
+    <meta name="theme-color" content="{{ settings.btn_col }}">
+
+    <title>
+      {{ page_title }}
+      {% if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif %}
+      {% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+
+    {% render 'social-meta-tags' %}
+
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+
+    <script>
+      window.theme = window.theme || {};
+      theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
+      theme.money_format_with_cart_code_preference = {% if settings.cart_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
+      theme.money_format = {{ shop.money_format | json }};
+      theme.strings = {
+        previous: {{ 'general.accessibility_labels.previous' | t | json }},
+        next: {{ 'general.accessibility_labels.next' | t | json }},
+        addressError: {{ 'map.errors.address_error' | t | json }},
+        addressNoResults: {{ 'map.errors.address_no_results' | t | json }},
+        addressQueryLimit: {{ 'map.errors.address_query_limit_html' | t | json }},
+        authError: {{ 'map.errors.auth_error' | t | json }},
+        icon_labels_left: {{ 'general.icon_labels.left' | t | escape | json }},
+        icon_labels_right: {{ 'general.icon_labels.right' | t | escape | json }},
+        icon_labels_down: {{ 'general.icon_labels.down' | t | escape | json }},
+        icon_labels_close: {{ 'general.icon_labels.close' | t | escape | json }},
+        icon_labels_plus: {{ 'general.icon_labels.plus' | t | escape | json }},
+        cart_terms_confirmation: {{ 'cart.terms.confirmation' | t | json }},
+        products_listing_from: {{ 'products.listing.from' | t | json }},
+        layout_live_search_see_all: {{ 'layout.live_search.see_all' | t | json }},
+        products_product_add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+        products_variant_no_stock: {{ 'products.variant.no_stock' | t | json }},
+        products_variant_non_existent: {{ 'products.variant.non_existent' | t | json }},
+        products_product_pick_a: {{ 'products.product.pick_a' | t | json }},
+        products_product_unit_price_separator: {{ 'products.product.unit_price_separator' | t | json }},
+        general_navigation_menu_toggle_aria_label: {{ 'general.navigation.menu_toggle_aria_label' | t | json }},
+        general_accessibility_labels_close: {{ 'general.accessibility_labels.close' | t | json }},
+        products_added_notification_title: {{ 'products.added_notification.title' | t | json }},
+        products_added_notification_item: {{ 'products.added_notification.item' | t | json }},
+        products_added_notification_unit_price: {{ 'products.added_notification.unit_price' | t | json }},
+        products_added_notification_quantity: {{ 'products.added_notification.quantity' | t | json }},
+        products_added_notification_total_price: {{ 'products.added_notification.total_price' | t | json }},
+        products_added_notification_shipping_note: {{ 'products.added_notification.shipping_note' | t | json }},
+        products_added_notification_keep_shopping: {{ 'products.added_notification.keep_shopping' | t | json }},
+        products_added_notification_cart: {{ 'products.added_notification.cart' | t | json }},
+        products_product_adding_to_cart: {{ 'products.product.adding_to_cart' | t | json }},
+        products_product_added_to_cart: {{ 'products.product.added_to_cart' | t | json }},
+        products_added_notification_subtotal: {{ 'products.added_notification.subtotal' | t | json }},
+        products_labels_sold_out: {{ 'products.labels.sold_out' | t | json }},
+        products_labels_sale: {{ 'products.labels.sale' | t | json }},
+        products_labels_percent_reduction: {{ 'products.labels.percent_reduction' | t: amount: '[[ amount ]]' | json }},
+        products_labels_value_reduction_html: {{ 'products.labels.value_reduction_html' | t: amount: '[[ amount ]]' | json }},
+        products_product_preorder: {{ 'products.product.preorder' | t | json }},
+        general_quick_search_pages: {{ 'general.quick_search.pages' | t | json }},
+        general_quick_search_no_results: {{ 'general.quick_search.no_results' | t | json }},
+        collections_general_see_all_subcollections: {{ 'collections.general.see_all_subcollections' | t | json }}
+      };
+      theme.routes = {
+        search_url: '{{ routes.search_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}'
+      };
+      theme.settings = {
+        cart_type: {{ settings.cart_type | json }},
+        quickbuy_style: {{ settings.quickbuy_style | json }},
+        avoid_orphans: {{ settings.avoid_orphans | json }}
+      };
+      document.documentElement.classList.add('js');
+    </script>
+
+    {%- if settings.swatch_enabled and settings.swatch_value_list != blank -%}
+      <style>
+        {%- assign swatch_lines = settings.swatch_value_list | newline_to_br | strip_newlines | split: '<br />' -%}
+        {%- for line in swatch_lines -%}
+          {%- assign line_split = line | split: ':' -%}
+          {%- if line_split.last contains '#' -%}
+            [data-swatch="{{ line_split.first | replace: '"', '' | downcase }}"] { --swatch-background-color: {{- line_split.last -}} }
+          {%- else -%}
+            [data-swatch="{{ line_split.first | replace: '"', '' | downcase }}"] { --swatch-background-image: url({{- line_split.last | strip | file_img_url: '128x128', crop: settings.swatch_crop_align -}}) }
+          {%- endif -%}
+        {%- endfor -%}
+      </style>
+    {%- endif -%}
+
+    {{ content_for_header }}
+
+    {{ shop.metafields.loox.global_html_head }}
+    {{ 'd5-style.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body
+    class="
+      template-{{ template | split: '.' | first }}
+      {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
+      {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
+    "
+    data-cc-animate-timeout="0"
+  >
+    {%- if settings.animations_enabled_desktop -%}
+      <script>
+        if ('IntersectionObserver' in window) {
+          document.body.classList.add("cc-animate-enabled");
+        }
+      </script>
+    {%- endif -%}
+
+    <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+    {% section 'store-messages' %}
+
+    <main id="content" role="main">
+      <div class="container cf">
+        {{ content_for_layout }}
+      </div>
+    </main>
+    {% section 'sticky-atc' %}
+    {% if request.path != '/challenge' %}
+      <div id="pagefooter">
+        {% section 'cross-page-promos' %}
+        {% section 'footer' %}
+      </div>
+
+      {% section 'popup' %}
+    {% endif %}
+
+    {{ 'vendor.min.js' | asset_url | script_tag }}
+    {{ 'theme.js' | asset_url | script_tag }}
+    {{ 'custom.js' | asset_url | script_tag }}
+    {{ shop.metafields.loox.global_html_body | replace: 'src=', 'data-src=' }}
+
+    {% render 'back-to-top' %}
+  </body>
+</html>

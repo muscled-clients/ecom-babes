@@ -1,0 +1,261 @@
+.utility-bar {
+  justify-content: flex-end;
+  margin: 0;
+}
+.utility-bar__centre {
+  text-align: right;
+  order: 2;
+  flex: none;
+  width: 100%;
+  max-width: max-content;
+  padding: 0 0 0 34px;
+}
+.page-header.page-header--with-upper-spacing {
+  display: none;
+}
+.utility-bar__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+  order: 1;
+  flex: 0 0 400px;
+}
+.utility-bar-main-d6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(174, 192, 196, 0.1);
+  padding: 14px 24px;
+  margin: 80px 0 30px 0;
+}
+.utility-bar-main-d6 .page-header.page-header--with-upper-spacing {
+  display: block;
+}
+.utility-bar-main-d6 .page-header.page-header--with-upper-spacing .container {
+  padding: 0;
+}
+.page-header.page-header--with-upper-spacing {
+  margin: 0;
+  padding: 0;
+}
+.utility-bar-main-d6 .page-header .container .dropdown .btn.btn-primary {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+}
+span.utility-bar__item.desktop-only {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+span.link-dropdown__button-text {
+  color: #121212;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.utility-bar__item {
+  color: #121212;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.utility-bar-main-d6
+  .page-header.page-header--with-upper-spacing
+  h1.pagetitle.h3-style {
+  padding: 0 !important;
+  color: #000;
+  font-family: "DIN Next" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 !important;
+}
+.innerer .product-block__title {
+  color: #000;
+  font-family: "DIN Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+.innerer .product-price {
+  justify-content: left;
+}
+.innerer
+  .product-price
+  span.product-price__item.product-price__amount.product-price__amount--on-sale.theme-money {
+  color: #4a717c;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.innerer
+  .product-price
+  span.product-price__item.product-price__compare.theme-money {
+  color: #aec0c4;
+  font-family: "DIN Next W1G";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: strikethrough;
+}
+.innerer a.btn.btn--secondary.quickbuy-toggle.new_btn_toggle {
+  color: #fff;
+  text-align: center;
+  font-family: "DIN Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 8px 0 0 !important;
+  width: calc(100% - 0px);
+  border-radius: 0;
+}
+.product-label-container span.product-label.product-label--sale {
+  color: #fff;
+  font-family: "DIN Next";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.innerer a.btn.btn--secondary.quickbuy-toggle.new_btn_toggle:hover {
+  color: #52717a;
+}
+.pagination-row .pagination {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-row .pagination span.pagination__number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #f0f0f0;
+}
+span.pagination__number,
+span.pagination__number a {
+  color: #121212;
+  text-align: center;
+  font-family: "DIN Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.pagination-row .pagination span.pagination__number.active {
+  color: #fff;
+  background: #4a717c;
+}
+.container.pagination-row {
+  margin: 10px auto 60px auto;
+}
+.pagination-row .pagination a.prev,
+.pagination-row .pagination a.next,
+.pagination-row .pagination span.pagination__sep {
+  display: none;
+}
+.sort-by-title-d6{
+  font-weight: 700; 
+}
+@media (min-width: 769px){
+  .link-dropdown__options{
+    top: 40px;
+    padding-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .utility-bar-main-d6 {
+    padding: 10px 16px;
+    margin: 30px 0 16px 0;
+  }
+  .utility-bar__centre,
+  .utility-bar__right {
+    display: none;
+  }
+  .utility-bar-main-d6 .page-header .container .dropdown .btn.btn-primary {
+    font-size: 16px;
+  }
+  a.toggle-btn.utility-bar__item.toggle-btn--revealed-desktop.mobile-only {
+    margin: 0;
+  }
+  a.toggle-btn.utility-bar__item.toggle-btn--revealed-desktop.mobile-only span {
+    display: none;
+  }
+  a.toggle-btn.utility-bar__item.toggle-btn--revealed-desktop.mobile-only
+    .button-icon:first-child {
+    margin: 0;
+    display: block;
+  }
+  .utility-bar-main-d6
+    .page-header.page-header--with-upper-spacing
+    h1.pagetitle.h3-style {
+    font-size: 16px !important;
+  }
+  .innerer .product-block__title {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .innerer
+    .product-price
+    span.product-price__item.product-price__amount.product-price__amount--on-sale.theme-money {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .innerer
+    .product-price
+    span.product-price__item.product-price__compare.theme-money {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .innerer a.btn.btn--secondary.quickbuy-toggle.new_btn_toggle {
+    font-size: 14px;
+    margin-top: 19px !important;
+    padding: 10px !important;
+    border-radius: 5px;
+  }
+  .product-label-container span.product-label.product-label--sale {
+    font-size: 10px;
+  }
+  span.product-price__item.price-label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 498px) {
+  .filter-container.filter-container--side
+    .collection-listing
+    .product-list
+    .product-block {
+    width: 50% !important;
+  }
+  .filter-container.filter-container--side .collection-listing .product-list {
+    flex-direction: unset !important;
+    align-items: baseline !important;
+  }
+}
