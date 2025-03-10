@@ -69,11 +69,9 @@
               </div>
             {%- endfor -%}
           </div>
-
           <div class="slideshow-controls">
             <div class="slideshow-controls__arrows"></div>
           </div>
-
           {%- assign models = product.media | where: 'media_type', 'model' -%}
           {% if models.size > 0 %}
             <script type="application/json" class="model-json">
