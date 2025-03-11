@@ -1,6 +1,6 @@
 (function () {
   const bundles = document.querySelectorAll('.b-card-d5');
-  const qtyInput = document.querySelector('.d5-quantity-selector input[name="quantity"]');
+  const qtyInput = document.querySelector('.qty-input-d6');
   const secondQtyInput = document.querySelector('.d5-quantity-input');
   const comparePrices = document.querySelectorAll('.compare-price-d5');
   const sellingPrices = document.querySelectorAll('.selling-price-d5');
