@@ -5,6 +5,9 @@
   height: 94px;
   overflow: hidden;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .d5-header,
 .d5-header #pageheader {
   height: 100%;
@@ -666,30 +669,30 @@
   text-align: center;
   box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3);
 }
-.d-main-d5 *{
+.d-main-d5 * {
   text-align: center;
-  font-family: "DIN Next"
+  font-family: "DIN Next";
 }
-.d-subtitle-d5{
+.d-subtitle-d5 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   text-transform: none;
 }
-.d-title-d5{
+.d-title-d5 {
   font-size: 30px;
   font-weight: 700;
   margin: 8px 0;
-  text-transform: none; 
+  text-transform: none;
 }
-.d-main-d5 p{
+.d-main-d5 p {
   font-size: 12px;
   margin: 0;
   font-weight: 400;
 }
- .shopify-section.section-main-product.page-section-spacing{
-    margin-bottom: 114px;
-  }
+.shopify-section.section-main-product.page-section-spacing {
+  margin-bottom: 114px;
+}
 @media (max-width: 1280px) {
   .mobile-navigation-drawer {
     max-width: 400px;
@@ -755,7 +758,7 @@
   }
 }
 @media (max-width: 768px) {
-  .shopify-section.section-main-product.page-section-spacing{
+  .shopify-section.section-main-product.page-section-spacing {
     margin-bottom: 64px;
   }
   .d5-main-product-section {
