@@ -6,12 +6,19 @@
     const sellingPrices = document.querySelectorAll('.selling-price-d5');   
     const variantSelect = document.querySelector('.d6-select'); // Select dropdown
 
-    function getSelectedVariantId() {
-        return variantSelect ? variantSelect.value : null;
+    if (!variantSelect) return;
+
+    // Parse the product JSON from data attribute
+    const productData = JSON.parse(variantSelect.getAttribute('data-product'));
+
+    function getSelectedVariant() {
+        const variantId = variantSelect.value;
+        return productData.variants.find(v => v.id == variantId);
     }
 
-    function updatePrices(selectedVariant) {
-        if (!selectedVariant) return; 
+    function updatePrices() {
+        const selectedVariant = getSelectedVariant();
+        if (!selectedVariant) return;
 
         bundles.forEach((bundle, index) => {
             let discountPercent = parseFloat(bundle.getAttribute('data-off-d5')) || 0;
@@ -24,31 +31,6 @@
             sellingPrices[index].textContent = `US $${discountedPrice.toFixed(2)}`;
             comparePrices[index].textContent = `US $${compareAtPrice.toFixed(2)}`;
         });
-    }
-
-    function fetchVariantAndUpdate() {
-        let variantId = getSelectedVariantId();
-        if (!variantId) return;
-
-        fetch(`${window.location.pathname}.js`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text(); // Read as text first
-            })
-            .then(text => {
-                try {
-                    return JSON.parse(text); // Parse JSON safely
-                } catch (error) {
-                    throw new Error("Response is not valid JSON: " + text);
-                }
-            })
-            .then(product => {
-                let selectedVariant = product.variants.find(v => v.id == variantId);
-                updatePrices(selectedVariant);
-            })
-            .catch(error => console.error("Error fetching variant:", error));
     }
 
     function updateQuantity() {
@@ -73,11 +55,9 @@
     });
 
     // Listen for variant selection change in the select dropdown
-    if (variantSelect) {
-        variantSelect.addEventListener('change', fetchVariantAndUpdate);
-    }
+    variantSelect.addEventListener('change', updatePrices);
 
     // Initial setup
-    fetchVariantAndUpdate();
+    updatePrices();
     updateQuantity();
 })();
