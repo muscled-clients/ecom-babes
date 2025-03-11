@@ -1199,10 +1199,12 @@
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Lizzie",
             "rating": 5,
-            "star_size": 25,
-            "gap": 2,
+            "star_size": 15,
+            "full_star": "shopify://shop_images/full-star.svg",
+            "empty_star": "shopify://shop_images/empty-star.svg",
+            "gap": 1,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
-            "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
+            "products": "adjustable-heart-o-ring-punk-rock-cuban-chain-necklace-lariat-y-style-necklace-with-key-heart-lock-pendant"
           }
         }
       },
