@@ -1053,28 +1053,6 @@
         "full_width": false
       }
     },
-    "16636847712d14e086": {
-      "type": "image-with-text",
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 40px; font-weight: bold;}",
-        "@media only screen and (max-width: 1024px) and (min-width: 768px) {h2 {font-size: 35px; }}",
-        "@media only screen and (max-width: 768px) {h2 {font-size: 28px; }}"
-      ],
-      "settings": {
-        "image_width": 500,
-        "subheading": "",
-        "title": "About us",
-        "use_h1": false,
-        "text": "<p> Nova Ceramics is dedicated to crafting unique and high-quality ceramic products that elevate your coffee drinking experience while reducing single-use culture and plastic waste. Our designs are inspired by nature and created to encourage reusable use, not only adding style to your coffee experience but also making a positive impact on the environment.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "image_position": "right",
-        "text_alignment": "left",
-        "use_alt_bg": false
-      }
-    },
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9": {
       "type": "rich-text",
       "blocks": {
@@ -1193,7 +1171,6 @@
     "compare_table_d5_Cq9Lti",
     "1663686268ced6ee0c",
     "1666347260a6b453a1",
-    "16636847712d14e086",
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9",
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",
     "custom_d4_image_with_text_XgmqAC",
