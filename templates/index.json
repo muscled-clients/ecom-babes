@@ -1136,13 +1136,18 @@
     },
     "review_sec_d6_rUNfFB": {
       "type": "review-sec-d6",
-      "settings": {
-        "block_heading": "Introducing Nerve Matrix",
-        "block_discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean",
-        "btn-text-sn": "",
-        "btn-link-sn": "",
-        "sub-text-sn": ""
-      }
+      "blocks": {
+        "text_ffCtka": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_ffCtka"
+      ],
+      "settings": {}
     }
   },
   "order": [
