@@ -373,7 +373,7 @@
                     name="id"
                     class="original-selector{% if product.variants.size == 1 %} hidden{% endif %} d6-select"
                     aria-label="{{ 'products.product.selector_label' | t | escape }}"
-                    data-product="{{ product | json }}"
+                    data-product="{{ product | json | escape }}"
                   >
                     {% if product.variants.size > 1 %}
                       <option value="">{{ 'products.product.no_selection' | t }}</option>
