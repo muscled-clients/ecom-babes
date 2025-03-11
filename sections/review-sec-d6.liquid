@@ -579,9 +579,14 @@
                     else
                       assign img = product.featured_image
                     endif
+                    if block.settings['p-title'] != blank
+                      assign title = block.settings['p-title']
+                    else
+                      assign title = product.title
+                    endif
                   %}
                   <img src="{{ img | image_url: width: 400 }}" width="100" height="80">
-                  <p>{{ product.title }}</p>
+                  <p>{{ title }}</p>
                 </div>
               </div>
             </div>
