@@ -510,8 +510,8 @@
   <div class="container-d11-sr-main">
     <div class="container-d11-sr">
       <div class="parent-masonry" id="parent-masonry">
-        {% for block in section.blocks %}
-          <div class="masonry">
+        <div class="masonry">
+          {% for block in section.blocks %}
             <div class="card-item-s">
               {% if block.settings['reviewer-img'] %}
                 <div class="reviewer-image-d6">
@@ -543,8 +543,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
         <div class="shades"></div>
       </div>
       <div class="dots-d11-1"></div>
