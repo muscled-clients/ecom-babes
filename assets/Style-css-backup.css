@@ -8183,7 +8183,7 @@ ul.inline li {
     padding-right: 40px;
     width: 140px;
     white-space: normal;
-    overflow: scroll;
+    overflow: visible;
   }
   .product-detail .gallery.gallery--layout-carousel-beside .thumbnails .thumbnail {
     display: block;
