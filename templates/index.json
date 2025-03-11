@@ -1142,6 +1142,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Tami",
+            "rating": 5,
+            "star_size": 18,
+            "gap": 2,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "3-piece-fuzzy-fleece-loungewear-set"
           }
@@ -1151,6 +1154,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Lizzie",
+            "rating": 5,
+            "star_size": 25,
+            "gap": 2,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
           }
@@ -1160,6 +1166,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Lizzie",
+            "rating": 5,
+            "star_size": 25,
+            "gap": 2,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
           }
@@ -1169,6 +1178,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Lizzie",
+            "rating": 5,
+            "star_size": 25,
+            "gap": 2,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
           }
@@ -1178,6 +1190,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
             "reviewer-name": "Lizzie",
+            "rating": 5,
+            "star_size": 25,
+            "gap": 2,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
           }
