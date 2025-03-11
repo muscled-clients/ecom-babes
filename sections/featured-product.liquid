@@ -858,27 +858,30 @@
   </div>
 </div>
 <script>
-  window.addEventListener("load", function () {
-  adjustThumbnailHeight();
-});
+  function adjustThumbnailHeight() {
+    const mainImage = document.querySelector(".main-image");
+    const thumbnails = document.querySelectorAll(".thumbnails");
 
-window.addEventListener("resize", function () {
-  adjustThumbnailHeight();
-});
+    if (window.innerWidth <= 1100) { // Run only if the screen width is 1100px or less
+      if (mainImage && thumbnails.length > 0) {
+        let mainImageHeight = mainImage.clientHeight;
 
-function adjustThumbnailHeight() {
-  const mainImage = document.querySelector(".main-image");
-  const thumbnails = document.querySelectorAll(".thumbnails");
-
-  if (mainImage && thumbnails.length > 0) {
-    let mainImageHeight = mainImage.clientHeight;
-
-    thumbnails.forEach((thumbnail) => {
-      thumbnail.style.height = `${mainImageHeight}px`;
-    });
+        thumbnails.forEach((thumbnail) => {
+          thumbnail.style.height = `${mainImageHeight}px`;
+        });
+      }
+    } else {
+      // Reset thumbnail height if screen size exceeds 1100px
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.style.height = ""; // Reset height
+      });
+    }
   }
-}
+
+  window.addEventListener("load", adjustThumbnailHeight);
+  window.addEventListener("resize", adjustThumbnailHeight);
 </script>
+
 {% if product != blank %}
   <script type="application/json" id="ProductJson-{{ product.id }}">
     {{ product | json }}
