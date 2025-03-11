@@ -511,22 +511,24 @@
     <div class="container-d11-sr">
       <div class="parent-masonry" id="parent-masonry">
         <div class="masonry">
-          <div class="card-item-s">
-            <div class="review">
-              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
-              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
-              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
-              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+          {% for block in section.blocks %}
+            <div class="card-item-s">
+              <div class="review">
+                "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had
+                that area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump
+                appeared on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times.
+                She only recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+              </div>
+              <div class="author-stars">
+                <p class="author"><strong>Linda Schwinn</strong></p>
+                <p class="stars">
+                  <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {% render 'review-star' %}
+                  </svg>
+                </p>
+              </div>
             </div>
-            <div class="author-stars">
-              <p class="author"><strong>Linda Schwinn</strong></p>
-              <p class="stars">
-                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {% render 'review-star' %}
-                </svg>
-              </p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="shades"></div>
       </div>
