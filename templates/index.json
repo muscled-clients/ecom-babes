@@ -802,6 +802,10 @@
             "size_chart_page": ""
           }
         },
+        "bundle_eq8B79": {
+          "type": "bundle",
+          "settings": {}
+        },
         "buy_buttons_ah7GJL": {
           "type": "buy_buttons",
           "settings": {
@@ -809,24 +813,6 @@
             "enable_payment_button": false,
             "show_backorder_text": true
           }
-        },
-        "description_jHQEcA": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "show_in_tab": false,
-            "open_tab": false,
-            "icon": ""
-          }
-        },
-        "bundle_eq8B79": {
-          "type": "bundle",
-          "settings": {}
-        },
-        "bundle_yg6aF8": {
-          "type": "bundle",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
@@ -835,10 +821,8 @@
         "vendor_zGB8hq",
         "divider_dDYirq",
         "variant_picker_cQUQB3",
-        "buy_buttons_ah7GJL",
-        "description_jHQEcA",
         "bundle_eq8B79",
-        "bundle_yg6aF8"
+        "buy_buttons_ah7GJL"
       ],
       "settings": {
         "product": "tested-product",
