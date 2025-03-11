@@ -1,10 +1,9 @@
 (function () {   
     const bundles = document.querySelectorAll('.b-card-d5');   
     const qtyInput = document.querySelector('.qty-input-d6');   
-    const secondQtyInput = document.querySelector('.d5-quantity-input'); // Might not exist
+    const secondQtyInput = document.querySelector('.d5-quantity-input'); // Optional
     const comparePrices = document.querySelectorAll('.compare-price-d5');   
     const sellingPrices = document.querySelectorAll('.selling-price-d5');   
-    const sizeOptions = document.querySelectorAll('.cc-select__option.js-option');   
     const variantSelect = document.querySelector('.d6-select'); // Select dropdown
 
     function getSelectedVariantId() {
@@ -36,11 +35,11 @@
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
-                return response.text(); // First read as text to check content
+                return response.text(); // Read as text first
             })
             .then(text => {
                 try {
-                    return JSON.parse(text); // Parse only if it's valid JSON
+                    return JSON.parse(text); // Parse JSON safely
                 } catch (error) {
                     throw new Error("Response is not valid JSON: " + text);
                 }
@@ -77,15 +76,6 @@
     if (variantSelect) {
         variantSelect.addEventListener('change', fetchVariantAndUpdate);
     }
-
-    // Detect URL changes when variant updates (e.g., via Shopify's script)
-    const observer = new MutationObserver(() => {
-        fetchVariantAndUpdate();
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    window.addEventListener('popstate', fetchVariantAndUpdate);
 
     // Initial setup
     fetchVariantAndUpdate();
