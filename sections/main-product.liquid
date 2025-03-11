@@ -12,15 +12,12 @@
       assign featured_media = product.featured_media
     endif
   endfor
-
   assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
   assign product_form_installments_id = product_form_id | append: '-installments'
-
   assign show_preorder_label = false
   if settings.prod_pre_order_label_show and product.template_suffix contains 'preorder'
     assign show_preorder_label = true
   endif
-
   if section.settings.enable_var_img_grouping
     assign variant_image_grouping_option_index = ''
     assign grouping_options = section.settings.var_img_grouping_option | downcase | replace: ', ', ',' | split: ','
@@ -153,34 +150,45 @@
                 {% render block %}
               </div>
             {% when 'discount' %}
-            {% render 'd5-discounts', title: block.settings.title, subtitle: block.settings.subtitle, text: block.settings.text, tandc: block.settings.tc %}
+              {% render 'd5-discounts',
+                title: block.settings.title,
+                subtitle: block.settings.subtitle,
+                text: block.settings.text,
+                tandc: block.settings.tc
+              %}
             {% when 'title' %}
               <div class="title-row" {{ block.shopify_attributes }}>
                 <h1 class="title">{{ product.title }}</h1>
               </div>
             {% when 'bundle' %}
-            {% assign bundle = product.metafields.custom.bundles.value %}
-            {% render 'd5-bundle', bundles: bundle %}
+              {% assign bundle = product.metafields.custom.bundles.value %}
+              {% render 'd5-bundle', bundles: bundle %}
             {% when 'upsell-d5' %}
-            {% assign products_m = product.metafields.custom.upsells.value %}
-            {% if products_m != blank %}
-            {% render 'upsells-d5', products_m: products_m, title: block.settings.title, type: block.settings.type %}
-            {% endif %}
+              {% assign products_m = product.metafields.custom.upsells.value %}
+              {% if products_m != blank %}
+                {% render 'upsells-d5',
+                  products_m: products_m,
+                  title: block.settings.title,
+                  type: block.settings.type
+                %}
+              {% endif %}
             {% when 'icons' %}
               <div class="pdp-icons-container-d5">
                 {% for block_d in section.blocks %}
-                  {% if block_d.type == "icon" %}
+                  {% if block_d.type == 'icon' %}
                     <div class="pdp-icon-d5 pdp-icon-d5-{{ forloop.index }}">
                       <div>
-                      <div class="svg-icon-d5">{{ block_d.settings.svg }}</div>
-                      <div class="icon-title-d5"><p>{{ block_d.settings.title }}</p></div>
+                        <div class="svg-icon-d5">{{ block_d.settings.svg }}</div>
+                        <div class="icon-title-d5">
+                          <p>{{ block_d.settings.title }}</p>
+                        </div>
                       </div>
                     </div>
-                     <div class="svg-splitter-d5 pdp-splitter-d5-{{ forloop.index }}">
+                    <div class="svg-splitter-d5 pdp-splitter-d5-{{ forloop.index }}">
                       <svg width="2" height="64" viewBox="0 0 2 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="1.33337" y1="-2.18557e-08" x2="1.33338" y2="64" stroke="#254249" stroke-dasharray="6 6"/>
+                        <line x1="1.33337" y1="-2.18557e-08" x2="1.33338" y2="64" stroke="#254249" stroke-dasharray="6 6"/>
                       </svg>
-                      </div>
+                    </div>
                   {% endif %}
                 {% endfor %}
               </div>
@@ -250,42 +258,42 @@
                 {%- endif -%}
               </div>
             {% when 'price_dec' %}
-        <div class="price-descriptors">
-                  {%- form 'product', product, id: product_form_installments_id -%}
-                    <input type="hidden" name="id" value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
-                    {{ form | payment_terms }}
-                  {%- endform -%}
+              <div class="price-descriptors">
+                {%- form 'product', product, id: product_form_installments_id -%}
+                  <input type="hidden" name="id" value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
+                  {{ form | payment_terms }}
+                {%- endform -%}
 
-                  {%- if block.settings.show_tax_and_shipping -%}
-                    {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                      <div class="product-policies">
-                        {%- if cart.taxes_included -%}
-                          {{ 'products.product.include_taxes' | t }}
-                        {%- endif -%}
-                        {%- if shop.shipping_policy.body != blank -%}
-                          {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                        {%- endif -%}
-                      </div>
-                    {%- endif -%}
-                  {%- endif -%}
-
-                  {% if section.settings.inventory_transfers_enable %}
-                    <div class="product-inventory-transfer {% unless current_variant.incoming %}product-inventory-transfer--none{% endunless %}">
-                      {%- if current_variant.incoming -%}
-                        {%- if current_variant.next_incoming_date -%}
-                          {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
-                          {%- if current_variant.available -%}
-                            {{ 'products.transfers.will_not_ship_until' | t: date: date }}
-                          {%- else -%}
-                            {{ 'products.transfers.will_be_in_stock_after' | t: date: date }}
-                          {%- endif -%}
-                        {%- else -%}
-                          {{ 'products.transfers.waiting_for_stock' | t }}
-                        {%- endif -%}
+                {%- if block.settings.show_tax_and_shipping -%}
+                  {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                    <div class="product-policies">
+                      {%- if cart.taxes_included -%}
+                        {{ 'products.product.include_taxes' | t }}
+                      {%- endif -%}
+                      {%- if shop.shipping_policy.body != blank -%}
+                        {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                       {%- endif -%}
                     </div>
-                  {% endif %}
-                </div>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {% if section.settings.inventory_transfers_enable %}
+                  <div class="product-inventory-transfer {% unless current_variant.incoming %}product-inventory-transfer--none{% endunless %}">
+                    {%- if current_variant.incoming -%}
+                      {%- if current_variant.next_incoming_date -%}
+                        {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
+                        {%- if current_variant.available -%}
+                          {{ 'products.transfers.will_not_ship_until' | t: date: date }}
+                        {%- else -%}
+                          {{ 'products.transfers.will_be_in_stock_after' | t: date: date }}
+                        {%- endif -%}
+                      {%- else -%}
+                        {{ 'products.transfers.waiting_for_stock' | t }}
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+                {% endif %}
+              </div>
             {% when 'benefits' %}
               {% if block.settings['benefits-title'] %}
                 <h4 class="benefits-title">{{ block.settings['benefits-title'] }}</h4>
@@ -497,8 +505,6 @@
                       endif
                     -%}
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
-                    
-
                       <div class="quantity-submit-row__submit input-row">
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
