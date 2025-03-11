@@ -1206,6 +1206,31 @@
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "adjustable-heart-o-ring-punk-rock-cuban-chain-necklace-lariat-y-style-necklace-with-key-heart-lock-pendant"
           }
+        },
+        "text_iMmi8G": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
+            "reviewer-name": "Meriam",
+            "rating": 5,
+            "star_size": 15,
+            "full_star": "shopify://shop_images/full-star.svg",
+            "empty_star": "shopify://shop_images/empty-star.svg",
+            "gap": 1,
+            "review-text": "<p>I really like the mug, the drinking lip is thin which I like. The mug is beautiful. I just wish it was a bit bigger.</p>",
+            "products": "summer-v-neck-ribbed-knit-crop-top-sleeveless-turndown-collar-in-10-colors"
+          }
+        },
+        "text_jBaXhz": {
+          "type": "text",
+          "settings": {
+            "reviewer-name": "Tami",
+            "rating": 5,
+            "star_size": 25,
+            "gap": 2,
+            "review-text": "",
+            "products": ""
+          }
         }
       },
       "block_order": [
@@ -1213,7 +1238,9 @@
         "text_Fdd9JB",
         "text_NXBr4p",
         "text_hyHKgj",
-        "text_PiKj48"
+        "text_PiKj48",
+        "text_iMmi8G",
+        "text_jBaXhz"
       ],
       "settings": {}
     }
