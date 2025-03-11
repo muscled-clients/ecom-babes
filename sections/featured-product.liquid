@@ -862,7 +862,7 @@
     const mainImage = document.querySelector(".main-image");
     const thumbnails = document.querySelectorAll(".thumbnails");
 
-    if (window.innerWidth >= 1100) { // Run only if the screen width is 1100px or less
+    if (window.innerWidth > 1100) { // Run only if the screen width is 1100px or less
       if (mainImage && thumbnails.length > 0) {
         let mainImageHeight = mainImage.clientHeight;
 
