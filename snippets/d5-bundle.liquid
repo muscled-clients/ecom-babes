@@ -150,9 +150,7 @@
                 {% assign discount = bundle.off_ | times: 0.01 %}
                 {% assign discount_amount = variant.price | times: discount %}
                 {% assign discounted_price = variant.price | minus: discount_amount %}
-
                 <span class="selling-price-d5">US {{ discounted_price | money }}</span>
-
               {% else %}
                 <span class="selling-price-d5">US {{ variant.price | money }}</span>
               {% endif %}
