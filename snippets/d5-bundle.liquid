@@ -51,7 +51,7 @@
     font-weight: 700;
     line-height: normal;
     width: fit-content;
-  } 
+  }
   .b-title-content-d5 .sale-badge-d5{
     background: #254249;
     display: flex;
@@ -111,7 +111,11 @@
     <div class="b-row-d5">
       {% for bundle in bundles %}
         {% assign variant = product.selected_or_first_available_variant %}
-        <div class="b-card-d5 {% if forloop.first %}selected-bundle{% endif %}" data-quantity-d5="{{ bundle.quantity }}" data-off-d5="{{ bundle.off_ }}">
+        <div
+          class="b-card-d5 {% if forloop.first %}selected-bundle{% endif %}"
+          data-quantity-d5="{{ bundle.quantity }}"
+          data-off-d5="{{ bundle.off_ }}"
+        >
           <div class="b-card-inner-d5">
             <div class="b-card-content-d5">
               <div class="b-radio-icons-d5">
@@ -128,14 +132,13 @@
                   </svg>
                 </span>
               </div>
-
               <div class="b-img-d5">
                 <img src="{{ bundle.img | image_url: width: 300, height: 300 }}" width="80" height="80">
               </div>
               <div class="b-title-content-d5">
                 <h4>{{ bundle.bundle_tile }}</h4>
                 {% if bundle.additional_text != blank %}
-                <span class="additional-text-d5">{{ bundle.additional_text }}</span>
+                  <span class="additional-text-d5">{{ bundle.additional_text }}</span>
                 {% endif %}
                 {% if bundle.quantity > 1 %}
                   <span class="sale-badge-d5">Save {{ bundle.off_ }}%</span>
@@ -153,7 +156,9 @@
               {% else %}
                 <span class="selling-price-d5">US {{ variant.price | money }}</span>
               {% endif %}
-              <span class="compare-price-d5 {% unless variant.compare_at_price > variant.price %}bigger{% endunless %}">US {{ variant.price | money }}</span>
+              <span class="compare-price-d5 {% unless variant.compare_at_price > variant.price %}bigger{% endunless %}"
+                >US {{ variant.price | money -}}
+              </span>
             </div>
           </div>
         </div>
