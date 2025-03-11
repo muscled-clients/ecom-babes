@@ -1108,32 +1108,6 @@
         "btn-url": "shopify://collections/products"
       }
     },
-    "1663684322da33c5af": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image_position": "center center",
-        "mobile_image_position": "center bottom",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 220,
-        "image_link": "",
-        "subheading": "",
-        "title": "Partner with Us  <br>and Grow Together",
-        "title_size": 60,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "Join Us",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
     "review_sec_d6_rUNfFB": {
       "type": "review-sec-d6",
       "blocks": {
@@ -1261,6 +1235,32 @@
         "text_bCd7Xn"
       ],
       "settings": {}
+    },
+    "1663684322da33c5af": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image_position": "center center",
+        "mobile_image_position": "center bottom",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 220,
+        "image_link": "",
+        "subheading": "",
+        "title": "Partner with Us  <br>and Grow Together",
+        "title_size": 60,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "Join Us",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
     }
   },
   "order": [
@@ -1287,7 +1287,7 @@
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9",
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",
     "custom_d4_image_with_text_XgmqAC",
-    "1663684322da33c5af",
-    "review_sec_d6_rUNfFB"
+    "review_sec_d6_rUNfFB",
+    "1663684322da33c5af"
   ]
 }
