@@ -166,11 +166,6 @@
           {% when 'bundle' %}
             {% assign bundle = product.metafields.custom.bundles.value %}
             {% render 'd5-bundle', bundles: bundle %}
-          {% when 'upsell-d5' %}
-            {% assign products_m = product.metafields.custom.upsells.value %}
-            {% if products_m != blank %}
-              {% render 'upsells-d5', products_m: products_m, title: block.settings.title, type: block.settings.type %}
-            {% endif %}
           {% when 'title' %}
             <div class="title-row" {{ block.shopify_attributes }}>
               {% if product != blank %}
