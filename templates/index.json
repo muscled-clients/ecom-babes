@@ -1133,6 +1133,16 @@
         "mobile_overlay_under": false,
         "overlay_style": "shadow"
       }
+    },
+    "review_sec_d6_rUNfFB": {
+      "type": "review-sec-d6",
+      "settings": {
+        "block_heading": "Introducing Nerve Matrix",
+        "block_discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean",
+        "btn-text-sn": "",
+        "btn-link-sn": "",
+        "sub-text-sn": ""
+      }
     }
   },
   "order": [
@@ -1159,6 +1169,7 @@
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9",
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",
     "custom_d4_image_with_text_XgmqAC",
-    "1663684322da33c5af"
+    "1663684322da33c5af",
+    "review_sec_d6_rUNfFB"
   ]
 }
