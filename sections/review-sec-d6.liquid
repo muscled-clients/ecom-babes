@@ -535,6 +535,13 @@
                 </p>
               </div>
               <div class="review">{{ block.settings['review-text'] }}</div>
+              <div class="review-product-d6">
+                {% assign product = section.settings.products %}
+                <div class="pro-img-title">
+                  <img src="{{ product.featured_image | image_url: width: 30, height: 60 }}" width="30" height="60">
+                  <p>{{ product.title }}</p>
+                </div>
+              </div>
             </div>
           {% endfor %}
         </div>
