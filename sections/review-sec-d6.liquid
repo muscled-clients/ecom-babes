@@ -513,6 +513,13 @@
         <div class="masonry">
           {% for block in section.blocks %}
             <div class="card-item-s">
+              <div class="reviewer-image-d6">
+                <img
+                  src="{{ block.settings.reviewer-img | image_url: width: 150, height: 300  }}"
+                  width="150"
+                  height="300"
+                >
+              </div>
               <div class="author-stars">
                 <p class="author"><strong>Linda Schwinn</strong></p>
                 <p class="stars">
