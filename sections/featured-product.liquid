@@ -159,6 +159,7 @@
             {% render block %}
           {% when 'bundle' %}
             {% assign bundle = product.metafields.custom.bundles.value %}
+            {{ bundle | json }}
             {% render 'd5-bundle', bundles: bundle %}
           {% when 'title' %}
             <div class="title-row" {{ block.shopify_attributes }}>
