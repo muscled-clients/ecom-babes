@@ -1234,6 +1234,20 @@
             "review-text": "<p>I am absolutely in love with this travel mug. It’s the perfect size and it fits perfectly in my car cup holders. I recently went to a coffee shop and got so many compliments from the barista and the clientele there. It is also holds the perfect amount of coffee as well. I’ve also been sharing the shops website with several people because I am incredibly pleased with my purchase and every time I use it, I am asked where I purchased this mug. This little travel mug brightens my day daily with its bright vibrant pink and purple colors</p>",
             "products": "two-piece-tracksuit-set"
           }
+        },
+        "text_bCd7Xn": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
+            "reviewer-name": "Julie",
+            "rating": 4,
+            "star_size": 15,
+            "full_star": "shopify://shop_images/full-star.svg",
+            "empty_star": "shopify://shop_images/empty-star.svg",
+            "gap": 1,
+            "review-text": "<p>Love these cups!!  They truly make a statement about how you like your drink!  My Afterglow cup was shy on the afterglow (no orange band), but is still a lovely cup that will wow the baristas!</p>",
+            "products": "sleeveless-backless-mini-dress"
+          }
         }
       },
       "block_order": [
@@ -1243,7 +1257,8 @@
         "text_hyHKgj",
         "text_PiKj48",
         "text_iMmi8G",
-        "text_jBaXhz"
+        "text_jBaXhz",
+        "text_bCd7Xn"
       ],
       "settings": {}
     }
