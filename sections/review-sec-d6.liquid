@@ -536,7 +536,7 @@
               </div>
               <div class="review">{{ block.settings['review-text'] }}</div>
               <div class="review-product-d6">
-                {% assign product = section.settings.products %}
+                {% assign product = block.settings.products %}
                 <div class="pro-img-title">
                   <img src="{{ product.featured_image | image_url: width: 30, height: 60 }}" width="30" height="60">
                   <p>{{ product.title }}</p>
@@ -571,6 +571,11 @@
             "id": "reviewer-name",
             "label": "Name",
             "default": "Tami"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Product"
           }
         ]
       }
