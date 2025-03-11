@@ -1144,7 +1144,8 @@
             "reviewer-name": "Tami",
             "rating": 5,
             "star_size": 15,
-            "full_star": "shopify://shop_images/Star_6.svg",
+            "full_star": "shopify://shop_images/empty-star.svg",
+            "empty_star": "shopify://shop_images/empty-star.svg",
             "gap": 1,
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "3-piece-fuzzy-fleece-loungewear-set"
