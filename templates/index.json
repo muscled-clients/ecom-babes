@@ -828,7 +828,7 @@
         "product": "3-piece-fuzzy-fleece-loungewear-set",
         "inventory_transfers_enable": true,
         "gallery_size": "medium",
-        "gallery_layout": "carousel-under",
+        "gallery_layout": "carousel-beside",
         "enable_zoom": true,
         "enable_video_looping": false,
         "enable_var_img_grouping": false,
