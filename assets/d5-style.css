@@ -1075,7 +1075,6 @@ button.d5-button-width a:hover {
   border: 2px solid #49717b;
   border-radius: 5px;
 }
-
 @media screen and (max-width: 768px) {
   .d6-button-snippet {
     margin: 20px auto 0;
@@ -1098,12 +1097,10 @@ button.d5-button-width a:hover {
     position: relative;
     letter-spacing: 0;
   }
-
   .d6-button-snippet-svg-1 {
     width: 18px;
     height: 12px;
   }
-
   .d6-button-snippet-svg-2 {
     width: 18px;
     height: 18px;
