@@ -1154,11 +1154,41 @@
             "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
             "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
           }
+        },
+        "text_NXBr4p": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
+            "reviewer-name": "Lizzie",
+            "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
+            "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
+          }
+        },
+        "text_hyHKgj": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
+            "reviewer-name": "Lizzie",
+            "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
+            "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
+          }
+        },
+        "text_PiKj48": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/Rectangle_2800.png",
+            "reviewer-name": "Lizzie",
+            "review-text": "<p>Absolutely LOVE these 16 oz mugs. Use it everyday. Brings me such joy! Will buy more!</p>",
+            "products": "bird-nest-shaped-ponytail-hair-clip-magic-lazy-braider-hairpin-for-women"
+          }
         }
       },
       "block_order": [
         "text_ffCtka",
-        "text_Fdd9JB"
+        "text_Fdd9JB",
+        "text_NXBr4p",
+        "text_hyHKgj",
+        "text_PiKj48"
       ],
       "settings": {}
     }
