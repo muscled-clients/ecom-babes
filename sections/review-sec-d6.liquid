@@ -573,7 +573,14 @@
               <div class="review-product-d6">
                 {% assign product = block.settings.products %}
                 <div class="pro-img-title">
-                  <img src="{{ product.featured_image | image_url: width: 400 }}" width="100" height="80">
+                  {% liquid
+                    if block.settings['p-img'] != blank
+                      assign img = block.settings['p-img']
+                    else
+                      assign img = product.featured_image
+                    endif
+                  %}
+                  <img src="{{ img | image_url: width: 400 }}" width="100" height="80">
                   <p>{{ product.title }}</p>
                 </div>
               </div>
