@@ -857,7 +857,28 @@
     </div>
   </div>
 </div>
+<script>
+  window.addEventListener("load", function () {
+  adjustThumbnailHeight();
+});
 
+window.addEventListener("resize", function () {
+  adjustThumbnailHeight();
+});
+
+function adjustThumbnailHeight() {
+  const mainImage = document.querySelector(".main-image");
+  const thumbnails = document.querySelectorAll(".thumbnail");
+
+  if (mainImage && thumbnails.length > 0) {
+    let mainImageHeight = mainImage.clientHeight;
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.style.height = `${mainImageHeight}px`;
+    });
+  }
+}
+</script>
 {% if product != blank %}
   <script type="application/json" id="ProductJson-{{ product.id }}">
     {{ product | json }}
