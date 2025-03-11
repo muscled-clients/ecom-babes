@@ -339,7 +339,6 @@
                 {{ 'onboarding.product.vendor' | t }}
               {% endif %}
             </div>
-
           {% when 'sku' %}
             <div
               class="sku {% if current_variant and current_variant.sku == blank %}sku--no-sku{% endif %}"
@@ -354,7 +353,6 @@
                 {%- endif -%}
               </span>
             </div>
-
           {% when 'variant_picker' %}
             <div class="input-row" {{ block.shopify_attributes }}>
               {% if product != blank %}
