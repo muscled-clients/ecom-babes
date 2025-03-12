@@ -211,7 +211,7 @@ ul.social-links__list {
 }
 
 @media (max-width: 768px) {
-  .article.fully-spaced-row--medium {
+  .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
     margin: 64px 0 0;
   }
   .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
