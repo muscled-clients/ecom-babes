@@ -46,9 +46,9 @@
           "type": "name",
           "settings": {
             "slide-image": "shopify://shop_images/Rectangle_3.png",
-            "slide-title": "Elevate Your <br>Wardrobe Today",
+            "slide-title": "Lorem ipsum <br>dolor sit",
             "slide-title-color": "#ffffff",
-            "slide-content": "Timeless Elegance",
+            "slide-content": "Lorem ipsum",
             "slide-content-color": "#ffffff",
             "sec-btn": "View Collection",
             "sec-url": "shopify://collections"
