@@ -780,43 +780,43 @@
       slider.classList.remove("grabbing");
     }
 
-    function getCurrentSlideIndex() {
-      return Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-    }
+    // function getCurrentSlideIndex() {
+    //   return Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+    // }
 
-    function updateDots(index) {
-      const activeDot = dotsContainer.querySelector(".dot-d11-1.active");
-      if (activeDot) activeDot.classList.remove("active");
-      dotsContainer.children[index].classList.add("active");
-    }
+    // function updateDots(index) {
+    //   const activeDot = dotsContainer.querySelector(".dot-d11-1.active");
+    //   if (activeDot) activeDot.classList.remove("active");
+    //   dotsContainer.children[index].classList.add("active");
+    // }
 
-    function goToSlide(index, direction) {
-      if (index < 0 || index >= slides.length) return;
+    // function goToSlide(index, direction) {
+    //   if (index < 0 || index >= slides.length) return;
 
-      const currentIndex = getCurrentSlideIndex();
-      if (currentIndex === index) return;
+    //   const currentIndex = getCurrentSlideIndex();
+    //   if (currentIndex === index) return;
 
-      const currentSlide = slides[currentIndex];
-      const nextSlide = slides[index];
+    //   const currentSlide = slides[currentIndex];
+    //   const nextSlide = slides[index];
 
-      slides.forEach(slide => {
-        slide.classList.remove("active", "slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right");
-      });
+    //   slides.forEach(slide => {
+    //     slide.classList.remove("active", "slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right");
+    //   });
 
-      if (direction === 'left') {
-        currentSlide.classList.add("slide-out-left");
-        nextSlide.classList.add("slide-in-right");
-      } else {
-        currentSlide.classList.add("slide-out-right");
-        nextSlide.classList.add("slide-in-left");
-      }
+    //   if (direction === 'left') {
+    //     currentSlide.classList.add("slide-out-left");
+    //     nextSlide.classList.add("slide-in-right");
+    //   } else {
+    //     currentSlide.classList.add("slide-out-right");
+    //     nextSlide.classList.add("slide-in-left");
+    //   }
 
-      setTimeout(() => {
-        currentSlide.classList.remove("active");
-        nextSlide.classList.add("active");
-      }, 100);
+    //   setTimeout(() => {
+    //     currentSlide.classList.remove("active");
+    //     nextSlide.classList.add("active");
+    //   }, 100);
 
-      updateDots(index);
-    }
+    //   updateDots(index);
+    // }
   });
 </script>
