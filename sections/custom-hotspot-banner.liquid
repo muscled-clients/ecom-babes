@@ -1,335 +1,200 @@
 <div id="shopify-section-{{ section.id }}" class="shopify-section">
   <style>
+            .section-{{ section.id }} {
+              background-color: {{ section.settings.background_color }};
+              padding-top: {{ section.settings.padding_top }}px;
+              padding-bottom: {{ section.settings.padding_bottom }}px;
+              margin-top: {{ section.settings.margin_top }}px;
+              margin-bottom: {{ section.settings.margin_bottom }}px;
+            }
 
+            .section-title-{{ section.id }} {
+              font-family: "DIN Next";
+              font-size: {{ section.settings.title_font_size }}px;
+              color: {{ section.settings.title_color }};
+              text-align: {{ section.settings.title_text_align }};
+              font-style: normal;
+              font-weight: 700;
+              width: 532px;
+              line-height: normal;
+              letter-spacing: 0.576px;
+              margin: 0;
+            }
 
-        .section-{{ section.id }} {
-          background-color: {{ section.settings.background_color }};
-          padding-top: {{ section.settings.padding_top }}px;
-          padding-bottom: {{ section.settings.padding_bottom }}px;
-          margin-top: {{ section.settings.margin_top }}px;
-          margin-bottom: {{ section.settings.margin_bottom }}px;
-        }
+            .section-text-{{ section.id }} {
+              color: {{ section.settings.text_color }};
+              font-family: "Libre Franklin";
+              font-size: {{ section.settings.text_font }}px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 16px 0;
+            }
 
-        .section-title-{{ section.id }} {
-          font-family: "DIN Next";
-          font-size: {{ section.settings.title_font_size }}px;
-          color: {{ section.settings.title_color }};
-          text-align: {{ section.settings.title_text_align }};
-          font-style: normal;
-          font-weight: 700;
-          width: 532px;
-          line-height: normal;
-          letter-spacing: 0.576px;
-          margin: 0;
-        }
+            .hotspot-item-{{ section.id }} .hotspot-icon.active {
+              transform: rotate(45deg);
+              transition: transform 0.3s ease;
+            }
 
-        .section-text-{{ section.id }} {
-          color: {{ section.settings.text_color }};
-          font-family: "Libre Franklin";
-          font-size: {{ section.settings.text_font }}px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 24px;
-          margin: 16px 0;
-        }
+            .hotspot-item-{{ section.id }}.active .hotspot-content {
+              opacity: 1;
+              visibility: visible;
+              transition: opacity 0.4s ease, transform 0.4s ease;
+            }
 
-        .hotspot-item-{{ section.id }} .hotspot-icon.active {
-          transform: rotate(45deg);
-          transition: transform 0.3s ease;
-        }
-        
-        .hotspot-item-{{ section.id }}.active .hotspot-content {
-          opacity: 1;
-          visibility: visible;
-          transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-        
-        .hotspot-item-{{ section.id }}.active .hotspot-icon {
-          transform: rotate(45deg); 
-        }
+            .hotspot-item-{{ section.id }}.active .hotspot-icon {
+              transform: rotate(45deg);
+            }
 
-        .btn_wrapper-{{ section.id }} {
-          display: flex;
-          gap: 16px;
-          transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        }
+            .btn_wrapper-{{ section.id }} {
+              display: flex;
+              gap: 16px;
+              transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            }
 
-        .btn_wrapper:hover {
-          transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        }
+            .btn_wrapper:hover {
+              transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            }
 
-        .btn-wrap-{{ section.id }} {
-          display: flex;
-          width: 217px;
-          height: 60px;
-          padding: 17px;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-          border-radius: 4px;
-          font-family: "DIN Next W1G";
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
+            .btn-wrap-{{ section.id }} {
+              display: flex;
+              width: 217px;
+              height: 60px;
+              padding: 17px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 4px;
+              font-family: "DIN Next W1G";
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
 
-        .btn-wrap-{{ section.id }}.btn-one {
-          background: #FFF;
-          color: #1A1A1A;
-          font-size: 16px;
-        }
+            .btn-wrap-{{ section.id }}.btn-one {
+              background: #FFF;
+              color: #1A1A1A;
+              font-size: 16px;
+            }
 
-        .btn-wrap-{{ section.id }}.btn-one:hover {
-          background: transparent;
-          color: #fff;
-          border: 1px solid #fff;
-        } 
+            .btn-wrap-{{ section.id }}.btn-one:hover {
+              background: transparent;
+              color: #fff;
+              border: 1px solid #fff;
+            }
 
-        .btn-wrap-{{ section.id }}.btn-two {
-          background: transparent;
-          border: 1px solid #FFF;
-          color: #FFF;
-          font-size: 16px;
-        }
+            .btn-wrap-{{ section.id }}.btn-two {
+              background: transparent;
+              border: 1px solid #FFF;
+              color: #FFF;
+              font-size: 16px;
+            }
 
-        .btn-wrap-{{ section.id }}.btn-two:hover {
-          background: #fff;
-          color: #1A1A1A;
-          border: none;
-        }
+            .btn-wrap-{{ section.id }}.btn-two:hover {
+              background: #fff;
+              color: #1A1A1A;
+              border: none;
+            }
 
-        .d11-content-wrap-{{ section.id }} {
-          position: absolute;
-          bottom: 53px;
-          left: 48px;
-        }
+            .d11-content-wrap-{{ section.id }} {
+              position: absolute;
+              bottom: 53px;
+              left: 48px;
+            }
 
-        .hotspots-image-{{ section.id }} {
-          border-radius: {{ section.settings.image_border_radius }}px;
-          position: relative;
-          width: 100%;
-        }
+            .hotspots-image-{{ section.id }} {
+              border-radius: {{ section.settings.image_border_radius }}px;
+              position: relative;
+              width: 100%;
+            }
 
-        .hotspots-image-{{ section.id }}  img,.hotspots-image-{{ section.id }}  picture,.hotspots-image-{{ section.id }}  source  {
-          width: 100%;
-          height: 100%;
-          object-fit: {{ section.settings.image_object_fit }};
-          border-radius: {{ section.settings.image_border_radius }}px;
-        }
+            .hotspots-image-{{ section.id }}  img,.hotspots-image-{{ section.id }}  picture,.hotspots-image-{{ section.id }}  source  {
+              width: 100%;
+              height: 100%;
+              object-fit: {{ section.settings.image_object_fit }};
+              border-radius: {{ section.settings.image_border_radius }}px;
+            }
 
-        .hotspot-item-{{ section.id }} {
-          position: absolute;
-          cursor: pointer;
-          color: {{ section.settings.hotspot_text_color }};
-          border-radius: {{ section.settings.hotspot_border_radius }}px;
-          width: {{ section.settings.hotspot_padding }}px;
-          height: {{ section.settings.hotspot_padding }}px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+            .hotspot-item-{{ section.id }} {
+              position: absolute;
+              cursor: pointer;
+              color: {{ section.settings.hotspot_text_color }};
+              border-radius: {{ section.settings.hotspot_border_radius }}px;
+              width: {{ section.settings.hotspot_padding }}px;
+              height: {{ section.settings.hotspot_padding }}px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-        .hotspot-item-{{ section.id }} .hotspot-icon{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-          background-color: {{ section.settings.hotspot_background_color }};
-          position: relative;
-          z-index: 1;
-          border-radius: 50%;
-          padding: 20px;
-          transition: transform 0.4s ease;
-        }
+            .hotspot-item-{{ section.id }} .hotspot-icon{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              background-color: {{ section.settings.hotspot_background_color }};
+              position: relative;
+              z-index: 1;
+              border-radius: 50%;
+              padding: 20px;
+              transition: transform 0.4s ease;
+            }
 
-        .hotspot-item-{{ section.id }} .hotspot-icon svg {
-          width: 64px;
-          height: 64px;
-        }
-        .hotspot-item-{{ section.id }} .hotspot-icon svg path{
-          fill: {{ section.settings.icon_color }};
-        }
-        .hotspot-item-{{ section.id }} .hotspot-content {
-          opacity: 0;
-          position: absolute;
-          transform: translateX(50%);
-          min-width: 380px;
-          padding: 32px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          transition: all 0.25s ease 0s;
-          border: 1px solid #FFF;
-          backdrop-filter: blur(50px);
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s ease-in-out;
-        }
+            .hotspot-item-{{ section.id }} .hotspot-icon svg {
+              width: 64px;
+              height: 64px;
+            }
+            .hotspot-item-{{ section.id }} .hotspot-icon svg path{
+              fill: {{ section.settings.icon_color }};
+            }
+            .hotspot-item-{{ section.id }} .hotspot-content {
+              opacity: 0;
+              position: absolute;
+              transform: translateX(50%);
+              min-width: 380px;
+              padding: 32px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              transition: all 0.25s ease 0s;
+              border: 1px solid #FFF;
+              backdrop-filter: blur(50px);
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.3s ease-in-out;
+            }
 
-        /* Keyframes for hotspot animation */
-        .hotspot-item-{{ section.id }}::before{
-          position: absolute;
-          z-index: 0;
-          top: 0px;
-          left: 0px;
-          background: {{ section.settings.hotspot_background_color }};
-          border-radius: 50%;
-          content: "";
-          width: 100%;
-          height: 100%;
-          animation: {{ section.settings.animation_duration }}s ease 0s infinite normal none running animation-wave;
-        }
+            /* Keyframes for hotspot animation */
+            .hotspot-item-{{ section.id }}::before{
+              position: absolute;
+              z-index: 0;
+              top: 0px;
+              left: 0px;
+              background: {{ section.settings.hotspot_background_color }};
+              border-radius: 50%;
+              content: "";
+              width: 100%;
+              height: 100%;
+              animation: {{ section.settings.animation_duration }}s ease 0s infinite normal none running animation-wave;
+            }
 
-        @keyframes animation-wave {
-          100% {
-            transform: scale(1.78);
-            opacity: 0;
+            @keyframes animation-wave {
+              100% {
+                transform: scale(1.78);
+                opacity: 0;
+              }
+            }
+          @media(min-width: 1024px) {
+            .hotspots-image-{{ section.id }} {
+              aspect-ratio: {{ section.settings.image_aspect_ratio }};
+            }
+            .mbl-po-btn {
+              display: none;
+            }
           }
-        }
-      @media(min-width: 1024px) {
-        .hotspots-image-{{ section.id }} {
-          aspect-ratio: {{ section.settings.image_aspect_ratio }};
-        }
-        .mbl-po-btn {
-          display: none;
-        }
-      }
-      @media(max-width: 1023px) {
-        .hotspots-image-{{ section.id }}{
-          aspect-ratio: 5/6;
-        }
-        .hotspots-image-{{ section.id }}  img,.hotspots-image-{{ section.id }}  picture,.hotspots-image-{{ section.id }}  source  {
-          object-fit: {{ section.settings.image_object_fit_m }};
-        }
-      
-        .hotspot-item-{{ section.id }} .hotspot-content{
-          padding: 15px;
-          min-width: 20rem;
-        }
-        .section-title-{{ section.id }} {
-          font-size: {{ section.settings.title_font_size_m }}px;
-          text-align: {{ section.settings.title_text_align_m }};
-          width: 343px;
-        }
-        .hotspot-item-{{ section.id }} {
-          width: {{ section.settings.hotspot_padding_m }}px;
-          height: {{ section.settings.hotspot_padding_m }}px;
-        }
-        .section-text-{{ section.id }} {
-          margin: 12px 0;
-          font-size: 14px;
-          line-height: normal;
-        }
-        .btn-wrap-{{ section.id }} {
-          display: flex;
-          width: 150px;
-          padding: 16px 20px;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
-        .btn_wrapper-{{ section.id }} {
-          gap: 8px;
-        }
-        .btn-wrap-{{ section.id }}.btn-one {
-          background: #FFF;
-          font-size: 18px;
-        }
-        .btn-wrap-{{ section.id }}.btn-two {
-          color: #FFF;
-          font-size: 18px;
-        }
-        .d11-content-wrap-{{ section.id }} {
-          bottom: 16px;
-          left: 16px;
-        }
-        .hotspot-item-{{ section.id }} .hotspot-icon svg {
-          width: 64px;
-          height: 64px;
-        }
-        .hotspot-item-{{ section.id }} .hotspot-icon {
-          padding: 10px;
-        }
-
-         @keyframes slideUp {
-          from {
-            transform: translateY(100%); /* Start off-screen */
-            opacity: 0; /* Invisible */
-          }
-          to {
-            transform: translateY(0); /* Move to original position */
-            opacity: 1; /* Fully visible */
-          }
-        }
-        
-        .hot-spot-popover.popover {
-          position: fixed;
-          top: 15%;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: 35% auto 0%;
-          max-width: 90%;
-          background: #ffffff;
-          transform: translateY(100%);
-          opacity: 0;
-          z-index: 1000;
-          transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-        
-        .hot-spot-popover.popover[open] {
-          animation: slideUp 0.5s ease forwards;
-          transform: translateY(0);
-          opacity: 1;
-          max-height: 35vh;
-        }
-        
-        .hot-spot-popover .icon-close {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-        
-        .hotspot-content.hot-spot-popover.popover div > p,
-        .hotspot-content.hot-spot-popover.popover div > strong {
-          color: #000;
-        }
-          
-        .mbl-po-btn {
-          top: -75px;
-          left: 45%;
-          background: #fff;
-          border-radius: 50%;
-          width: 0rem;
-          display: block;
-          border: none;
-          position: absolute;
-          color: #000;
-          padding: 1.5rem 1.5rem;
-          border-radius: 50%;
-        }
-          
-        .mbl-po-btn svg {
-          fill: #fff;
-          position: absolute;
-          top: 25%;
-          right: 0;
-          left: 26%;
-        }
-
-        .hotspot-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0006;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 998; /* Behind the popup */
-}
-
+          @media(max-width: 1023px) {
+            .hotspots-image-{{ section.id }}{
+              aspect-ratio: 5/6;
+            }
             .hotspots-image-{{ section.id }}  img,.hotspots-image-{{ section.id }}  picture,.hotspots-image-{{ section.id }}  source  {
               object-fit: {{ section.settings.image_object_fit_m }};
             }
@@ -342,7 +207,6 @@
               font-size: {{ section.settings.title_font_size_m }}px;
               text-align: {{ section.settings.title_text_align_m }};
               width: 343px;
-              text-transform: none;
             }
             .hotspot-item-{{ section.id }} {
               width: {{ section.settings.hotspot_padding_m }}px;
@@ -373,7 +237,8 @@
               font-size: 18px;
             }
             .d11-content-wrap-{{ section.id }} {
-              bottom: 7%;
+              bottom: 16px;
+              left: 16px;
             }
             .hotspot-item-{{ section.id }} .hotspot-icon svg {
               width: 64px;
@@ -463,34 +328,167 @@
       z-index: 998; /* Behind the popup */
     }
 
-    .hotspot-backdrop.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    body.no-scroll {
-      overflow: hidden;
-    }
-            button.mbl-po-btn:active {
-        background: #fff;
-    }
+                .hotspots-image-{{ section.id }}  img,.hotspots-image-{{ section.id }}  picture,.hotspots-image-{{ section.id }}  source  {
+                  object-fit: {{ section.settings.image_object_fit_m }};
+                }
 
-          }
-  @media( max-width: 768px){
-    .section-text-{{ section.id }} br{
-      display: none;
-    }
-    #shopify-section-{{ section.id }} .hotspot-icon{
-      width: 80%;
-      height: 80%;
-      padding: 7px;
-    }
-  }
+                .hotspot-item-{{ section.id }} .hotspot-content{
+                  padding: 15px;
+                  min-width: 20rem;
+                }
+                .section-title-{{ section.id }} {
+                  font-size: {{ section.settings.title_font_size_m }}px;
+                  text-align: {{ section.settings.title_text_align_m }};
+                  width: 343px;
+                  text-transform: none;
+                }
+                .hotspot-item-{{ section.id }} {
+                  width: {{ section.settings.hotspot_padding_m }}px;
+                  height: {{ section.settings.hotspot_padding_m }}px;
+                }
+                .section-text-{{ section.id }} {
+                  margin: 12px 0;
+                  font-size: 14px;
+                  line-height: normal;
+                }
+                .btn-wrap-{{ section.id }} {
+                  display: flex;
+                  width: 150px;
+                  padding: 16px 20px;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 10px;
+                }
+                .btn_wrapper-{{ section.id }} {
+                  gap: 8px;
+                }
+                .btn-wrap-{{ section.id }}.btn-one {
+                  background: #FFF;
+                  font-size: 18px;
+                }
+                .btn-wrap-{{ section.id }}.btn-two {
+                  color: #FFF;
+                  font-size: 18px;
+                }
+                .d11-content-wrap-{{ section.id }} {
+                  bottom: 7%;
+                }
+                .hotspot-item-{{ section.id }} .hotspot-icon svg {
+                  width: 64px;
+                  height: 64px;
+                }
+                .hotspot-item-{{ section.id }} .hotspot-icon {
+                  padding: 10px;
+                }
+
+                 @keyframes slideUp {
+                  from {
+                    transform: translateY(100%); /* Start off-screen */
+                    opacity: 0; /* Invisible */
+                  }
+                  to {
+                    transform: translateY(0); /* Move to original position */
+                    opacity: 1; /* Fully visible */
+                  }
+                }
+
+                .hot-spot-popover.popover {
+                  position: fixed;
+                  top: 15%;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  margin: 35% auto 0%;
+                  max-width: 90%;
+                  background: #ffffff;
+                  transform: translateY(100%);
+                  opacity: 0;
+                  z-index: 1000;
+                  transition: transform 0.5s ease, opacity 0.5s ease;
+                }
+
+                .hot-spot-popover.popover[open] {
+                  animation: slideUp 0.5s ease forwards;
+                  transform: translateY(0);
+                  opacity: 1;
+                  max-height: 35vh;
+                }
+
+                .hot-spot-popover .icon-close {
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  cursor: pointer;
+                }
+
+                .hotspot-content.hot-spot-popover.popover div > p,
+                .hotspot-content.hot-spot-popover.popover div > strong {
+                  color: #000;
+                }
+
+                .mbl-po-btn {
+                  top: -75px;
+                  left: 45%;
+                  background: #fff;
+                  border-radius: 50%;
+                  width: 0rem;
+                  display: block;
+                  border: none;
+                  position: absolute;
+                  color: #000;
+                  padding: 1.5rem 1.5rem;
+                  border-radius: 50%;
+                }
+
+                .mbl-po-btn svg {
+                  fill: #fff;
+                  position: absolute;
+                  top: 25%;
+                  right: 0;
+                  left: 26%;
+                }
+
+                .hotspot-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #0006;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease-in-out;
+          z-index: 998; /* Behind the popup */
+        }
+
+        .hotspot-backdrop.active {
+          opacity: 1;
+          visibility: visible;
+        }
+        body.no-scroll {
+          overflow: hidden;
+        }
+                button.mbl-po-btn:active {
+            background: #fff;
+        }
+
+              }
+      @media( max-width: 768px){
+        .section-text-{{ section.id }} br{
+          display: none;
+        }
+        #shopify-section-{{ section.id }} .hotspot-icon{
+          width: 80%;
+          height: 80%;
+          padding: 7px;
+        }
+      }
   </style>
 
   <div class="section-{{ section.id }}">
     <div class="hotspots-image-{{ section.id }}">
       <div class="hotspot-backdrop"></div>
-      <picture style="display: grid;">
+      <picture style="display: flex;">
         <div class="d11-content-wrap-{{ section.id }}">
           <h2 class="section-title-{{ section.id }}">{{ section.settings.section_title }}</h2>
           <p class="section-text-{{ section.id }}">{{ section.settings.section_text }}</p>
