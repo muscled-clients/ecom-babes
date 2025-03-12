@@ -703,7 +703,7 @@
         "button_cTpPBQ"
       ],
       "custom_css": [
-        "@media (max-width: 768px) {.article.fully-spaced-row--medium {margin: 40px 0 0; }}"
+        "@media (max-width: 768px) {.article.fully-spaced-row--medium {margin: 0 0; }}"
       ],
       "settings": {
         "height": "medium",
