@@ -205,6 +205,10 @@ ul.social-links__list {
 .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
   margin: 44px 0 64px;
 }
+.title-row .title a {
+  font-size: 48px;
+}
+
 @media (max-width: 768px) {
   .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete,
   .article.fully-spaced-row--medium {
