@@ -211,11 +211,11 @@ ul.social-links__list {
 }
 
 @media (max-width: 768px) {
-  .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete,
   .article.fully-spaced-row--medium {
     margin: 64px 0 0;
   }
   .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
     padding: 0 0;
+    margin: 0;
   }
 }
