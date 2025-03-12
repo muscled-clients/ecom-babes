@@ -702,9 +702,7 @@
         "text_Q6AQhG",
         "button_cTpPBQ"
       ],
-      "custom_css": [
-        "@media (max-width: 768px) {.article.fully-spaced-row--medium {margin: 0 0; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "height": "medium",
         "text_alignment": "center",
