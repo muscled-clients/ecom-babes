@@ -214,7 +214,8 @@ ul.social-links__list {
   .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
     margin: 64px 0 0;
   }
-  .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
+  .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete,
+  .fully-spaced-row--medium {
     padding: 0 0;
     margin: 0;
   }
