@@ -1203,7 +1203,6 @@
           },
           "faa78de8-219d-480c-8395-d84ed0815cd2": {
             "type": "menu",
-            "disabled": true,
             "settings": {
               "title": "Brand",
               "menu": "footer"
