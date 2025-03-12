@@ -950,7 +950,7 @@
         "btn-color": "#ffffff",
         "button_url": "shopify://collections/all",
         "custom-padding-top-2-desktop": 64,
-        "custom-padding-bottom-2-desktop": 16,
+        "custom-padding-bottom-2-desktop": 64,
         "custom-padding-top-2-mobile": 15,
         "custom-padding-bottom-2-mobile": 40
       }
