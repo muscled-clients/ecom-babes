@@ -1249,9 +1249,9 @@
       "type": "custom-d4-image-with-text",
       "settings": {
         "section-background": "shopify://shop_images/Rectangle_7.png",
-        "section-heading": "Partner with Us  and Grow Together",
+        "section-heading": "Partner with Us <br>and Grow Together",
         "btn-label": "Join Now",
-        "btn-url": ""
+        "btn-url": "#"
       }
     }
   },
