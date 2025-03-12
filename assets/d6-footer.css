@@ -203,7 +203,7 @@ ul.social-links__list {
 
 /* homepage css */
 .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
-  margin: 44px 0 64px;
+  padding: 44px 0 64px;
 }
 .title-row .title a {
   font-size: 48px;
