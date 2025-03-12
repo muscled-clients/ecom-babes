@@ -1,14 +1,14 @@
 /*Product page*/
 .product-block__image.product-block__image--primary.product-block__image--active {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Codes Ends here*/
 
 .product-block .btn.quickbuy-toggle {
-    padding: 16px 20px 18px!important;
+  padding: 16px 20px 18px !important;
 }
 
 /*Deliver at your Door*/
@@ -115,7 +115,6 @@ img.rimage__image.fade-in.cover.lazyautosizes.lazyloaded:hover {
   font-weight: bold;
   font-size: 18px !important;
   color: white;
- 
 }
 
 .product-block .btn.quickbuy-toggle:hover {
@@ -162,7 +161,7 @@ button.button.button--large:hover {
   color: black !important;
 }
 span.current-price.theme-money {
-  font-size: 40px;
+  font-size: 20px;
   color: black !important;
   font-weight: 700;
 }
@@ -174,7 +173,7 @@ span.current-price.theme-money {
   .section-footer__text-block__image:not(:last-child) {
     display: block;
     margin-bottom: 20px;
-}
+  }
   ul.section-footer__menu-block__menu {
     text-align: center;
   }
@@ -183,8 +182,8 @@ span.current-price.theme-money {
   }
   .section-footer__text {
     text-align: center;
-       font-size: 16px;
-}
+    font-size: 16px;
+  }
   form#footer_newsletter_signup {
     text-align: center;
   }
