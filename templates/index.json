@@ -1245,30 +1245,13 @@
       ],
       "settings": {}
     },
-    "1663684322da33c5af": {
-      "type": "image-with-text-overlay",
+    "custom_d4_image_with_text_kRgWWF": {
+      "type": "custom-d4-image-with-text",
       "settings": {
-        "image_position": "center center",
-        "mobile_image_position": "center bottom",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 220,
-        "image_link": "",
-        "subheading": "",
-        "title": "Partner with Us  <br>and Grow Together",
-        "title_size": 60,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "Join Us",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
+        "section-background": "shopify://shop_images/Rectangle_7.png",
+        "section-heading": "Partner with Us  and Grow Together",
+        "btn-label": "Join Now",
+        "btn-url": ""
       }
     }
   },
@@ -1297,6 +1280,6 @@
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",
     "custom_d4_image_with_text_XgmqAC",
     "review_sec_d6_rUNfFB",
-    "1663684322da33c5af"
+    "custom_d4_image_with_text_kRgWWF"
   ]
 }
