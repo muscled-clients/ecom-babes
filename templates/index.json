@@ -304,8 +304,8 @@
         "button_url": "shopify://collections/all",
         "btn-bg": "#49717b",
         "btn-color": "#ffffff",
-        "custom-padding-option-top-desktop": 66,
-        "custom-padding-option-bottom-desktop": 66,
+        "custom-padding-option-top-desktop": 96,
+        "custom-padding-option-bottom-desktop": 96,
         "custom-padding-option-top-mobile": 64,
         "custom-padding-option-bottom-mobile": 34
       }
