@@ -7790,7 +7790,6 @@ ul.inline li {
     flex: 0 0 auto;
     margin-left: 44px;
     width: calc(50% - 44px);
-    max-width: 490px;
   }
 }
 @media (min-width: 1040px) {
