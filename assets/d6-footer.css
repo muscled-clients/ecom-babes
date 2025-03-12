@@ -203,7 +203,7 @@ ul.social-links__list {
 
 /* homepage css */
 .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete {
-  margin: 40px 0 0;
+  margin: 44px 0 64px;
 }
 @media (max-width: 768px) {
   .article.fully-spaced-row--medium.cc-animate-init.-in.cc-animate-complete,
