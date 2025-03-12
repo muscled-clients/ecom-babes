@@ -949,8 +949,8 @@
         "button_url": "shopify://collections/all",
         "custom-padding-top-2-desktop": 64,
         "custom-padding-bottom-2-desktop": 64,
-        "custom-padding-top-2-mobile": 15,
-        "custom-padding-bottom-2-mobile": 40
+        "custom-padding-top-2-mobile": 20,
+        "custom-padding-bottom-2-mobile": 20
       }
     },
     "1663686268ced6ee0c": {
