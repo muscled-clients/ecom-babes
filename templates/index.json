@@ -9,36 +9,6 @@
  */
 {
   "sections": {
-    "1663590573310273b6": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
-      "custom_css": [
-        "h1 {color: white;}"
-      ],
-      "settings": {
-        "image_position": "center center",
-        "mobile_image_position": "center top",
-        "height": "fixed",
-        "height_desktop": 700,
-        "height_mobile": 600,
-        "image_link": "shopify://collections/products",
-        "subheading": "",
-        "title": "<h1>Handcrafted Travel Mugs</h1>",
-        "title_size": 52,
-        "title_size_mobile": 56,
-        "use_h1": true,
-        "text": "<p>Enjoy your coffee in a sustainable way with our beautifully designed reusable cups, equipped with a lid and heat-band for sipping on-the-go.</p>",
-        "enlarge_text": false,
-        "button_label_1": "Shop Now",
-        "button_url_1": "shopify://collections/products",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow"
-      }
-    },
     "slide_show_d5_9giFXb": {
       "type": "slide-show-d5",
       "blocks": {
@@ -255,17 +225,6 @@
         "padding_bottom": 50
       }
     },
-    "featured_collection_d5_4w84ix": {
-      "type": "featured-collection-d5",
-      "disabled": true,
-      "settings": {
-        "title": "<h2><strong>Travel Mugs</strong></h2>",
-        "info": "<p>Our ceramic travel mugs combine artistry and convenience, letting you enjoy beautifully crafted coffee moments wherever life takes you.</p>",
-        "collection": "products",
-        "btn-l": "View All",
-        "btn-u": "shopify://collections/products"
-      }
-    },
     "benefits_d5_t8eVwA": {
       "type": "benefits-d5",
       "settings": {
@@ -316,8 +275,8 @@
         "hotspot_jJFRCe": {
           "type": "hotspot",
           "settings": {
-            "title": "Show Features Here",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum diam.",
+            "title": "Nulla in neque",
+            "description": "Aliquam viverra magna eget quam gravida commodo. Ut maximus augue maximus",
             "position_x": 39,
             "position_y": 35,
             "position_x_m": 30,
@@ -333,7 +292,7 @@
         "hotspot_74jw6H": {
           "type": "hotspot",
           "settings": {
-            "title": "Show Features Here",
+            "title": "Phasellus vel felis et",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum diam.",
             "position_x": 68,
             "position_y": 62,
@@ -353,15 +312,15 @@
         "hotspot_74jw6H"
       ],
       "settings": {
-        "section_title": "Find the Perfect Fit  for Your Journey",
+        "section_title": "Proin vitae arcu eget nunc consectetu",
         "title_font_size": 48,
         "title_font_size_m": 32,
         "title_color": "#ffffff",
         "title_text_align": "left",
-        "section_text": "Discover the ideal products tailored to your needs, offering comfort, & functionality to enhance every aspect of your daily life & adventures.",
+        "section_text": "Maecenas in imperdiet elit. Aenean pretium elit non tellus cursus luctus sit amet sed arcu. Duis consectetur velit erat, in maximus ligula bibendum et.",
         "text_color": "#ffffff",
         "text_font": 16,
-        "btn_url_one": "shopify://collections/12oz",
+        "btn_url_one": "",
         "btn_label_one": "Shop Now",
         "btn_url_two": "shopify://collections/all",
         "btn_label_two": "View Collection",
@@ -383,39 +342,6 @@
         "animation_duration": 4,
         "title_text_align_m": "left",
         "hotspot_padding_m": 32
-      }
-    },
-    "adfe6f7c-06b8-4e6d-8acb-3572fcbda4af": {
-      "type": "image-with-text",
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 40px; font-weight: bold;}",
-        ".subheading--over {margin-bottom: 10px;}",
-        "@media only screen and (max-width: 1024px) and (min-width: 768px) {h2 {font-size: 35px; }}",
-        "@media only screen and (max-width: 768px) {h2 {font-size: 28px; }}"
-      ],
-      "settings": {
-        "image_width": 700,
-        "subheading": "Why Nova Ceramics?",
-        "title": "Uniqueness in Every Sip",
-        "use_h1": false,
-        "text": "<p>Discover the beauty of individuality with Nova Ceramics. Each piece is expertly handcrafted using a special glazing process, ensuring that no two pieces are identical. Your mug will be one-of a-kind, with its own subtle variations, making it truly yours. </p><p><strong>Uncompromised taste</strong> - crafted to preserve the flavor of your favorite drinks.</p><p><strong>Take to-go</strong> - each mug comes equipped with a BPA-free silicone lid and heat-band.</p><p><strong>Dishwasher & microwave safe</strong> - simply pop them in the dishwasher for hassle-free maintenance.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "image_position": "left",
-        "text_alignment": "left",
-        "use_alt_bg": false
-      }
-    },
-    "1663684304dccb84e0": {
-      "type": "rich-text",
-      "disabled": true,
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "use_alt_bg": false
       }
     },
     "scrolling_images_d5_Xwfqfe": {
@@ -467,11 +393,11 @@
         "text_NfgJAd"
       ],
       "settings": {
-        "sec-heading": "Loved by Our Customers",
+        "sec-heading": " Morbi id mollis felis.",
         "heading-color": "#ffffff",
         "heading-size": 48,
         "heading-size-mobile": 30,
-        "sec-sub-heading": "Real Smiles, Real Stories – See Our Happy Customers!",
+        "sec-sub-heading": "Vestibulum ante ipsum primis in faucibus  orci luctus et",
         "animate": "marquee-horizontal-right",
         "animate-time": 25,
         "stop-animation": false,
@@ -566,8 +492,8 @@
           "settings": {
             "icon": "shopify://shop_images/Group_1000006062.svg",
             "icon-width": 42,
-            "block-title": "Eco-Friendly",
-            "block-text": "Sustainably made to reduce waste and protect the planet for future generations."
+            "block-title": "non eros",
+            "block-text": "volutpat dapibus sed a libero. Donec nec mauris"
           }
         },
         "spliter_XmThr6": {
@@ -579,8 +505,8 @@
           "settings": {
             "icon": "shopify://shop_images/Group_1000006063.svg",
             "icon-width": 42,
-            "block-title": "Green Materials",
-            "block-text": "Crafted from responsibly sourced materials for a cleaner, more sustainable environment."
+            "block-title": "convallis nisi ",
+            "block-text": "lacinia mauris. Ut sem felis, laoreet et mauris eu, efficitur efficitur ligula."
           }
         },
         "spliter_hEM6fW": {
@@ -592,8 +518,8 @@
           "settings": {
             "icon": "shopify://shop_images/Vector_2.svg",
             "icon-width": 60,
-            "block-title": "Chemical-Free",
-            "block-text": "Made without harmful chemicals, ensuring safety for you and the planet."
+            "block-title": "viverra efficitur",
+            "block-text": "lectus. Integer ac quam non nulla pulvinar elementum vitae sit amet neque."
           }
         }
       },
@@ -605,9 +531,9 @@
         "block_y9Pn94"
       ],
       "settings": {
-        "sub-heading": "sustainability",
-        "heading": "Our Responsibility, <br>Your Sustainable Choice",
-        "content": "<p>Our commitment goes beyond crafting beautiful designs—we take responsibility for how they're made. Every piece is handcrafted in small batches within the European Union, supporting local artisans and reducing environmental impact. Our sustainable practices ensure that our fabrics are OEKO-TEX® certified, free from harmful chemicals, and produced ethically. By embracing mindful production, we aim to create timeless pieces while protecting the planet and its people.</p>",
+        "sub-heading": "pellentesque",
+        "heading": "in faucibus orci <br>luctus et ultrices",
+        "content": "<p>Maecenas in imperdiet elit. Aenean pretium elit non tellus cursus luctus sit amet sed arcu. Duis consectetur velit erat, in maximus ligula bibendum et. Nulla in neque sem. Aliquam turpis nunc, commodo vitae mauris dignissim, rhoncus pellentesque metus. Maecenas rhoncus lacinia eros. Aliquam non ultricies ligula.</p>",
         "btn": "",
         "url": "",
         "sec-image": "shopify://shop_images/Group_1000006060.png"
@@ -619,7 +545,7 @@
         "text_LxzabN": {
           "type": "text",
           "settings": {
-            "text": "Elevate your space with the artistry of Nova Ceramics.",
+            "text": "Ut maximus augue maximus dui aliquet, ac lacinia ex porttitor.",
             "min-text": "",
             "svg": "",
             "position": "column"
@@ -669,20 +595,20 @@
         "subheading_igrc9x": {
           "type": "subheading",
           "settings": {
-            "subheading": "ABOUT US"
+            "subheading": "Integer faucibus"
           }
         },
         "heading_J7Wag9": {
           "type": "heading",
           "settings": {
-            "title": "Our Story and Mission",
+            "title": "urpis vitae suscipit congue",
             "use_h1": false
           }
         },
         "text_Q6AQhG": {
           "type": "text",
           "settings": {
-            "text": "<p>Founded with a passion for quality and innovation, we strive to create products that enhance everyday life. Our mission is to blend functionality, style, and sustainability, ensuring every item meets the highest standards. Committed to excellence, we focus on craftsmanship, customer satisfaction, and making a positive impact on the world through thoughtful, well-designed solutions.</p>",
+            "text": "<p>Cras tempus gravida magna vel feugiat. Duis purus ex, accumsan non sem id, rhoncus tristique justo. Donec risus nibh, facilisis et urna in, viverra blandit risus. In et nisi ornare, dignissim nisl scelerisque, luctus urna. Nulla aliquam iaculis euismod. Pellentesque semper est eu massa maximus, id ornare metus luctus</p>",
             "enlarge_text": true
           }
         },
@@ -842,7 +768,7 @@
         "row_CwrNit": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Free of plastic packaging",
+            "value-to-compare": "Ut a enim sit amet sapien",
             "tick-or-cross": "cross",
             "tick-or-cross-2": "tick",
             "tick-or-cross-3": "tick"
@@ -851,7 +777,7 @@
         "row_LW8VBR": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Leaves no nasty residue",
+            "value-to-compare": "t hendrerit quam ut suscip",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "tick",
             "tick-or-cross-3": "tick"
@@ -860,7 +786,7 @@
         "row_qXGBbG": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Vegan & Cruelty-Free",
+            "value-to-compare": "mollis blandit. Proin sollicitud",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -869,7 +795,7 @@
         "row_FrVYbj": {
           "type": "row",
           "settings": {
-            "value-to-compare": "All-Natural, Safe Ingredients",
+            "value-to-compare": " Nunc tincidunt, lectus sed facilis",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "tick"
@@ -878,7 +804,7 @@
         "row_4C3B3A": {
           "type": "row",
           "settings": {
-            "value-to-compare": "No Measuring, No Mess",
+            "value-to-compare": "a eu, vestibulum a nisl. P",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "tick"
@@ -887,7 +813,7 @@
         "row_eTAQmy": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Certified Organic Ingredients",
+            "value-to-compare": "s eu, efficitur efficitur ligula. P",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "tick"
@@ -896,7 +822,7 @@
         "row_aQLzxt": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Recyclable Packaging",
+            "value-to-compare": "ue varius hendrerit a era",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -905,7 +831,7 @@
         "row_tUJigB": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Supports Charitable Causes",
+            "value-to-compare": "Pellentesque sapien neq",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -914,7 +840,7 @@
         "row_Bet6tK": {
           "type": "row",
           "settings": {
-            "value-to-compare": "Cost-Effective",
+            "value-to-compare": "ndrerit a erat.",
             "tick-or-cross": "tick",
             "tick-or-cross-2": "cross",
             "tick-or-cross-3": "cross"
@@ -943,7 +869,7 @@
         "company-3-product": "shopify://shop_images/X_1.png",
         "ship-icon": "shopify://shop_images/Frame_1410110648.svg",
         "ship-text": "Free U.S. & CDN Shipping Options",
-        "button_text": "Try  Nova Ceramics Today",
+        "button_text": "Try Today",
         "btn-bg": "#49717b",
         "btn-color": "#ffffff",
         "button_url": "shopify://collections/all",
@@ -951,85 +877,6 @@
         "custom-padding-bottom-2-desktop": 64,
         "custom-padding-top-2-mobile": 20,
         "custom-padding-bottom-2-mobile": 20
-      }
-    },
-    "1663686268ced6ee0c": {
-      "type": "testimonials",
-      "blocks": {
-        "166368626866396a47-0": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Obsessed.\n\nI bought one for myself and one for my husband. I knew I was going to love it. It's regular cup of coffee sized, fits in the cup holder, light weight, hasn't leaked on me yet, and is a work of art.",
-            "author": "",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "eacde969-2568-444f-b3da-6feb93bbfeba": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Gorgeous.\n\nLove this mug I use it for my morning oat milk matcha lattes and I love that it is not too big. The colors are also so vibrant and I love the quality.",
-            "author": "",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "166368626866396a47-1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Great travel mug!\n\nThis product looks great, it’s not too heavy, has a nice silicone lid, and a nice silicone handle. Perfect size for a morning cup of coffee. That’s great in my car cupholder. Cleans really well.",
-            "author": "",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "b59c2031-9cd2-40af-afcf-4aaaf06cd3be": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Best mug ever!\n\nI love this mug. Just right for coffee. It is beautiful. I ordered another color! Highly recommend.",
-            "author": "",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "1edf0d16-fd32-4abd-bace-41aee7ace134": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Love it!\n\nI got mine in Monsoon and mine looks almost exactly like the picture! I’m very happy with the one I received. I may even need another!",
-            "author": "",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "166368626866396a47-0",
-        "eacde969-2568-444f-b3da-6feb93bbfeba",
-        "166368626866396a47-1",
-        "b59c2031-9cd2-40af-afcf-4aaaf06cd3be",
-        "1edf0d16-fd32-4abd-bace-41aee7ace134"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "What our customers think",
-        "layout": "no-image",
-        "text_caps": false,
-        "quote_text_size": 30,
-        "quote_text_size_mobile": 20,
-        "image_shape": "square",
-        "use_alt_bg": false,
-        "autoplay": true,
-        "autoplay_speed": 6
       }
     },
     "1666347260a6b453a1": {
@@ -1257,15 +1104,11 @@
     }
   },
   "order": [
-    "1663590573310273b6",
     "slide_show_d5_9giFXb",
     "d5_icon_with_text_bar_a4CGUH",
     "video_slider_CCczNT",
-    "featured_collection_d5_4w84ix",
     "benefits_d5_t8eVwA",
     "custom_hotspot_banner_V8BA4F",
-    "adfe6f7c-06b8-4e6d-8acb-3572fcbda4af",
-    "1663684304dccb84e0",
     "scrolling_images_d5_Xwfqfe",
     "scrolling_images_d5_Cbhtpc",
     "image_text_sec_Gtgq6m",
@@ -1275,7 +1118,6 @@
     "collection_list_XhKHy7",
     "featured_product_83emBx",
     "compare_table_d5_Cq9Lti",
-    "1663686268ced6ee0c",
     "1666347260a6b453a1",
     "bdfd64b8-21c7-4dd9-8aa9-a425d339acb9",
     "87d7f094-9fc8-427f-b7e0-baf0e88a01fd",

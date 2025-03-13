@@ -1188,7 +1188,7 @@
             "type": "text",
             "settings": {
               "title": "<span>YOUR</span>LOGO",
-              "text": "<p>Nova Ceramics offers beautifully crafted, sustainable mugs that add artistry and purpose to your daily coffee routine.</p>",
+              "text": "<p>ec nec mauris convallis, convallis nisi sed, lacinia mauris. Ut sem felis, laoreet et mauris eu, efficitur efficitur ligula. </p>",
               "image_width": 130,
               "show_social_icons": false,
               "soc_icons_large": false
@@ -1212,7 +1212,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Join & Save! Get 10% Off Your First Order.",
-              "text": "<p>Join the Nova Ceramics community and explore handcrafted designs that bring artistry and sustainability to every sip. Be the first to hear about new collections, exclusive offers, and the latest updates!</p>",
+              "text": "<p>Proin vitae arcu eget nunc consectetur iaculis at nec neque. Nunc consequat hendrerit quam ut suscipit. Integer malesuada vitae erat sit amet pulvinar. Etiam nisl ligula, vehicula a cursu</p>",
               "button_style": "primary",
               "show_social_icons": false,
               "soc_icons_large": false
